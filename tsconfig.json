@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -19,9 +23,31 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@types/*": [
+        "./src/types/*.ts"
+      ],
+      "@mocks/*": [
+        "./src/mocks/*.ts",
+        "./src/mocks/**/*.ts"
+      ],
+      "@components/*": [
+        "./src/components/**/*.tsx"
+      ],
+      "@hooks/*": [
+        "./src/hooks/*"
+      ],
+      "@ctx/*": [
+        "./src/ctx/*"
+      ]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

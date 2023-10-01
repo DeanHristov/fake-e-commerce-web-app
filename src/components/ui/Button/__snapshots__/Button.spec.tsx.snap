@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UI/Component <Button {...} /> Should render default state 1`] = `
+<div>
+  <button>
+    Click me
+  </button>
+</div>
+`;
