@@ -4,6 +4,8 @@ import {NextFont} from 'next/dist/compiled/@next/font';
 import {FC, ReactNode} from 'react';
 import {mockServer} from '@mocks/server';
 import {Metadata} from 'next';
+import PageFooter from '../components/containers/PageFooter/PageFooter';
+import PageHeader from '../components/containers/PageHeader';
 
 // Including mocks
 if (Boolean(process.env.API_MOCKING)) {
@@ -30,9 +32,13 @@ const RootLayout: FC<IRootLayoutProps> = async ({ children }) => {
         suppressHydrationWarning={true}
         className={`bg-gray-100 ${inter.className}`}
       >
-        <header>[HEADER]</header>
+        <PageHeader />
         <main>{children}</main>
-        <footer>[Footer]</footer>
+        <PageFooter>
+          <h3 className="p-2 text-center text-slate-900">
+            &#169; 2023 | Fake App
+          </h3>
+        </PageFooter>
       </body>
     </html>
   );

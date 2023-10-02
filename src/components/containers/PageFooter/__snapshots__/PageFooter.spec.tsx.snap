@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Containers/PageFooter <PageFooter {...} /> Should render default state 1`] = `
+<div>
+  <footer
+    class="p-2"
+  >
+    <div
+      class="w-full h-px m-auto bg-gradient-to-r from-transparent via-gray-400 to-transparent"
+    />
+    <h3
+      class="p-2 text-center text-slate-900"
+    >
+      © 2023 | Fake App
+    </h3>
+  </footer>
+</div>
+`;

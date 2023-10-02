@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UI/Divider <Divider {...} /> Should render default state 1`] = `
+<div>
+  <div
+    class="w-full m-auto border-b border-gray-400"
+  />
+</div>
+`;
+
+exports[`UI/Divider <Divider {...} /> Should render with pink gradient 1`] = `
+<div>
+  <div
+    class="w-full h-px m-auto bg-gradient-to-r from-transparent via-pink-600 to-transparent"
+  />
+</div>
+`;

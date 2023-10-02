@@ -11,6 +11,7 @@ const config: Config = {
       colors: {
         gray: {
           100: '#F6F6F6',
+          600: '#969BA0',
         },
       },
       backgroundImage: {

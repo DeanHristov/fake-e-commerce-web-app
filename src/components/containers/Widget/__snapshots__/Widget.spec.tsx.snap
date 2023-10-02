@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Container/Widget <Widget {...} /> Should render default state 1`] = `
+<div>
+  <section
+    class="bg-white w-auto h-auto rounded-2xl p-4"
+  >
+    <div
+      class="py-0"
+    >
+      <h3
+        class="text-base text-black font-bold"
+      >
+        Widget title
+      </h3>
+    </div>
+    <div
+      class="pt-2"
+    >
+      <div
+        class="w-96 pb-2"
+      >
+        Body content...
+      </div>
+      <div
+        class="w-full h-px m-auto bg-gradient-to-r from-transparent via-gray-400 to-transparent"
+      />
+      <h3
+        class="leading-loose text-center text-slate-900"
+      >
+        © 2023 | Fake App
+      </h3>
+    </div>
+  </section>
+</div>
+`;
