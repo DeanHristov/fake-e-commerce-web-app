@@ -3,7 +3,7 @@
 exports[`UI/Component <Button {...} /> Should render a primary state of the button 1`] = `
 <div>
   <button
-    class="bg-teal-300 w-full px-4 py-2 rounded-lg text-white font-bold uppercase active:shadow-md duration-200 flex justify-center items-center gap-2"
+    class="bg-green-600 w-full px-4 py-2 rounded-lg text-white font-bold uppercase active:shadow-md ease-in duration-200 flex justify-center items-center gap-2"
   >
     Click me
   </button>
@@ -13,7 +13,7 @@ exports[`UI/Component <Button {...} /> Should render a primary state of the butt
 exports[`UI/Component <Button {...} /> Should render a secondary state of the button 1`] = `
 <div>
   <button
-    class="bg-white border border-teal-300 w-full px-4 py-2 rounded-lg text-cyan-700 font-normal active:shadow-md duration-200 flex justify-center items-center gap-2"
+    class="bg-white border border-green-600 w-full px-4 py-2 rounded-lg text-cyan-700 font-normal active:shadow-md ease-in duration-200 flex justify-center items-center gap-2"
   >
     Click me
   </button>
@@ -23,7 +23,7 @@ exports[`UI/Component <Button {...} /> Should render a secondary state of the bu
 exports[`UI/Component <Button {...} /> Should render the button with a left icon 1`] = `
 <div>
   <button
-    class="bg-teal-300 w-full px-4 py-2 rounded-lg text-white font-bold uppercase active:shadow-md duration-200 flex justify-center items-center gap-2"
+    class="bg-green-600 w-full px-4 py-2 rounded-lg text-white font-bold uppercase active:shadow-md ease-in duration-200 flex justify-center items-center gap-2"
   >
     <svg
       aria-hidden="true"
@@ -44,7 +44,7 @@ exports[`UI/Component <Button {...} /> Should render the button with a left icon
 exports[`UI/Component <Button {...} /> Should render the button with a right icon 1`] = `
 <div>
   <button
-    class="bg-teal-300 w-full px-4 py-2 rounded-lg text-white font-bold uppercase active:shadow-md duration-200 flex justify-center items-center gap-2"
+    class="bg-green-600 w-full px-4 py-2 rounded-lg text-white font-bold uppercase active:shadow-md ease-in duration-200 flex justify-center items-center gap-2"
   >
     Click me
     <svg
