@@ -25,14 +25,14 @@ const Button: FC<IButtonProps> = ({
 }) => {
   const buttonStyles: Record<string, string> = {
     primary:
-      'bg-teal-300 w-full px-4 py-2 rounded-lg text-white font-bold uppercase',
+      'bg-green-600 w-full px-4 py-2 rounded-lg text-white font-bold uppercase',
     secondary:
-      'bg-white border border-teal-300 w-full px-4 py-2 rounded-lg text-cyan-700 font-normal',
+      'bg-white border border-green-600 w-full px-4 py-2 rounded-lg text-cyan-700 font-normal',
   };
 
   return (
     <button
-      className={`${buttonStyles[variant]} active:shadow-md duration-200 flex justify-center items-center gap-2`}
+      className={`${buttonStyles[variant]} active:shadow-md ease-in duration-200 flex justify-center items-center gap-2`}
       onClick={onClick}
       {...rest}
     >

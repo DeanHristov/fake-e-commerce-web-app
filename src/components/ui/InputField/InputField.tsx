@@ -36,7 +36,7 @@ const SearchField: FC<IInputFieldProps> = ({
         placeholder={placeholder}
         className={`h-full ${
           leftIcon ? 'pl-10 pr-6' : 'px-6'
-        } w-full rounded-lg bg-gray-200 text-slate-700`}
+        } w-full rounded-lg bg-gray-200 text-slate-700 ease-in duration-200 focus:bg-white`}
         {...rest}
       />
       {rightIcon && (
