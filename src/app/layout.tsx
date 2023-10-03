@@ -30,10 +30,12 @@ const RootLayout: FC<IRootLayoutProps> = async ({ children }) => {
     <html lang="en">
       <body
         suppressHydrationWarning={true}
-        className={`bg-gray-100 ${inter.className}`}
+        className={`bg-gray-100 ${inter.className} `}
       >
         <PageHeader />
-        <main>{children}</main>
+        <main className="flex h-screen min-w-[320px] max-w-screen-xl m-auto">
+          {children}
+        </main>
         <PageFooter>
           <h3 className="p-2 text-center text-slate-900">
             &#169; 2023 | Fake App

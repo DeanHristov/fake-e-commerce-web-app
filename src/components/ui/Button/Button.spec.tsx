@@ -11,7 +11,9 @@ describe('UI/Component <Button {...} />', () => {
   });
 
   it('Should render a secondary state of the button', () => {
-    const { container } = render(<Button secondary title="Click me" />);
+    const { container } = render(
+      <Button variant="secondary" title="Click me" />,
+    );
 
     expect(container).toMatchSnapshot();
   });

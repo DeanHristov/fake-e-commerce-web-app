@@ -11,7 +11,11 @@ const config: Config = {
       colors: {
         gray: {
           100: '#F6F6F6',
+          200: '#f3f3f3',
           600: '#969BA0',
+        },
+        zinc: {
+          100: '#4f4f4f',
         },
       },
       backgroundImage: {

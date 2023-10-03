@@ -33,6 +33,9 @@ const config: Config = {
     '<rootDir>/tests/*.{ts,tsx}',
   ],
   testMatch: ['<rootDir>/src/**/*.spec.ts?(x)'],
+  moduleNameMapper: {
+    'next/navigation': '<rootDir>/tests/__mocks__/next-useRouter.ts',
+  },
   coverageThreshold: {
     global: {
       branches: 80,

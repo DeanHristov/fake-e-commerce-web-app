@@ -17,7 +17,8 @@
     "next": "latest",
     "node-fetch": "^3.3.2",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "use-debounce": "^9.0.4"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.4.5",
