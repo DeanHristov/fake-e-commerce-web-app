@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UI/Component <InputField {...} /> Should render a default state of the Component 1`] = `
+<div>
+  <div
+    class="relative w-full rounded-lg h-10 border border-gray-500"
+  >
+    <input
+      class="h-full px-6 w-full rounded-lg bg-gray-200 text-slate-700"
+      placeholder="Text me..."
+      type="text"
+      value=""
+    />
+  </div>
+</div>
+`;
