@@ -25,6 +25,10 @@ export const metadata: Metadata = {
   },
 };
 
+//@see: https://github.com/vercel/next.js/issues/43704
+//TODO Removed hard-coded height (h-[88vh]) from pages when the issue above is solved!
+//TODO Move the "usePathname()" functionality from the PageHeader here when the issue above is solved!
+
 const RootLayout: FC<IRootLayoutProps> = async ({ children }) => {
   return (
     <html lang="en">
@@ -33,9 +37,7 @@ const RootLayout: FC<IRootLayoutProps> = async ({ children }) => {
         className={`bg-gray-100 ${inter.className} `}
       >
         <PageHeader />
-        <main className="flex h-screen min-w-[320px] max-w-screen-xl m-auto">
-          {children}
-        </main>
+        <main className="min-w-[320px] max-w-screen-xl m-auto">{children}</main>
         <PageFooter>
           <h3 className="p-2 text-center text-slate-900">
             &#169; 2023 | Fake App

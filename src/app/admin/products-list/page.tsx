@@ -4,11 +4,11 @@ import { Metadata } from 'next';
 export interface IProductsListProps {}
 
 export const metadata: Metadata = {
-  title: 'ProductsList title',
+  title: 'Products title',
 };
 
 const ProductsListPage: FC<IProductsListProps> = ({}) => {
-  return <div>Product sList page</div>;
+  return <div className="h-[88vh]">Product sList page</div>;
 };
 
 export default ProductsListPage;

@@ -8,7 +8,11 @@ export const metadata: Metadata = {
 };
 
 const RegisterPage: FC<IRegisterProps> = ({}) => {
-  return <div>Register page</div>;
+  return (
+    <div className="flex justify-center items-center h-[93.7vh]">
+      Register page
+    </div>
+  );
 };
 
 export default RegisterPage;

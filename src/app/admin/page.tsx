@@ -4,11 +4,11 @@ import { Metadata } from 'next';
 export interface IAdminProps {}
 
 export const metadata: Metadata = {
-  title: 'Admin title',
+  title: 'Admin',
 };
 
 const AdminPage: FC<IAdminProps> = ({}) => {
-  return <div>Admin page</div>;
+  return <div className="h-[88vh]">Admin page</div>;
 };
 
 export default AdminPage;

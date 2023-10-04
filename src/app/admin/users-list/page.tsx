@@ -4,11 +4,11 @@ import { Metadata } from 'next';
 export interface IUsersListProps {}
 
 export const metadata: Metadata = {
-  title: 'UsersList title',
+  title: 'Users',
 };
 
 const UsersListPage: FC<IUsersListProps> = ({}) => {
-  return <div>Users page</div>;
+  return <div className="h-[88vh]">Users page</div>;
 };
 
 export default UsersListPage;

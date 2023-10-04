@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 const ProductsPage: FC<IProductsProps> = ({}) => {
-  return <div>Products page</div>;
+  return <div className="h-[88vh]">Products page</div>;
 };
 
 export default ProductsPage;

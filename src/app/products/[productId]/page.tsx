@@ -15,7 +15,7 @@ export const generateMetadata = ({
 };
 
 const ProductPage: FC<IProductProps> = ({ params: { productId } }) => {
-  return <div>Product page {productId}</div>;
+  return <div className="h-[88vh]">Product page {productId}</div>;
 };
 
 export default ProductPage;
