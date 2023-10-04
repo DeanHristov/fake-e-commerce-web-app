@@ -5,7 +5,7 @@ import {
   RestHandler,
   RestRequest,
 } from 'msw';
-import mockedUsers from '@mocks/data/users';
+import mockedUsers from '../data/users';
 import { IUser } from '../../types';
 
 const userHandlers: RestHandler<MockedRequest<IUser>>[] = [

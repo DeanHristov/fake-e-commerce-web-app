@@ -1,5 +1,5 @@
 import { MockedRequest, rest, RestContext, RestHandler } from 'msw';
-import mockedProducts from '@mocks/data/products';
+import mockedProducts from '../data/products';
 import { IProduct } from '../../types';
 
 export let productsHandler: RestHandler<MockedRequest<IProduct>>[] = [

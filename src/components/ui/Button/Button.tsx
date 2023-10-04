@@ -4,9 +4,11 @@ import { FC, ReactNode } from 'react';
 import Spinner from '../Spinner/Spinner';
 
 export type TButtonPresentations = 'primary' | 'secondary';
+export type TButtonType = 'submit' | 'reset' | 'button';
 
 export interface IButtonProps {
   title: string;
+  type?: TButtonType;
   className?: string;
   spinning?: boolean;
   variant?: TButtonPresentations;
@@ -18,6 +20,7 @@ export interface IButtonProps {
 const Button: FC<IButtonProps> = ({
   variant = 'primary',
   title,
+  type = 'button',
   leftIcon,
   rightIcon,
   spinning,
@@ -35,6 +38,7 @@ const Button: FC<IButtonProps> = ({
   return (
     <div className={className ?? ''}>
       <button
+        type={type}
         className={`${buttonStyles[variant]} active:shadow-md ease-in duration-200 flex justify-center items-center gap-2`}
         onClick={onClick}
         {...rest}

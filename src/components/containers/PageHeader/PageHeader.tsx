@@ -17,7 +17,6 @@ export interface IPageHeaderProps {}
 
 const PageHeader: FC<IPageHeaderProps> = ({}) => {
   const router: AppRouterInstance = useRouter();
-
   //@see: https://github.com/vercel/next.js/issues/43704
   const currentPath = usePathname();
 

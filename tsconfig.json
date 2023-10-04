@@ -22,24 +22,7 @@
         "name": "next"
       }
     ],
-    "paths": {
-      "@types/*": [
-        "./src/types/*.ts"
-      ],
-      "@mocks/*": [
-        "./src/mocks/*.ts",
-        "./src/mocks/**/*.ts"
-      ],
-      "@components/*": [
-        "./src/components/**/*.tsx"
-      ],
-      "@hooks/*": [
-        "./src/hooks/*"
-      ],
-      "@ctx/*": [
-        "./src/ctx/*"
-      ]
-    }
+    "paths": {}
   },
   "include": [
     "next-env.d.ts",

@@ -2,10 +2,10 @@ import './globals.css';
 import {Inter} from 'next/font/google';
 import {NextFont} from 'next/dist/compiled/@next/font';
 import {FC, ReactNode} from 'react';
-import {mockServer} from '@mocks/server';
 import {Metadata} from 'next';
 import PageFooter from '../components/containers/PageFooter/PageFooter';
 import PageHeader from '../components/containers/PageHeader';
+import {mockServer} from '../mocks/server';
 
 // Including mocks
 if (Boolean(process.env.API_MOCKING)) {
