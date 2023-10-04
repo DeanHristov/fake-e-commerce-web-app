@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UI/FormField <FormField {...} /> Should render the badge with a counter 1`] = `
+<div>
+  <div
+    class="py-2"
+  >
+    <label
+      class="block text-xs mb-1 cursor-pointer"
+      for="email"
+    >
+      Username or an email
+    </label>
+    <div
+      class="h-12"
+    >
+      <div
+        class="relative w-full rounded-lg h-full border border-gray-500"
+      >
+        <input
+          class="h-full px-6 w-full rounded-lg bg-white text-slate-700 ease-in duration-200 focus:bg-white"
+          id="email"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

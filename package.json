@@ -15,8 +15,7 @@
   "dependencies": {
     "@heroicons/react": "^2.0.18",
     "next": "latest",
-    "node-fetch": "^3.3.2",
-    "react": "latest",
+    "react": "18.2.0",
     "react-dom": "latest",
     "use-debounce": "^9.0.4"
   },

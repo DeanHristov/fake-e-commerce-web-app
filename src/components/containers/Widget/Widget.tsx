@@ -1,4 +1,7 @@
+'use client';
+
 import { FC, ReactNode } from 'react';
+import { useIsClient } from '../../../hooks/useIsClient';
 
 type TStyle = 'white' | 'indigo';
 
@@ -11,8 +14,12 @@ export interface IWidgetProps {
 }
 
 const Widget: FC<IWidgetProps> = ({ children, title, subTitle, header }) => {
+  const isClient: boolean = useIsClient();
+
+  if (!isClient) return null;
+
   return (
-    <section className="bg-white w-auto h-auto rounded-2xl p-4">
+    <section className="bg-white h-auto m-auto rounded-lg p-4 shadow-lg">
       {/** Widget Header */}
       {header && header}
       {!header && (
