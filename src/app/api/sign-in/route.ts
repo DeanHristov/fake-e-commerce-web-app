@@ -15,7 +15,7 @@ export async function POST(req: NextRequest) {
 
   // TODO Replace the way how finding the user!
   const userIdx = users.findIndex((item) => item.email === email);
-  const unauthorizedResponse = NextResponse.json<{ status: string }>(
+  const unauthorizedResponse = NextResponse.json<ISignInResponse>(
     { status: 'Unauthorized' },
     { status: 401 },
   );

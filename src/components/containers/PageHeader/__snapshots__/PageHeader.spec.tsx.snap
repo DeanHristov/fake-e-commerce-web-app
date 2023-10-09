@@ -3,13 +3,13 @@
 exports[`Containers/PageHeader <PageHeader {...}> Should render default state 1`] = `
 <div>
   <div
-    class="shadow-md px-4"
+    class="shadow-md px-2"
   >
     <header
       class="flex flex-col md:flex-row  min-w-[320px] max-w-screen-xl m-auto"
     >
       <div
-        class="w-full py-2 md:w-4/12 text-center md:text-left"
+        class="w-full py-2 text-center md:text-left"
       >
         <a
           class="w-full text-black font-bold text-2xl"
@@ -19,7 +19,7 @@ exports[`Containers/PageHeader <PageHeader {...}> Should render default state 1`
         </a>
       </div>
       <div
-        class="w-full h-14 py-2 self-center md:w-96"
+        class="w-full h-14 py-2 self-center"
       >
         <div
           class="relative w-full rounded-lg h-full border border-gray-500"
@@ -50,7 +50,7 @@ exports[`Containers/PageHeader <PageHeader {...}> Should render default state 1`
         </div>
       </div>
       <div
-        class="w-full py-2 md:w-4/12 flex justify-center md:justify-end items-center"
+        class="w-full py-2 flex justify-center md:justify-end items-center"
       >
         <div
           class="w-24 md:w-14 border text-center"
@@ -104,20 +104,6 @@ exports[`Containers/PageHeader <PageHeader {...}> Should render default state 1`
               </svg>
             </span>
           </a>
-        </div>
-        <div
-          class="w-24 text-center"
-        >
-          <div
-            class=""
-          >
-            <button
-              class="bg-green-600 w-full px-4 py-2 rounded-sm text-white font-bold uppercase active:shadow-md ease-in duration-200 flex justify-center items-center gap-2"
-              type="button"
-            >
-              Login
-            </button>
-          </div>
         </div>
       </div>
     </header>

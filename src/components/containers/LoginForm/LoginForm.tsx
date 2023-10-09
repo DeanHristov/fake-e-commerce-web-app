@@ -1,13 +1,13 @@
 'use client';
 
-import { FC } from 'react';
 import { useFormik } from 'formik';
-import { object, string } from 'yup';
-import Widget from '../Widget';
-import FormField from '../../ui/FormField';
-import Button from '../../ui/Button';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import { FC, useState } from 'react';
+import { object, string } from 'yup';
+import Button from '../../ui/Button';
+import FormField from '../../ui/FormField';
+import Widget from '../Widget';
 
 export interface ILoginFormProps {}
 
@@ -20,6 +20,7 @@ export enum LOGIN_FORM_FIELDS {
 // TODO Make the form more user-friendly with a nice feedback on un-success sign in
 // TODO Fix the issue in console: content.js:1 Uncaught (in promise) Error: Something went wrong. Please check back shortly.
 const LoginForm: FC<ILoginFormProps> = ({}) => {
+  const [spinning, setSpinning] = useState<boolean>(false);
   const router = useRouter();
   const formik = useFormik({
     validateOnChange: false,
@@ -34,6 +35,8 @@ const LoginForm: FC<ILoginFormProps> = ({}) => {
     }),
 
     onSubmit: async (values, { resetForm }) => {
+      setSpinning(true);
+
       const controller = new AbortController();
       const response = await fetch('/api/sign-in/', {
         signal: controller.signal,
@@ -46,6 +49,7 @@ const LoginForm: FC<ILoginFormProps> = ({}) => {
 
       if (!response.ok) {
         resetForm();
+        setSpinning(false);
         return controller.abort();
       }
 
@@ -78,7 +82,12 @@ const LoginForm: FC<ILoginFormProps> = ({}) => {
           onChange={formik.handleChange}
         />
 
-        <Button type="submit" className="py-2 w-96" title={'Login'} />
+        <Button
+          type="submit"
+          spinning={spinning}
+          className="py-2 w-96"
+          title={'Login'}
+        />
       </form>
 
       <Link href="/reset-password" className="text-blue-400 text-sm">

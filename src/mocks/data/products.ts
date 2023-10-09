@@ -2,6 +2,7 @@ import { IProduct, PRODUCT_CATEGORIES } from '../../types';
 
 const products: IProduct[] = [
   {
+    _id: '29a34b48-8343-4e3d-8c21-3548ba249936',
     name: 'Airpods Pro2 Headphones',
     image: '/images/airpods.jpg',
     description:
@@ -11,6 +12,7 @@ const products: IProduct[] = [
     price: 399.99,
     countInStock: 10,
     rating: 4.5,
+    currency: 'USD',
     reviews: 5,
   },
 ];

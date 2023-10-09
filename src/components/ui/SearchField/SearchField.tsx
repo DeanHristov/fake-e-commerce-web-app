@@ -20,7 +20,7 @@ const SearchField: FC<ISearchFieldProps> = ({
 
   useEffect(() => {
     if (lazyValue.length > 0) onChange(lazyValue);
-  }, [lazyValue]);
+  }, [lazyValue, onChange]);
 
   return (
     <InputField

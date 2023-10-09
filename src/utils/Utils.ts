@@ -1,4 +1,5 @@
 import jwt, { Secret } from 'jsonwebtoken';
+import { TCurrency } from '../types';
 
 export class Utils {
   /**
@@ -55,6 +56,26 @@ export class Utils {
 
     return jwt.sign(payload, JWT_SECRET as Secret, {
       expiresIn: JWT_EXPIRE,
+    });
+  }
+
+  /**
+   * Converts a number to a string with a proper currency and amount format.
+   * @param {number} amount An amount
+   * @param {TCurrency} currency
+   * @param {string} locale A locale string
+   * @return string
+   */
+  public static parseAmountbyCurrency(
+    amount: number,
+    currency: TCurrency,
+    locale = 'en-US',
+  ): string {
+    return Math.abs(amount).toLocaleString(locale, {
+      style: 'currency',
+      currency: currency,
+      maximumFractionDigits: 2,
+      minimumFractionDigits: 2,
     });
   }
 }

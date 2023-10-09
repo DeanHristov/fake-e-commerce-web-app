@@ -1,17 +1,16 @@
 'use client';
 
-import { FC } from 'react';
-import Link from 'next/link';
-import Button from '../../ui/Button';
 import {
   MagnifyingGlassIcon,
   ShoppingCartIcon,
   UserIcon,
 } from '@heroicons/react/24/solid';
+import { AppRouterInstance } from 'next/dist/shared/lib/app-router-context.shared-runtime';
+import Link from 'next/link';
+import { usePathname, useRouter } from 'next/navigation';
+import { FC } from 'react';
 import Badge from '../../ui/Badge';
 import SearchField from '../../ui/SearchField';
-import { usePathname, useRouter } from 'next/navigation';
-import { AppRouterInstance } from 'next/dist/shared/lib/app-router-context.shared-runtime';
 
 export interface IPageHeaderProps {}
 
@@ -24,14 +23,14 @@ const PageHeader: FC<IPageHeaderProps> = ({}) => {
     <>
       {currentPath === '/login' && <div />}
       {currentPath !== '/login' && (
-        <div className="shadow-md px-4">
+        <div className="shadow-md px-2">
           <header className="flex flex-col md:flex-row  min-w-[320px] max-w-screen-xl m-auto">
-            <div className="w-full py-2 md:w-4/12 text-center md:text-left">
+            <div className="w-full py-2 text-center md:text-left">
               <Link href={'/'} className="w-full text-black font-bold text-2xl">
                 E-commerce
               </Link>
             </div>
-            <div className="w-full h-14 py-2 self-center md:w-96">
+            <div className="w-full h-14 py-2 self-center">
               <SearchField
                 placeholder={'Search me...'}
                 onChange={(value) => console.log(value)}
@@ -40,7 +39,7 @@ const PageHeader: FC<IPageHeaderProps> = ({}) => {
                 }
               />
             </div>
-            <div className="w-full py-2 md:w-4/12 flex justify-center md:justify-end items-center">
+            <div className="w-full py-2 flex justify-center md:justify-end items-center">
               <div className="w-24 md:w-14 border text-center">
                 <Link href={'/shopping-card'}>
                   <Badge counter={6}>
@@ -55,10 +54,6 @@ const PageHeader: FC<IPageHeaderProps> = ({}) => {
                     <UserIcon className="w-7 h-7 text-gray-500" />
                   </Badge>
                 </Link>
-              </div>
-
-              <div className="w-24 text-center">
-                <Button onClick={() => router.push('/login')} title={'Login'} />
               </div>
             </div>
           </header>

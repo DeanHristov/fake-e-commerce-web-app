@@ -19,7 +19,7 @@ const Widget: FC<IWidgetProps> = ({ children, title, subTitle, header }) => {
   if (!isClient) return null;
 
   return (
-    <section className="bg-white h-auto m-auto rounded-lg p-4 shadow-lg">
+    <section className="bg-white h-auto m-auto border border-gray-300 rounded-lg p-4 shadow-lg">
       {/** Widget Header */}
       {header && header}
       {!header && (

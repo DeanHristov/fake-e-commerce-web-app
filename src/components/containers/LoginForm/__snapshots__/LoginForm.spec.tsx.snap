@@ -3,7 +3,7 @@
 exports[`Container/Component <LoginForm {...} /> Should render the badge with a counter 1`] = `
 <div>
   <section
-    class="bg-white h-auto m-auto rounded-lg p-4 shadow-lg"
+    class="bg-white h-auto m-auto border border-gray-300 rounded-lg p-4 shadow-lg"
   >
     <div
       class="py-0"

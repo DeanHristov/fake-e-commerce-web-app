@@ -66,14 +66,14 @@ $ npm start
 ### Users & Authentication
 
 - Authentication
-  - A JWT and cookie which expires in 1 hour
+    - A JWT and cookie which expires in 1 hour
 - User login
-  - User can login with email and password
-  - Plain text password will compare with stored hashed password
-  - Once logged in, a token will be sent along with a cookie (token).
+    - User can login with email and password
+    - Plain text password will compare with stored hashed password
+    - Once logged in, a token will be sent along with a cookie (token).
 - User logout
-  - Cookie will be destroyed
-  - Token will be invalidated
+    - Cookie will be destroyed
+    - Token will be invalidated
 
 Currently, there are two kinds of users. Each of them has different abilities
 
