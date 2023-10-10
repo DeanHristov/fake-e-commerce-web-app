@@ -10,4 +10,17 @@ export let productsHandler: RestHandler<MockedRequest<IProduct>>[] = [
       return res(ctx.status(200), ctx.json(mockedProducts));
     },
   ),
+
+  // Fetching a single product
+  rest.get(
+    `${process.env.NEXT_PUBLIC_API_URL}/products/:productId`,
+    (req, res, ctx: RestContext) => {
+      const { productId } = req.params;
+      const outputItem: IProduct | undefined = mockedProducts.find(
+        (item: IProduct) => item._id === productId,
+      );
+
+      return res(ctx.status(200), ctx.json(outputItem ?? null));
+    },
+  ),
 ];

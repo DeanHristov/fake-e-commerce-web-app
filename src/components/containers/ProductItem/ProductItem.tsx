@@ -20,7 +20,7 @@ const ProductItem: FC<IProductItemProps> = ({
   const handlerClick = useCallback(() => router.push(`/products/${_id}`), []);
 
   return (
-    <div className="p-2">
+    <div>
       <Widget>
         <Image alt="" src={image} width={640} height={320} />
         <h3

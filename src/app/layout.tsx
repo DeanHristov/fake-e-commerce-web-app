@@ -1,15 +1,15 @@
-import './globals.css';
-import {Inter} from 'next/font/google';
-import {NextFont} from 'next/dist/compiled/@next/font';
-import {FC, ReactNode} from 'react';
-import {Metadata} from 'next';
+import { Metadata } from 'next';
+import { NextFont } from 'next/dist/compiled/@next/font';
+import { Inter } from 'next/font/google';
+import { FC, ReactNode } from 'react';
 import PageFooter from '../components/containers/PageFooter/PageFooter';
 import PageHeader from '../components/containers/PageHeader';
-import {mockServer} from '../mocks/server';
+import mockServer from '../mocks/server';
+import './globals.css';
 
 // Including mocks
 if (Boolean(process.env.API_MOCKING)) {
-  mockServer.listen({ onUnhandledRequest: 'bypass' });
+  mockServer.listen();
 }
 
 const inter: NextFont = Inter({ subsets: ['latin'] });
@@ -37,7 +37,9 @@ const RootLayout: FC<IRootLayoutProps> = async ({ children }) => {
         className={`bg-gray-100 ${inter.className} `}
       >
         <PageHeader />
-        <main className="min-w-[320px] max-w-screen-xl m-auto">{children}</main>
+        <main className="min-w-[320px] max-w-screen-xl m-auto pt-4">
+          {children}
+        </main>
         <PageFooter>
           <h3 className="p-2 text-center text-slate-900">
             &#169; 2023 | Fake App

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`UI/Component <Comment {...} />  1`] = `
+exports[`UI/Component <Comment {...} /> Should render a default state of the component 1`] = `
 <div>
   <div
     class="relative grid grid-cols-1 gap-4 p-4 mb-8 border rounded-lg bg-white"

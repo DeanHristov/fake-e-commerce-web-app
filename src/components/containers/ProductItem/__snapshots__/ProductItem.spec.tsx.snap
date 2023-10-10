@@ -2,11 +2,9 @@
 
 exports[`UI/ProductItem <ProductItem {...} /> Should render the badge with a counter 1`] = `
 <div>
-  <div
-    class="p-2"
-  >
-    <section
-      class="bg-white h-auto m-auto border border-gray-300 rounded-lg p-4 shadow-lg"
+  <div>
+    <div
+      class="bg-white border border-gray-300 rounded-lg p-4 shadow-lg"
     >
       <div
         class="py-0"
@@ -36,7 +34,7 @@ exports[`UI/ProductItem <ProductItem {...} /> Should render the badge with a cou
           $399.99
         </span>
       </div>
-    </section>
+    </div>
   </div>
 </div>
 `;

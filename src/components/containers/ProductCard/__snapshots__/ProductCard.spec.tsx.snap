@@ -1,0 +1,158 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Containers/ProductCard <ProductCard {...} /> Should render a default state of the component 1`] = `
+<div>
+  <div>
+    <div
+      class="bg-white border border-gray-300 rounded-lg p-4 shadow-lg"
+    >
+      <div
+        class="py-0"
+      />
+      <div
+        class="pt-2"
+      >
+        <div
+          class="md:pb-2 flex justify-start items-center"
+        >
+          <span
+            class="md:p-2 w-[50%]  text-gray-500 text-2xl block"
+          >
+            Price:
+          </span>
+          <span
+            class="md:p-2 w-[50%]  text-gray-500 text-xl font-bold block"
+          >
+            $399.99
+          </span>
+        </div>
+        <div
+          class="md:pb-2 flex justify-start items-center  border-t border-gray-300"
+        >
+          <span
+            class="md:p-2 w-[50%] text-gray-500 text-2xl block"
+          >
+            Status:
+          </span>
+          <span
+            class="md:p-2 w-[50%] block text-green-400"
+          >
+            In stock
+          </span>
+        </div>
+        <div
+          class="md:mb-8 flex justify-start items-center border-b border-t border-gray-300"
+        >
+          <span
+            class="md:p-2 w-[50%] text-gray-500 text-2xl block"
+          >
+            Quantity:
+          </span>
+          <div
+            class="w-[50%] md:h-10"
+          >
+            <div
+              class="relative w-full rounded-lg h-full border border-gray-500"
+            >
+              <input
+                class="h-full px-6 w-full rounded-lg bg-white text-slate-700 ease-in duration-200 focus:bg-white"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class=""
+        >
+          <button
+            class="cursor-pointer bg-green-600 w-full px-4 py-2 rounded-sm text-white font-bold uppercase active:shadow-md ease-in duration-200 flex justify-center items-center gap-2"
+            type="button"
+          >
+            Add to card
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Containers/ProductCard <ProductCard {...} /> Should render the component when countInStock=0 1`] = `
+<div>
+  <div>
+    <div
+      class="bg-white border border-gray-300 rounded-lg p-4 shadow-lg"
+    >
+      <div
+        class="py-0"
+      />
+      <div
+        class="pt-2"
+      >
+        <div
+          class="md:pb-2 flex justify-start items-center"
+        >
+          <span
+            class="md:p-2 w-[50%]  text-gray-500 text-2xl block"
+          >
+            Price:
+          </span>
+          <span
+            class="md:p-2 w-[50%]  text-gray-500 text-xl font-bold block"
+          >
+            $399.99
+          </span>
+        </div>
+        <div
+          class="md:pb-2 flex justify-start items-center  border-t border-gray-300"
+        >
+          <span
+            class="md:p-2 w-[50%] text-gray-500 text-2xl block"
+          >
+            Status:
+          </span>
+          <span
+            class="md:p-2 w-[50%] block text-red-400"
+          >
+            Out of stock
+          </span>
+        </div>
+        <div
+          class="md:mb-8 flex justify-start items-center border-b border-t border-gray-300"
+        >
+          <span
+            class="md:p-2 w-[50%] text-gray-500 text-2xl block"
+          >
+            Quantity:
+          </span>
+          <div
+            class="w-[50%] md:h-10"
+          >
+            <div
+              class="relative w-full rounded-lg h-full border border-gray-500"
+            >
+              <input
+                class="h-full px-6 w-full rounded-lg bg-white text-slate-700 ease-in duration-200 focus:bg-white"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class=""
+        >
+          <button
+            class="cursor-not-allowed bg-green-600 w-full px-4 py-2 rounded-sm text-white font-bold uppercase active:shadow-md ease-in duration-200 flex justify-center items-center gap-2"
+            disabled=""
+            type="button"
+          >
+            Add to card
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

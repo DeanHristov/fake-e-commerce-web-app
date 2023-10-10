@@ -10,6 +10,7 @@ export interface IButtonProps {
   title: string;
   type?: TButtonType;
   className?: string;
+  disabled?: boolean;
   spinning?: boolean;
   variant?: TButtonPresentations;
   onClick?: () => void;
@@ -20,6 +21,7 @@ export interface IButtonProps {
 const Button: FC<IButtonProps> = ({
   variant = 'primary',
   title,
+  disabled = false,
   type = 'button',
   leftIcon,
   rightIcon,
@@ -38,8 +40,11 @@ const Button: FC<IButtonProps> = ({
   return (
     <div className={className ?? ''}>
       <button
+        disabled={disabled}
         type={type}
-        className={`${buttonStyles[variant]} active:shadow-md ease-in duration-200 flex justify-center items-center gap-2`}
+        className={`${disabled ? 'cursor-not-allowed' : 'cursor-pointer'} ${
+          buttonStyles[variant]
+        } active:shadow-md ease-in duration-200 flex justify-center items-center gap-2`}
         onClick={onClick}
         {...rest}
       >

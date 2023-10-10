@@ -12,7 +12,7 @@ const mockComment: IComment = {
 };
 
 describe('UI/Component <Comment {...} />', () => {
-  it('', () => {
+  it('Should render a default state of the component', () => {
     const { container } = render(<Comment {...mockComment} />);
 
     expect(container).toMatchSnapshot();
