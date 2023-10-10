@@ -4,6 +4,15 @@ export enum PRODUCT_CATEGORIES {
 
 export type TCurrency = 'USD' | 'BGN' | 'EUR';
 
+export interface IComment {
+  productId: string;
+  _id: string;
+  name: string;
+  email: string;
+  body: string;
+  date: string;
+}
+
 export interface IProduct {
   _id: string;
   name: string;
@@ -16,6 +25,7 @@ export interface IProduct {
   rating: number;
   reviews: number;
   currency: TCurrency;
+  comments?: IComment[];
 }
 
 export interface IUser {
