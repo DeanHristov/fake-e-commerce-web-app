@@ -1,7 +1,7 @@
-import { render } from '@testing-library/react';
-import Button from './Button';
-import userEvent from '@testing-library/user-event';
 import { ShoppingCartIcon } from '@heroicons/react/24/solid';
+import { render } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import Button from './Button';
 
 describe('UI/Component <Button {...} />', () => {
   it('Should render a primary state of the button', () => {
