@@ -66,7 +66,7 @@ export class Utils {
    * @param {string} locale A locale string
    * @return string
    */
-  public static parseAmountbyCurrency(
+  public static parseAmountByCurrency(
     amount: number,
     currency: TCurrency,
     locale = 'en-US',
@@ -77,5 +77,20 @@ export class Utils {
       maximumFractionDigits: 2,
       minimumFractionDigits: 2,
     });
+  }
+
+  public static calculateOldPrice(
+    price: number,
+    discountPercentage: number,
+    currency?: TCurrency,
+  ): number | string {
+    const reminder: number = (discountPercentage * price) / 100;
+    const oldPrice: number = price + reminder;
+
+    if (Utils.isNotNull(currency)) {
+      return Utils.parseAmountByCurrency(oldPrice, currency!);
+    }
+
+    return oldPrice;
   }
 }

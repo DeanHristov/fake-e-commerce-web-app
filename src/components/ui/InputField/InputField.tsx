@@ -19,12 +19,7 @@ export interface IInputFieldProps {
 
 const SearchField: FC<IInputFieldProps> = ({
   type = 'text',
-  id,
-  value,
-  name,
   className,
-  placeholder,
-  onChange,
   leftIcon,
   rightIcon,
   ...rest
@@ -39,12 +34,7 @@ const SearchField: FC<IInputFieldProps> = ({
         <div className="absolute top-1 left-2 right-auto">{leftIcon}</div>
       )}
       <input
-        id={id}
         type={type}
-        value={value}
-        name={name}
-        placeholder={placeholder}
-        onChange={onChange}
         className={`h-full ${
           leftIcon ? 'pl-10 pr-6' : 'px-6'
         } w-full rounded-lg bg-white text-slate-700 ease-in duration-200 focus:bg-white`}

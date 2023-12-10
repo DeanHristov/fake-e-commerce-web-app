@@ -8,7 +8,7 @@ import InputField from '../../ui/InputField';
 import Widget from '../Widget';
 
 export interface IProductCardProps {
-  id: string;
+  id: number;
   currency: TCurrency;
   countInStock: number;
   price: number;
@@ -35,7 +35,7 @@ const ProductCard: FC<IProductCardProps> = ({
             Price:
           </span>
           <span className="md:p-2 w-[50%]  text-gray-500 text-xl font-bold block">
-            {Utils.parseAmountbyCurrency(price, currency)}
+            {Utils.parseAmountByCurrency(price, currency)}
           </span>
         </div>
         <div className="md:pb-2 flex justify-start items-center  border-t border-gray-300">

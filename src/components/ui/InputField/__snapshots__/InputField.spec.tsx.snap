@@ -9,7 +9,6 @@ exports[`UI/Component <InputField {...} /> Should render a default state of the 
       class="h-full px-6 w-full rounded-lg bg-white text-slate-700 ease-in duration-200 focus:bg-white"
       placeholder="Text me..."
       type="text"
-      value=""
     />
   </div>
 </div>

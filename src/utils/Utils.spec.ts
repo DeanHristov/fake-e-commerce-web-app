@@ -33,9 +33,9 @@ describe('Class / Utils', () => {
   });
 
   it('Should parse an amount correctly', () => {
-    const usdAmount: string = Utils.parseAmountbyCurrency(122, 'USD');
-    const bgnAmount: string = Utils.parseAmountbyCurrency(122, 'BGN');
-    const eurAmount: string = Utils.parseAmountbyCurrency(122, 'EUR');
+    const usdAmount: string = Utils.parseAmountByCurrency(122, 'USD');
+    const bgnAmount: string = Utils.parseAmountByCurrency(122, 'BGN');
+    const eurAmount: string = Utils.parseAmountByCurrency(122, 'EUR');
 
     expect(usdAmount).toEqual('$122.00');
     expect(bgnAmount).toEqual('BGN 122.00');

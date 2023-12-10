@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Container/GridView <GridView {...} /> Should render default state 1`] = `
+<div>
+  <div
+    class="min-h-[88vh] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"
+  >
+    <div>
+      <div
+        class="bg-white border border-gray-300 rounded-lg p-4 shadow-lg"
+      >
+        <div
+          class="py-0"
+        />
+        <div
+          class="pt-2"
+        >
+          <img
+            alt=""
+            data-nimg="1"
+            decoding="async"
+            fetchpriority="high"
+            height="320"
+            src="/_next/image?url=https%3A%2F%2Fi.dummyjson.com%2Fdata%2Fproducts%2F1%2Fthumbnail.jpg&w=1920&q=75"
+            srcset="/_next/image?url=https%3A%2F%2Fi.dummyjson.com%2Fdata%2Fproducts%2F1%2Fthumbnail.jpg&w=640&q=75 1x, /_next/image?url=https%3A%2F%2Fi.dummyjson.com%2Fdata%2Fproducts%2F1%2Fthumbnail.jpg&w=1920&q=75 2x"
+            style="color: transparent;"
+            width="640"
+          />
+          <h3
+            class="text-xl text-slate-700 border underline hover:cursor-pointer mt-1"
+          >
+            iPhone 9
+          </h3>
+          <span
+            class="text-gray-400 font-bold text-lg"
+          >
+            €549.00
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

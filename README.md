@@ -8,8 +8,8 @@ crutches" for the mind.**
 
 ## Requirements
 
-- [Node](https://nodejs.org/en/) `^16.15.0`
-- [NPM](https://www.npmjs.com/) `^8.5.5`
+- [Node](https://nodejs.org/en/) `^18.17.0`
+- [NPM](https://www.npmjs.com/) `^9.6.7`
 
 ## Installation
 
@@ -30,11 +30,13 @@ $ npm install # or yarn install
 
 ## Configuration
 
-Create a **.env.local** file in a root folder and copy-paste variables below
+Create a **.env** file in a root folder and copy-paste variables below
 
 ```dotenv
 API_MOCKING=true
-API_URL=https://my-backend-endpoint.com/api
+
+API_URL=https://dummyjson.com
+BASE_URL=http://localhost:3000/api
 
 JWT_SECRET=super-secret-word
 JWT_EXPIRE=1h
@@ -95,8 +97,7 @@ on [NPM scripts](https://docs.npmjs.com/misc/scripts).
 | `npm run lint`          | Linting the code                              |
 | `npm run test`          | Running the unit tests ( using jest/RTL)      |
 | `npm run test:watch`    | Running the unit tests in "watch" mode        |
-| `npm run test:coverage` | Running the coverage of the unit tests        |
-| `npm run storybook`     | Running the storybook at port 6006            |
+| `npm run test:coverage` | Running the coverage of the unit tests        | 
 
 ## Used technologies
 

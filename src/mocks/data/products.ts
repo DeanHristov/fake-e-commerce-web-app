@@ -1,28 +1,24 @@
-import { IProduct, PRODUCT_CATEGORIES } from '../../types';
+import { IProduct } from '@/types'; // Inspiration was taken from here: https://dummyjson.com/
 
+// Inspiration was taken from here: https://dummyjson.com/
 const products: IProduct[] = [
   {
-    _id: '29a34b48-8343-4e3d-8c21-3548ba249936',
-    name: 'Airpods Pro2 Headphones',
-    image: '/images/airpods.jpg',
-    description:
-      "Apple's new H2 chip is the driving force behind AirPods Pro and their improved sound characteristics. It works in unison with a personalized driver and amplifier for crystal clear heights and deep, rich bass with incredible clarity, so every sound is more pronounced than ever",
+    id: 1,
+    title: 'iPhone 9',
+    description: 'An apple mobile which is nothing like apple',
+    price: 549,
+    discountPercentage: 12.96,
+    rating: 4.69,
+    stock: 94,
     brand: 'Apple',
-    category: PRODUCT_CATEGORIES.ELECTRONIC,
-    price: 399.99,
-    countInStock: 10,
-    rating: 4.5,
-    currency: 'USD',
-    reviews: 5,
-    comments: [
-      {
-        productId: '29a34b48-8343-4e3d-8c21-3548ba249936',
-        _id: '29a34b48-8343-4e3d-8c21',
-        name: 'John Doue',
-        date: '20 April 2022, at 14:88 PM',
-        email: 'john-doue@example.com',
-        body: 'It is a great product!',
-      },
+    category: 'smartphones',
+    thumbnail: 'https://i.dummyjson.com/data/products/1/thumbnail.jpg',
+    images: [
+      'https://i.dummyjson.com/data/products/1/1.jpg',
+      'https://i.dummyjson.com/data/products/1/2.jpg',
+      'https://i.dummyjson.com/data/products/1/3.jpg',
+      'https://i.dummyjson.com/data/products/1/4.jpg',
+      'https://i.dummyjson.com/data/products/1/thumbnail.jpg',
     ],
   },
 ];

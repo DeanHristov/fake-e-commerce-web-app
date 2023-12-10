@@ -13,19 +13,19 @@ export interface IComment {
   date: string;
 }
 
+// Object schema can be seen here: https://dummyjson.com/docs/products
 export interface IProduct {
-  _id: string;
-  name: string;
-  image: string;
+  id: number;
+  title: string;
   description: string;
-  brand: string;
-  category: PRODUCT_CATEGORIES;
   price: number;
-  countInStock: number;
+  discountPercentage: number;
   rating: number;
-  reviews: number;
-  currency: TCurrency;
-  comments?: IComment[];
+  stock: number;
+  brand: string;
+  category: string;
+  thumbnail: string;
+  images: string[];
 }
 
 export interface IUser {

@@ -1,16 +1,16 @@
 import { render } from '@testing-library/react';
 
 import products from '../../../mocks/data/products';
-import ProductItem, { IProductItemProps } from './ProductItem';
+import ProductItem from './ProductItem';
+import { IProduct } from '@/types';
 
-const mockProduct: IProductItemProps = products.find(
-  (item: IProductItemProps) =>
-    item._id === '29a34b48-8343-4e3d-8c21-3548ba249936',
-)!;
+const mockProduct: IProduct = products.find((item) => item.id === 1)!;
 
 describe('UI/ProductItem <ProductItem {...} />', () => {
   it('Should render the badge with a counter', () => {
-    const { container } = render(<ProductItem {...mockProduct} />);
+    const { container } = render(
+      <ProductItem positionIdx={0} {...mockProduct} />,
+    );
 
     expect(container).toMatchSnapshot();
   });

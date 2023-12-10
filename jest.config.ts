@@ -1,6 +1,8 @@
 import type { Config } from 'jest';
 import nextJest from 'next/jest';
 
+import nodeFetch, { Request, Response } from 'node-fetch';
+
 const createJestConfig = nextJest({
   // Provide the path to your Next.js app to load next.config.js and .env files in your test environment
   dir: './',
@@ -17,11 +19,16 @@ const config: Config = {
     '!<rootDir>/*.config.{ts,js}',
     '!<rootDir>/tests/e2e/**/*.{ts,tsx}',
     '!<rootDir>/src/mocks/**/*.{ts,tsx}',
-    '!<rootDir>/.storybook/**/*.{ts,tsx,js}',
     '!**/types.ts',
     '!**/infra/**',
     '!**/node_modules/**',
     '!**/.next/**',
+    '!**/app/**/page.tsx',
+    '!**/app/**/not-found.tsx',
+    '!**/app/components/**/index.ts',
+    '!**/app/**/route.ts',
+    '!**/src/app/layout.tsx',
+    '!**/src/store/**',
   ],
   testPathIgnorePatterns: [
     '/.next/',
@@ -43,7 +50,10 @@ const config: Config = {
     },
   },
   globals: {
-    fetch: global.fetch,
+    //@see: https://github.com/node-fetch/node-fetch/discussions/1503
+    fetch: nodeFetch,
+    Request: Request,
+    Response: Response,
   },
 };
 

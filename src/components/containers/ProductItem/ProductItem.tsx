@@ -3,34 +3,44 @@
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { FC, useCallback } from 'react';
-import { IProduct } from '../../../types';
-import { Utils } from '../../../utils/Utils';
-import Widget from '../Widget';
+import { IProduct, TCurrency } from '@/types';
+import { Utils } from '@/utils/Utils';
+import Widget from '@/components/containers/Widget';
 
-export interface IProductItemProps extends IProduct {}
+export interface IProductItemProps extends IProduct {
+  currency?: TCurrency;
+  positionIdx: number;
+}
 
 const ProductItem: FC<IProductItemProps> = ({
-  name,
-  image,
+  title,
+  thumbnail,
   price,
-  _id,
-  currency,
+  id,
+  positionIdx,
+  currency = 'EUR',
 }) => {
   const router = useRouter();
-  const handlerClick = useCallback(() => router.push(`/products/${_id}`), []);
+  const handlerClick = useCallback(() => router.push(`/products/${id}`), []);
 
   return (
     <div>
       <Widget>
-        <Image alt="" src={image} width={640} height={320} />
+        <Image
+          priority={positionIdx < 10}
+          alt=""
+          src={thumbnail}
+          width={640}
+          height={320}
+        />
         <h3
           onClick={handlerClick}
           className="text-xl text-slate-700 border underline hover:cursor-pointer mt-1"
         >
-          {name}
+          {title}
         </h3>
         <span className="text-gray-400 font-bold text-lg">
-          {Utils.parseAmountbyCurrency(price, currency)}
+          {Utils.parseAmountByCurrency(price, currency)}
         </span>
       </Widget>
     </div>

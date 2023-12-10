@@ -24,8 +24,8 @@ exports[`Containers/ProductDetails <ProductDetails {...} /> Should render a defa
             decoding="async"
             height="320"
             loading="lazy"
-            src="/_next/image?url=%2Fimages%2Fairpods.jpg&w=1080&q=75"
-            srcset="/_next/image?url=%2Fimages%2Fairpods.jpg&w=640&q=75 1x, /_next/image?url=%2Fimages%2Fairpods.jpg&w=1080&q=75 2x"
+            src="/_next/image?url=https%3A%2F%2Fi.dummyjson.com%2Fdata%2Fproducts%2F1%2Fthumbnail.jpg&w=1080&q=75"
+            srcset="/_next/image?url=https%3A%2F%2Fi.dummyjson.com%2Fdata%2Fproducts%2F1%2Fthumbnail.jpg&w=640&q=75 1x, /_next/image?url=https%3A%2F%2Fi.dummyjson.com%2Fdata%2Fproducts%2F1%2Fthumbnail.jpg&w=1080&q=75 2x"
             style="color: transparent;"
             width="440"
           />
@@ -35,76 +35,25 @@ exports[`Containers/ProductDetails <ProductDetails {...} /> Should render a defa
             <h3
               class="p-2  text-gray-500 border-b border-t border-gray-300"
             >
-              Airpods Pro2 Headphones
+              iPhone 9
             </h3>
             <span
               class="block  text-gray-500 p-2 border-b border-gray-300"
             >
-              $399.99
+              €549.00
             </span>
             <span
               class="block p-2 border-b border-gray-300"
             >
-              4.5
+              4.69
             </span>
           </div>
         </div>
         <p
           class="py-2 mb-10 text-gray-500"
         >
-          Apple's new H2 chip is the driving force behind AirPods Pro and their improved sound characteristics. It works in unison with a personalized driver and amplifier for crystal clear heights and deep, rich bass with incredible clarity, so every sound is more pronounced than ever
+          An apple mobile which is nothing like apple
         </p>
-        <div
-          class="relative grid grid-cols-1 gap-4 p-4 mb-8 border rounded-lg bg-white"
-        >
-          <div
-            class="relative flex gap-4"
-          >
-            <img
-              alt=""
-              class="relative rounded-lg -top-8 -mb-4 bg-white border"
-              data-nimg="1"
-              decoding="async"
-              height="20"
-              loading="lazy"
-              src="/_next/image?url=%2Fimages%2Favatar.jpeg&w=128&q=75"
-              srcset="/_next/image?url=%2Fimages%2Favatar.jpeg&w=64&q=75 1x, /_next/image?url=%2Fimages%2Favatar.jpeg&w=128&q=75 2x"
-              style="color: transparent;"
-              width="64"
-            />
-            <div
-              class="flex flex-col w-full"
-            >
-              <div
-                class="flex flex-row justify-between"
-              >
-                <p
-                  class="relative text-xl whitespace-nowrap truncate overflow-hidden"
-                >
-                  John Doue
-                </p>
-                <a
-                  class="text-gray-500 text-xl"
-                  href="#"
-                >
-                  <i
-                    class="fa-solid fa-trash"
-                  />
-                </a>
-              </div>
-              <p
-                class="text-gray-400 text-sm"
-              >
-                20 April 2022, at 14:88 PM
-              </p>
-            </div>
-          </div>
-          <p
-            class="-mt-4 text-gray-500"
-          >
-            It is a great product!
-          </p>
-        </div>
       </div>
     </div>
   </div>

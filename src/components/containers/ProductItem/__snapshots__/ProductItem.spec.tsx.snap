@@ -16,22 +16,22 @@ exports[`UI/ProductItem <ProductItem {...} /> Should render the badge with a cou
           alt=""
           data-nimg="1"
           decoding="async"
+          fetchpriority="high"
           height="320"
-          loading="lazy"
-          src="/_next/image?url=%2Fimages%2Fairpods.jpg&w=1920&q=75"
-          srcset="/_next/image?url=%2Fimages%2Fairpods.jpg&w=640&q=75 1x, /_next/image?url=%2Fimages%2Fairpods.jpg&w=1920&q=75 2x"
+          src="/_next/image?url=https%3A%2F%2Fi.dummyjson.com%2Fdata%2Fproducts%2F1%2Fthumbnail.jpg&w=1920&q=75"
+          srcset="/_next/image?url=https%3A%2F%2Fi.dummyjson.com%2Fdata%2Fproducts%2F1%2Fthumbnail.jpg&w=640&q=75 1x, /_next/image?url=https%3A%2F%2Fi.dummyjson.com%2Fdata%2Fproducts%2F1%2Fthumbnail.jpg&w=1920&q=75 2x"
           style="color: transparent;"
           width="640"
         />
         <h3
           class="text-xl text-slate-700 border underline hover:cursor-pointer mt-1"
         >
-          Airpods Pro2 Headphones
+          iPhone 9
         </h3>
         <span
           class="text-gray-400 font-bold text-lg"
         >
-          $399.99
+          €549.00
         </span>
       </div>
     </div>

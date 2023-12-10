@@ -23,7 +23,7 @@ exports[`Containers/ProductCard <ProductCard {...} /> Should render a default st
           <span
             class="md:p-2 w-[50%]  text-gray-500 text-xl font-bold block"
           >
-            $399.99
+            €549.00
           </span>
         </div>
         <div
@@ -57,7 +57,6 @@ exports[`Containers/ProductCard <ProductCard {...} /> Should render a default st
               <input
                 class="h-full px-6 w-full rounded-lg bg-white text-slate-700 ease-in duration-200 focus:bg-white"
                 type="text"
-                value=""
               />
             </div>
           </div>
@@ -101,7 +100,7 @@ exports[`Containers/ProductCard <ProductCard {...} /> Should render the componen
           <span
             class="md:p-2 w-[50%]  text-gray-500 text-xl font-bold block"
           >
-            $399.99
+            €549.00
           </span>
         </div>
         <div
@@ -113,9 +112,9 @@ exports[`Containers/ProductCard <ProductCard {...} /> Should render the componen
             Status:
           </span>
           <span
-            class="md:p-2 w-[50%] block text-red-400"
+            class="md:p-2 w-[50%] block text-green-400"
           >
-            Out of stock
+            In stock
           </span>
         </div>
         <div
@@ -135,7 +134,6 @@ exports[`Containers/ProductCard <ProductCard {...} /> Should render the componen
               <input
                 class="h-full px-6 w-full rounded-lg bg-white text-slate-700 ease-in duration-200 focus:bg-white"
                 type="text"
-                value=""
               />
             </div>
           </div>
@@ -144,8 +142,7 @@ exports[`Containers/ProductCard <ProductCard {...} /> Should render the componen
           class=""
         >
           <button
-            class="cursor-not-allowed bg-green-600 w-full px-4 py-2 rounded-sm text-white font-bold uppercase active:shadow-md ease-in duration-200 flex justify-center items-center gap-2"
-            disabled=""
+            class="cursor-pointer bg-green-600 w-full px-4 py-2 rounded-sm text-white font-bold uppercase active:shadow-md ease-in duration-200 flex justify-center items-center gap-2"
             type="button"
           >
             Add to card

@@ -32,7 +32,7 @@ const PageHeader: FC<IPageHeaderProps> = ({}) => {
             </div>
             <div className="w-full h-14 py-2 self-center">
               <SearchField
-                placeholder={'Search me...'}
+                placeholder="Search me..."
                 onChange={(value) => console.log(value)}
                 rightIcon={
                   <MagnifyingGlassIcon className="w-7 h-7 text-zinc-100" />
