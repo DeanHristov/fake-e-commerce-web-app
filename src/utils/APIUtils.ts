@@ -16,23 +16,6 @@ export class APIUtils {
 
   /**
    * @description
-   * @param none
-   * @return
-   */
-  public static interceptAPICalls() {
-    // @see: https://github.com/mswjs/msw/issues/1340
-    // Including mocks
-    const isMocking: boolean =
-      process.env.NODE_ENV !== 'test' &&
-      process.env.NODE_ENV === 'development' &&
-      Boolean(process.env.API_MOCKING) &&
-      process.env.API_MOCKING === 'true';
-
-    if (isMocking) require('@/mocks');
-  }
-
-  /**
-   * @description
    * @param
    * @return
    */

@@ -20,7 +20,6 @@ const config: Config = {
     '!<rootDir>/tests/e2e/**/*.{ts,tsx}',
     '!<rootDir>/src/mocks/**/*.{ts,tsx}',
     '!**/types.ts',
-    '!**/infra/**',
     '!**/node_modules/**',
     '!**/.next/**',
     '!**/app/**/page.tsx',
@@ -33,7 +32,6 @@ const config: Config = {
   testPathIgnorePatterns: [
     '/.next/',
     '/node_modules/',
-    '/infra/',
     '<rootDir>/src/mocks/*.{ts,tsx}',
     '<rootDir>/tests/*.{ts,tsx}',
   ],

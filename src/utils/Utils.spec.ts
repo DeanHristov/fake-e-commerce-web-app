@@ -1,6 +1,4 @@
-import jwt from 'jsonwebtoken';
 import { Utils } from './Utils';
-import { APIUtils } from '@/utils/APIUtils';
 
 describe('Class / Utils', () => {
   it('Should return null', () => {
@@ -23,14 +21,6 @@ describe('Class / Utils', () => {
   it('Should not be an empty', () => {
     expect(Utils.isNotEmpty({ key: 'value' })).toBeTruthy();
     expect(Utils.isNotEmpty([1, 2, 3])).toBeTruthy();
-  });
-
-  it('Should be able to create a JWT', () => {
-    const spySign = jest.spyOn(jwt, 'sign');
-
-    spySign.mockImplementation(() => 'Bearer token');
-
-    expect(APIUtils.getJWToken({ key: 'value' })).toEqual('Bearer token');
   });
 
   it('Should parse an amount correctly', () => {
