@@ -85,12 +85,15 @@ const LoginForm: FC<ILoginFormProps> = ({}) => {
         <Button
           type="submit"
           spinning={spinning}
-          className="py-2 w-96"
+          className="py-2 w-96 rounded-xl"
           title={'Login'}
         />
       </form>
 
-      <Link href="/reset-password" className="text-blue-400 text-sm">
+      <Link
+        href="/reset-password"
+        className="text-blue-400 text-sm mt-4 text-center hover:underline"
+      >
         Reset password
       </Link>
     </Widget>

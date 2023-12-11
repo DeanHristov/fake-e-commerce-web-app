@@ -3,47 +3,91 @@
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { FC, useCallback } from 'react';
-import { IProduct, TCurrency } from '@/types';
-import { Utils } from '@/utils/Utils';
 import Widget from '@/components/containers/Widget';
+import { TCurrency } from '@/types';
+import PriceLabel from '@/components/ui/PriceLabel';
+import StarRating from '@/components/ui/StarRating';
+import StockLabel from '@/components/ui/StockLabel';
+import Button from '@/components/ui/Button';
 
-export interface IProductItemProps extends IProduct {
-  currency?: TCurrency;
+import { HeartIcon, ShoppingCartIcon } from '@heroicons/react/24/solid';
+import DiscountLabel from '@/components/ui/DiscountLabel';
+import { Utils } from '@/utils/Utils';
+
+export interface IProductItemProps {
+  id: number;
   positionIdx: number;
+  title: string;
+  price: number;
+  rating: number;
+  category: string;
+  thumbnail: string;
+  stock: number;
+  discountPercentage?: number;
+  currency?: TCurrency;
 }
 
 const ProductItem: FC<IProductItemProps> = ({
-  title,
-  thumbnail,
-  price,
   id,
   positionIdx,
+  title,
+  price,
+  thumbnail,
+  rating,
+  discountPercentage,
+  stock,
   currency = 'EUR',
 }) => {
   const router = useRouter();
   const handlerClick = useCallback(() => router.push(`/products/${id}`), []);
 
   return (
-    <div>
-      <Widget>
-        <Image
-          priority={positionIdx < 10}
-          alt=""
-          src={thumbnail}
-          width={640}
-          height={320}
-        />
+    <Widget>
+      <div className="group mx-auto h-auto max-w-[288px]">
+        {Utils.isNotNull(discountPercentage) && (
+          <DiscountLabel discount={discountPercentage!} />
+        )}
+        <div className="w-full rounded-lg border border-gray-300 h-40 flex justify-center overflow-hidden relative">
+          <Image
+            priority={positionIdx < 10}
+            src={thumbnail}
+            width={0}
+            height={0}
+            sizes="100vw"
+            alt={title}
+            className={`w-full h-auto rounded-lg transition ${
+              stock <= 0 && 'group-hover:opacity-80'
+            }`}
+          />
+        </div>
         <h3
           onClick={handlerClick}
-          className="text-xl text-slate-700 border underline hover:cursor-pointer mt-1"
+          className="text-black text-lg mt-2 truncate hover:underline hover:cursor-pointer"
         >
           {title}
         </h3>
-        <span className="text-gray-400 font-bold text-lg">
-          {Utils.parseAmountByCurrency(price, currency)}
-        </span>
-      </Widget>
-    </div>
+        <PriceLabel discountPercentage={discountPercentage} price={price} />
+        <StarRating
+          activeColor="#FFA133"
+          inActiveColor="#E3E3E3"
+          starCount={5}
+          rating={rating}
+        />
+        <StockLabel stock={stock} />
+        <div className="flex flex-col gap-y-2 pt-2 md:flex-row md:gap-x-2 md:gap-y-0">
+          <Button
+            variant="secondary"
+            title={'Card'}
+            leftIcon={<ShoppingCartIcon className={'w-4 h-4 text-dark'} />}
+          />
+          <Button
+            variant="secondary"
+            title={'Washlist'}
+            leftIcon={<HeartIcon className={'w-4 h-4 text-dark'} />}
+          />
+        </div>
+      </div>
+    </Widget>
   );
 };
 

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 const ShoppingCardPage: FC<IShoppingCardProps> = ({}) => {
-  return <div className="h-[88vh]">ShoppingCard page</div>;
+  return <div>ShoppingCard page</div>;
 };
 
 export default ShoppingCardPage;

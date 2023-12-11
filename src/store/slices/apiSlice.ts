@@ -15,7 +15,7 @@ export const apiSlice = createApi({
     baseUrl: process.env.API_URL,
   }),
   endpoints: (builder) => ({
-    getProducts: builder.query<IProduct[], void>({
+    getProducts: builder.query<IAPIResponse, null>({
       query: () => '/products',
       transformResponse: ({ products }) => products,
     }),

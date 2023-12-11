@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UI/Component <PriceLabel {...} /> Should render the both prices 1`] = `
+<div>
+  <div
+    class="mt-3 space-x-2"
+  >
+    <span
+      class="text-md font-normal text-zinc-400 line-through leading-4"
+    >
+      $38.61
+    </span>
+    <span
+      class="text-md font-normal text-zinc-400"
+    >
+      /
+    </span>
+    <span
+      class="text-lg font-medium text-black"
+    >
+      $34.20
+    </span>
+  </div>
+</div>
+`;
+
+exports[`UI/Component <PriceLabel {...} /> Should render the default state 1`] = `
+<div>
+  <div
+    class="mt-3 false"
+  >
+    <span
+      class="text-lg font-medium text-black"
+    >
+      €34.20
+    </span>
+  </div>
+</div>
+`;

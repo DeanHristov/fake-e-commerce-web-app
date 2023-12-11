@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UI/Component <StarRating {...} /> Should render the default state 1`] = `
+<div>
+  <div
+    class="flex space-x-2 items-center mt-4"
+    data-testid="star-rating"
+  >
+    <div
+      class="flex space-x-1 justify-start items-baseline"
+    >
+      <span
+        class="star-icon transition"
+        data-testid="star-item"
+        style="color: rgb(27, 27, 27);"
+      >
+        ☆
+      </span>
+      <span
+        class="star-icon transition"
+        data-testid="star-item"
+        style="color: rgb(27, 27, 27);"
+      >
+        ☆
+      </span>
+      <span
+        class="star-icon transition"
+        data-testid="star-item"
+        style="color: rgb(27, 27, 27);"
+      >
+        ☆
+      </span>
+      <span
+        class="star-icon transition"
+        data-testid="star-item"
+        style="color: rgb(209, 209, 209);"
+      >
+        ☆
+      </span>
+      <span
+        class="star-icon transition"
+        data-testid="star-item"
+        style="color: rgb(209, 209, 209);"
+      >
+        ☆
+      </span>
+    </div>
+    <span
+      class="text-xs font-medium text-zambezi leading-4"
+      data-testid="rating"
+    >
+      2.5 Reviews
+    </span>
+  </div>
+</div>
+`;

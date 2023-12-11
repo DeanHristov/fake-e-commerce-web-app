@@ -21,41 +21,36 @@ export interface IButtonProps {
 const Button: FC<IButtonProps> = ({
   variant = 'primary',
   title,
-  disabled = false,
-  type = 'button',
   leftIcon,
   rightIcon,
   spinning,
   className,
+  disabled = false,
   onClick = () => {},
   ...rest
 }) => {
   const buttonStyles: Record<string, string> = {
     primary:
-      'bg-green-600 w-full px-4 py-2 rounded-sm text-white font-bold uppercase',
-    secondary:
-      'bg-white border border-green-600 w-full px-4 py-2 rounded-lg text-cyan-700 font-normal',
+      'bg-green-600 text-white font-bold uppercase bg-primary hover:bg-hover',
+    secondary: 'bg-white border border-green-600 text-dark font-normal',
   };
 
   return (
-    <div className={className ?? ''}>
-      <button
-        disabled={disabled}
-        type={type}
-        className={`${disabled ? 'cursor-not-allowed' : 'cursor-pointer'} ${
-          buttonStyles[variant]
-        } active:shadow-md ease-in duration-200 flex justify-center items-center gap-2`}
-        onClick={onClick}
-        {...rest}
-      >
-        {leftIcon}
-        {title}
-        {rightIcon}
-        {spinning && (
-          <Spinner data-testid="spinner" width={24} color="#155e75" />
-        )}
-      </button>
-    </div>
+    <button
+      disabled={disabled}
+      className={`${
+        disabled ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'
+      } ${
+        buttonStyles[variant]
+      } hover:shadow-lg duration-300 ease-in w-full px-4 py-1.5 flex justify-center items-center gap-2 rounded-md`}
+      onClick={onClick}
+      {...rest}
+    >
+      {leftIcon}
+      {title}
+      {rightIcon}
+      {spinning && <Spinner data-testid="spinner" width={24} color="#155e75" />}
+    </button>
   );
 };
 

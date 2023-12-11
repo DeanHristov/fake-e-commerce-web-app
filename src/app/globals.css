@@ -1,3 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.discount-flag-container::before {
+    content: "";
+    position: absolute;
+    top: 2rem;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 .8rem .8rem 0;
+    border-color: transparent #ef4444 transparent transparent;
+}
+
+.star-icon {
+    font-size: 1rem;
+    position: relative;
+    cursor: pointer;
+}
+
+
+.star-icon:before {
+    content: '\2605';
+    position: absolute;
+    left: 0;
+}
+
+.star-icon.full:before {
+    color: #1B1B1B;
+    content: '\2605';
+    position: absolute;
+    left: 0;
+}
+
+.page-container {
+    min-height: calc(100vh - 8rem);
+}

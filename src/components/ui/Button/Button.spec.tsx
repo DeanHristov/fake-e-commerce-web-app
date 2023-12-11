@@ -4,13 +4,13 @@ import userEvent from '@testing-library/user-event';
 import Button from './Button';
 
 describe('UI/Component <Button {...} />', () => {
-  it('Should render a primary state of the button', () => {
+  it('Should be able to render the primary state', () => {
     const { container } = render(<Button title="Click me" />);
 
     expect(container).toMatchSnapshot();
   });
 
-  it('Should render a secondary state of the button', () => {
+  it('Should be able to render the secondary state', () => {
     const { container } = render(
       <Button variant="secondary" title="Click me" />,
     );
@@ -18,7 +18,7 @@ describe('UI/Component <Button {...} />', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('Should render the button with a left icon', () => {
+  it('Should be able to render it with a  left icon', () => {
     const { container } = render(
       <Button
         leftIcon={<ShoppingCartIcon className="h-6 w-6 text-white" />}
@@ -29,7 +29,7 @@ describe('UI/Component <Button {...} />', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('Should render the button with a right icon', () => {
+  it('Should be able to render it with a right icon', () => {
     const { container } = render(
       <Button
         rightIcon={<ShoppingCartIcon className="h-6 w-6 text-white" />}
@@ -53,7 +53,7 @@ describe('UI/Component <Button {...} />', () => {
       <Button title="Click me" onClick={onChangeMock} />,
     );
 
-    const button = getByRole('button', { name: /Click me/i });
+    const button: HTMLElement = getByRole('button', { name: /Click me/i });
     await userEvent.click(button);
 
     expect(onChangeMock).toBeCalled();

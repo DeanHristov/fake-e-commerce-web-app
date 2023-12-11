@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UI/Component <DiscountLabel {...} /> Should be able to render the default state 1`] = `
+<div>
+  <div
+    class="discount-flag-container z-20 bg-red-500 absolute top-5 -left-3 rounded-br rounded-tr"
+  >
+    <span
+      class="discount-flag block py-2 px-3 text-white text-xs font-medium"
+    >
+      -20%
+    </span>
+  </div>
+</div>
+`;

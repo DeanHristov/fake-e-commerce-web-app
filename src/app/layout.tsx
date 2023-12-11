@@ -6,7 +6,6 @@ import { FC, ReactNode } from 'react';
 import { StoreProvider } from '@/store/StoreProvider';
 import PageHeader from '@/components/containers/PageHeader';
 import PageFooter from '@/components/containers/PageFooter';
-
 import './globals.css';
 
 const inter: NextFont = Inter({ subsets: ['latin'] });
@@ -35,7 +34,7 @@ const RootLayout: FC<IRootLayoutProps> = async ({ children }) => {
       >
         <StoreProvider>
           <PageHeader />
-          <main className="min-w-[320px] max-w-screen-xl m-auto pt-4">
+          <main className="page-container min-w-[320px] max-w-screen-xl m-auto pt-4">
             {children}
           </main>
           <PageFooter>

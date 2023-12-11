@@ -4,74 +4,62 @@ exports[`Containers/ProductCard <ProductCard {...} /> Should render a default st
 <div>
   <div>
     <div
-      class="bg-white border border-gray-300 rounded-lg p-4 shadow-lg"
+      class="bg-white border border-gray-300 rounded-lg p-4 shadow-md inline-block w-auto relative"
     >
       <div
-        class="py-0"
-      />
-      <div
-        class="pt-2"
+        class="md:pb-2 flex justify-start items-center"
       >
-        <div
-          class="md:pb-2 flex justify-start items-center"
+        <span
+          class="md:p-2 w-[50%]  text-gray-500 text-2xl block"
         >
-          <span
-            class="md:p-2 w-[50%]  text-gray-500 text-2xl block"
-          >
-            Price:
-          </span>
-          <span
-            class="md:p-2 w-[50%]  text-gray-500 text-xl font-bold block"
-          >
-            €549.00
-          </span>
-        </div>
-        <div
-          class="md:pb-2 flex justify-start items-center  border-t border-gray-300"
+          Price:
+        </span>
+        <span
+          class="md:p-2 w-[50%]  text-gray-500 text-xl font-bold block"
         >
-          <span
-            class="md:p-2 w-[50%] text-gray-500 text-2xl block"
-          >
-            Status:
-          </span>
-          <span
-            class="md:p-2 w-[50%] block text-green-400"
-          >
-            In stock
-          </span>
-        </div>
-        <div
-          class="md:mb-8 flex justify-start items-center border-b border-t border-gray-300"
+          €549.00
+        </span>
+      </div>
+      <div
+        class="md:pb-2 flex justify-start items-center  border-t border-gray-300"
+      >
+        <span
+          class="md:p-2 w-[50%] text-gray-500 text-2xl block"
         >
-          <span
-            class="md:p-2 w-[50%] text-gray-500 text-2xl block"
-          >
-            Quantity:
-          </span>
+          Status:
+        </span>
+        <span
+          class="md:p-2 w-[50%] block text-green-400"
+        >
+          In stock
+        </span>
+      </div>
+      <div
+        class="md:mb-8 flex justify-start items-center border-b border-t border-gray-300"
+      >
+        <span
+          class="md:p-2 w-[50%] text-gray-500 text-2xl block"
+        >
+          Quantity:
+        </span>
+        <div
+          class="w-[50%] md:h-10"
+        >
           <div
-            class="w-[50%] md:h-10"
+            class="relative w-full rounded-lg h-full border border-gray-500"
           >
-            <div
-              class="relative w-full rounded-lg h-full border border-gray-500"
-            >
-              <input
-                class="h-full px-6 w-full rounded-lg bg-white text-slate-700 ease-in duration-200 focus:bg-white"
-                type="text"
-              />
-            </div>
+            <input
+              class="h-full px-6 w-full rounded-lg bg-white text-slate-700 ease-in duration-200 focus:bg-white"
+              type="text"
+            />
           </div>
         </div>
-        <div
-          class=""
-        >
-          <button
-            class="cursor-pointer bg-green-600 w-full px-4 py-2 rounded-sm text-white font-bold uppercase active:shadow-md ease-in duration-200 flex justify-center items-center gap-2"
-            type="button"
-          >
-            Add to card
-          </button>
-        </div>
       </div>
+      <button
+        class="cursor-pointer bg-green-600 text-white font-bold uppercase bg-primary hover:bg-hover hover:shadow-lg duration-300 ease-in w-full px-4 py-1.5 flex justify-center items-center gap-2 rounded-md"
+      >
+        Add to card
+      </button>
     </div>
   </div>
 </div>
@@ -81,74 +69,62 @@ exports[`Containers/ProductCard <ProductCard {...} /> Should render the componen
 <div>
   <div>
     <div
-      class="bg-white border border-gray-300 rounded-lg p-4 shadow-lg"
+      class="bg-white border border-gray-300 rounded-lg p-4 shadow-md inline-block w-auto relative"
     >
       <div
-        class="py-0"
-      />
-      <div
-        class="pt-2"
+        class="md:pb-2 flex justify-start items-center"
       >
-        <div
-          class="md:pb-2 flex justify-start items-center"
+        <span
+          class="md:p-2 w-[50%]  text-gray-500 text-2xl block"
         >
-          <span
-            class="md:p-2 w-[50%]  text-gray-500 text-2xl block"
-          >
-            Price:
-          </span>
-          <span
-            class="md:p-2 w-[50%]  text-gray-500 text-xl font-bold block"
-          >
-            €549.00
-          </span>
-        </div>
-        <div
-          class="md:pb-2 flex justify-start items-center  border-t border-gray-300"
+          Price:
+        </span>
+        <span
+          class="md:p-2 w-[50%]  text-gray-500 text-xl font-bold block"
         >
-          <span
-            class="md:p-2 w-[50%] text-gray-500 text-2xl block"
-          >
-            Status:
-          </span>
-          <span
-            class="md:p-2 w-[50%] block text-green-400"
-          >
-            In stock
-          </span>
-        </div>
-        <div
-          class="md:mb-8 flex justify-start items-center border-b border-t border-gray-300"
+          €549.00
+        </span>
+      </div>
+      <div
+        class="md:pb-2 flex justify-start items-center  border-t border-gray-300"
+      >
+        <span
+          class="md:p-2 w-[50%] text-gray-500 text-2xl block"
         >
-          <span
-            class="md:p-2 w-[50%] text-gray-500 text-2xl block"
-          >
-            Quantity:
-          </span>
+          Status:
+        </span>
+        <span
+          class="md:p-2 w-[50%] block text-green-400"
+        >
+          In stock
+        </span>
+      </div>
+      <div
+        class="md:mb-8 flex justify-start items-center border-b border-t border-gray-300"
+      >
+        <span
+          class="md:p-2 w-[50%] text-gray-500 text-2xl block"
+        >
+          Quantity:
+        </span>
+        <div
+          class="w-[50%] md:h-10"
+        >
           <div
-            class="w-[50%] md:h-10"
+            class="relative w-full rounded-lg h-full border border-gray-500"
           >
-            <div
-              class="relative w-full rounded-lg h-full border border-gray-500"
-            >
-              <input
-                class="h-full px-6 w-full rounded-lg bg-white text-slate-700 ease-in duration-200 focus:bg-white"
-                type="text"
-              />
-            </div>
+            <input
+              class="h-full px-6 w-full rounded-lg bg-white text-slate-700 ease-in duration-200 focus:bg-white"
+              type="text"
+            />
           </div>
         </div>
-        <div
-          class=""
-        >
-          <button
-            class="cursor-pointer bg-green-600 w-full px-4 py-2 rounded-sm text-white font-bold uppercase active:shadow-md ease-in duration-200 flex justify-center items-center gap-2"
-            type="button"
-          >
-            Add to card
-          </button>
-        </div>
       </div>
+      <button
+        class="cursor-pointer bg-green-600 text-white font-bold uppercase bg-primary hover:bg-hover hover:shadow-lg duration-300 ease-in w-full px-4 py-1.5 flex justify-center items-center gap-2 rounded-md"
+      >
+        Add to card
+      </button>
     </div>
   </div>
 </div>

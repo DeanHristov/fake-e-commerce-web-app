@@ -1,5 +1,6 @@
 import jwt from 'jsonwebtoken';
 import { Utils } from './Utils';
+import { APIUtils } from '@/utils/APIUtils';
 
 describe('Class / Utils', () => {
   it('Should return null', () => {
@@ -29,7 +30,7 @@ describe('Class / Utils', () => {
 
     spySign.mockImplementation(() => 'Bearer token');
 
-    expect(Utils.getJWToken({ key: 'value' })).toEqual('Bearer token');
+    expect(APIUtils.getJWToken({ key: 'value' })).toEqual('Bearer token');
   });
 
   it('Should parse an amount correctly', () => {

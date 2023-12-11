@@ -2,13 +2,17 @@ import type { Config } from 'tailwindcss';
 
 const config: Config = {
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/pages/**/*.tsx',
+    './src/components/**/*.tsx',
+    './src/app/**/*.tsx',
   ],
   theme: {
     extend: {
       colors: {
+        black: '#030303',
+        primary: '#5BCFC5',
+        hover: '#48a79f',
+        dark: '#4F7086',
         gray: {
           100: '#F6F6F6',
           200: '#f3f3f3',

@@ -2,9 +2,11 @@ import bcryptjs from 'bcryptjs';
 import ms from 'ms';
 
 import { NextRequest, NextResponse } from 'next/server';
-import { Utils } from '../../../utils/Utils';
+import { Utils } from '@/utils/Utils';
 // TODO Replace the way how retrieve the users - Use some fake DB!
-import users from '../../../mocks/data/users';
+import users from '@/mocks/data/users';
+
+import {APIUtils} from '@/utils/APIUtils';
 
 export interface ISignInResponse {
   status: string;
@@ -35,7 +37,7 @@ export async function POST(req: NextRequest) {
 
   if (!isPasswordMatch) return unauthorizedResponse;
 
-  const token: string = Utils.getJWToken(currentUser);
+  const token: string = APIUtils.getJWToken(currentUser);
   response.cookies.set({
     name: 'token',
     value: `Bearer ${token}`,
