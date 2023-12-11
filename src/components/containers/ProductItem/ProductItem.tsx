@@ -77,12 +77,10 @@ const ProductItem: FC<IProductItemProps> = ({
         <div className="flex flex-col gap-y-2 pt-2 md:flex-row md:gap-x-2 md:gap-y-0">
           <Button
             variant="secondary"
-            title={'Card'}
             leftIcon={<ShoppingCartIcon className={'w-4 h-4 text-dark'} />}
           />
           <Button
             variant="secondary"
-            title={'Washlist'}
             leftIcon={<HeartIcon className={'w-4 h-4 text-dark'} />}
           />
         </div>

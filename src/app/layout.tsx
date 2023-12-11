@@ -3,7 +3,7 @@ import { NextFont } from 'next/dist/compiled/@next/font';
 import { Inter } from 'next/font/google';
 import { FC, ReactNode } from 'react';
 
-import { StoreProvider } from '@/store/StoreProvider';
+import { AppProvider } from '@/AppProvider';
 import PageHeader from '@/components/containers/PageHeader';
 import PageFooter from '@/components/containers/PageFooter';
 import './globals.css';
@@ -32,7 +32,7 @@ const RootLayout: FC<IRootLayoutProps> = async ({ children }) => {
         suppressHydrationWarning={true}
         className={`bg-gray-100 ${inter.className} `}
       >
-        <StoreProvider>
+        <AppProvider>
           <PageHeader />
           <main className="page-container min-w-[320px] max-w-screen-xl m-auto pt-4">
             {children}
@@ -42,7 +42,7 @@ const RootLayout: FC<IRootLayoutProps> = async ({ children }) => {
               &#169; 2023 | Fake App
             </h3>
           </PageFooter>
-        </StoreProvider>
+        </AppProvider>
       </body>
     </html>
   );

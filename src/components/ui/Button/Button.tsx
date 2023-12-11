@@ -7,7 +7,7 @@ export type TButtonPresentations = 'primary' | 'secondary';
 export type TButtonType = 'submit' | 'reset' | 'button';
 
 export interface IButtonProps {
-  title: string;
+  title?: string;
   type?: TButtonType;
   className?: string;
   disabled?: boolean;
