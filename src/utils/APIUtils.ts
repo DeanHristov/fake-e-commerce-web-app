@@ -24,6 +24,7 @@ export class APIUtils {
     // Including mocks
     const isMocking: boolean =
       process.env.NODE_ENV !== 'test' &&
+      process.env.NODE_ENV === 'development' &&
       Boolean(process.env.API_MOCKING) &&
       process.env.API_MOCKING === 'true';
 
