@@ -36,3 +36,29 @@
 .page-container {
     min-height: calc(100vh - 8rem);
 }
+
+.fade-in {
+    animation: fadeIn 2s ease infinite;
+}
+
+.animation-delay-200 {
+    animation-delay: 200ms;
+}
+
+.animation-delay-300 {
+    animation-delay: 300ms;
+}
+
+.animation-delay-400 {
+    animation-delay: 400ms;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
