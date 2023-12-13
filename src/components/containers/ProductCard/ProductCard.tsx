@@ -1,11 +1,11 @@
 'use client';
 
 import { FC, useCallback, useState } from 'react';
-import { TCurrency } from '../../../types';
-import { Utils } from '../../../utils/Utils';
 import Button from '../../ui/Button';
 import InputField from '../../ui/InputField';
 import Widget from '../Widget';
+import { TCurrency } from '@/types';
+import { Utils } from '@/utils/Utils';
 
 export interface IProductCardProps {
   id: number;
@@ -22,10 +22,7 @@ const ProductCard: FC<IProductCardProps> = ({
 }) => {
   const isAvailable: boolean = countInStock > 0;
   const [quantity, setQuantity] = useState<number>(0);
-  const [cardStatus, setCardStatus] = useState();
-  const onAddToCard = useCallback(() => {
-    //TODO add logic here
-  }, [quantity]);
+  const onAddToCard = useCallback(() => {}, [quantity]);
 
   return (
     <div>

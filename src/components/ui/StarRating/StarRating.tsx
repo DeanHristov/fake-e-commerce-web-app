@@ -40,7 +40,7 @@ const StarRating: FC<IStarRatingProps> = ({
               data-testid="star-item"
               style={{ color: style }}
               key={`star-${idx}`}
-              className="star-icon transition"
+              className="star-icon"
               onClick={() => handlerClick(idx)}
             >
               {star}

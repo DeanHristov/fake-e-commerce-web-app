@@ -1,0 +1,132 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UI/CartTableRow <CartTableRow {...} /> Should render a default state of the Component 1`] = `
+<div>
+  <ul
+    class="w-full h-auto border-b border-b-dark px-2 py-2 md:flex md:justify-start"
+  >
+    <li
+      class="w-full md:flex md:justify-start md:space-x-2 overflow-hidden"
+    >
+      <img
+        alt="Spring and summershoes"
+        class="w-auto h-auto rounded-lg max-w-[8rem] border border-gray-300 mx-auto md:m-0"
+        data-nimg="1"
+        decoding="async"
+        fetchpriority="high"
+        height="0"
+        sizes="100vw"
+        src="/_next/image?url=https%3A%2F%2Fi.dummyjson.com%2Fdata%2Fproducts%2F59%2Fthumbnail.jpg&w=3840&q=75"
+        srcset="/_next/image?url=https%3A%2F%2Fi.dummyjson.com%2Fdata%2Fproducts%2F59%2Fthumbnail.jpg&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fi.dummyjson.com%2Fdata%2Fproducts%2F59%2Fthumbnail.jpg&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fi.dummyjson.com%2Fdata%2Fproducts%2F59%2Fthumbnail.jpg&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fi.dummyjson.com%2Fdata%2Fproducts%2F59%2Fthumbnail.jpg&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fi.dummyjson.com%2Fdata%2Fproducts%2F59%2Fthumbnail.jpg&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fi.dummyjson.com%2Fdata%2Fproducts%2F59%2Fthumbnail.jpg&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fi.dummyjson.com%2Fdata%2Fproducts%2F59%2Fthumbnail.jpg&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fi.dummyjson.com%2Fdata%2Fproducts%2F59%2Fthumbnail.jpg&w=3840&q=75 3840w"
+        style="color: transparent;"
+        width="0"
+      />
+      <h3
+        class="text-black text-lg mt-2 truncate hover:underline hover:cursor-pointer text-center md:text-left"
+      >
+        <span
+          class="text-black text-sm"
+        >
+          3x 
+        </span>
+        Spring and summershoes
+      </h3>
+    </li>
+    <li
+      class="w-full flex justify-center space-x-2 md:pt-2 md:justify-start md:max-w-[8rem]"
+    >
+      <h3
+        class="md:hidden"
+      >
+        Price: 
+      </h3>
+      <div
+        class=""
+      >
+        <span
+          class="price-label"
+        >
+          $20.00
+        </span>
+      </div>
+    </li>
+    <li
+      class="w-full md:max-w-[8rem] px-2 pt-2 mx-auto md:p-0"
+    >
+      <div
+        class="flex justify-center items-center bg-gray-100 rounded-md border border-gray-400 undefined"
+      >
+        <button
+          class="text-lg w-20 py-1 text-red-400 font-medium border-r border-r-gray-400"
+        >
+          -
+        </button>
+        <span
+          class="w-full px-1 py-1 text-center"
+        >
+          3
+        </span>
+        <button
+          class="text-lg w-20 py-1 text-green-400 font-medium border-l border-l-gray-400"
+        >
+          +
+        </button>
+      </div>
+    </li>
+    <li
+      class="w-full md:max-w-[10rem] relative"
+    >
+      <div
+        class="w-full flex items-center justify-center space-x-2 py-2 md:py-0 md:flex-col"
+      >
+        <h3
+          class="md:hidden"
+        >
+          Subtotal: 
+        </h3>
+        <div
+          class="space-x-2"
+        >
+          <span
+            class="price-label-old line-through"
+          >
+            $59.79
+          </span>
+          <span
+            class="price-label-old"
+          >
+            /
+          </span>
+          <span
+            class="price-label"
+          >
+            $55.00
+          </span>
+        </div>
+        <span
+          class="text-red-500 font-medium text-center block"
+        >
+          (-8.71%)
+        </span>
+      </div>
+      <div
+        class="text-black text-sm text-center md:text-left md:absolute md:bottom-0.5 md:right-0"
+      >
+        <span
+          class="hover:underline hover:cursor-pointer hover:text-dark"
+          data-testid="btn-remove"
+        >
+          Remove
+        </span>
+         / 
+        <span
+          class="hover:underline hover:cursor-pointer hover:text-dark"
+          data-testid="btn-wish-list"
+        >
+          Wish list
+        </span>
+      </div>
+    </li>
+  </ul>
+</div>
+`;

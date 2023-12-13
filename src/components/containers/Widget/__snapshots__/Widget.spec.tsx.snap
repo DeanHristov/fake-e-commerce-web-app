@@ -3,7 +3,7 @@
 exports[`Container/Widget <Widget {...} /> Should render default state 1`] = `
 <div>
   <div
-    class="bg-white border border-gray-300 rounded-lg p-4 shadow-md inline-block w-auto relative"
+    class="bg-white border border-gray-300 rounded-lg p-4 shadow-md inline-block w-auto relative undefined"
   >
     <h3
       class="text-base text-black font-bold"

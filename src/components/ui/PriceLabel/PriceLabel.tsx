@@ -4,8 +4,8 @@ import { TCurrency } from '@/types';
 
 export interface IPriceLabelProps {
   price: number;
+  currency: TCurrency;
   discountPercentage?: number;
-  currency?: TCurrency;
 }
 
 const PriceLabel: FC<IPriceLabelProps> = ({
@@ -15,17 +15,17 @@ const PriceLabel: FC<IPriceLabelProps> = ({
 }) => {
   return (
     <div
-      className={`mt-3 ${Utils.isNotNull(discountPercentage) && 'space-x-2'}`}
+      className={`${Utils.isNotNull(discountPercentage) ? 'space-x-2' : ''}`}
     >
       {Utils.isNotNull(discountPercentage) && (
         <>
-          <span className="text-md font-normal text-zinc-400 line-through leading-4">
+          <span className="price-label-old line-through">
             {Utils.calculateOldPrice(price, discountPercentage!, currency)}
           </span>
-          <span className="text-md font-normal text-zinc-400">{'/'}</span>
+          <span className="price-label-old">{'/'}</span>
         </>
       )}
-      <span className="text-lg font-medium text-black">
+      <span className="price-label">
         {Utils.parseAmountByCurrency(price, currency)}
       </span>
     </div>

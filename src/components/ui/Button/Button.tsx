@@ -42,7 +42,7 @@ const Button: FC<IButtonProps> = ({
         disabled ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'
       } ${
         buttonStyles[variant]
-      } hover:shadow-lg duration-300 ease-in w-full px-4 py-1.5 flex justify-center items-center gap-2 rounded-md`}
+      } hover:shadow-lg duration-300 ease-in w-full px-4 py-1.5 flex justify-center items-center gap-2 ${className}`}
       onClick={onClick}
       {...rest}
     >

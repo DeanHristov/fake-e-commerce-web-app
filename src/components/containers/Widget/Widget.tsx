@@ -9,17 +9,26 @@ export interface IWidgetProps {
   children: ReactNode;
   title?: string;
   subTitle?: string;
+  className?: string;
   header?: ReactNode;
   bg?: TStyle;
 }
 
-const Widget: FC<IWidgetProps> = ({ children, title, subTitle, header }) => {
+const Widget: FC<IWidgetProps> = ({
+  children,
+  title,
+  className,
+  subTitle,
+  header,
+}) => {
   const isClient: boolean = useIsClient();
 
   if (!isClient) return null;
 
   return (
-    <div className="bg-white border border-gray-300 rounded-lg p-4 shadow-md inline-block w-auto relative">
+    <div
+      className={`bg-white border border-gray-300 rounded-lg p-4 shadow-md inline-block w-auto relative ${className}`}
+    >
       {header}
       {!header && (
         <>

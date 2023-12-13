@@ -2,7 +2,7 @@
 
 import { ChangeEvent, FC, ReactNode } from 'react';
 
-export type TInputFieldTypes = 'text' | 'password';
+export type TInputFieldTypes = 'text' | 'password' | 'number';
 
 export interface IInputFieldProps {
   onChange: (ev: ChangeEvent<HTMLInputElement>) => void;
@@ -15,6 +15,7 @@ export interface IInputFieldProps {
   leftIcon?: ReactNode;
   rightIcon?: ReactNode;
   placeholder?: string;
+  disabled?: boolean;
 }
 
 const SearchField: FC<IInputFieldProps> = ({
@@ -26,7 +27,7 @@ const SearchField: FC<IInputFieldProps> = ({
 }) => {
   return (
     <div
-      className={`relative w-full rounded-lg ${
+      className={`relative w-full rounded-md ${
         className ?? 'h-full'
       } border border-gray-500`}
     >

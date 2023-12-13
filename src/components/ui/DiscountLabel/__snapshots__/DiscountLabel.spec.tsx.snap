@@ -3,10 +3,10 @@
 exports[`UI/Component <DiscountLabel {...} /> Should be able to render the default state 1`] = `
 <div>
   <div
-    class="discount-flag-container z-20 bg-red-500 absolute top-5 -left-3 rounded-br rounded-tr"
+    class="card-flag-container"
   >
     <span
-      class="discount-flag block py-2 px-3 text-white text-xs font-medium"
+      class="card-flag"
     >
       -20%
     </span>

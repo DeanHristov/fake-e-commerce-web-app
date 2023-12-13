@@ -3,7 +3,7 @@
 exports[`Container/Component <LoginForm {...} /> Should render the badge with a counter 1`] = `
 <div>
   <div
-    class="bg-white border border-gray-300 rounded-lg p-4 shadow-md inline-block w-auto relative"
+    class="bg-white border border-gray-300 rounded-lg p-4 shadow-md inline-block w-auto relative undefined"
   >
     <h3
       class="text-base text-black font-bold"
@@ -21,7 +21,7 @@ exports[`Container/Component <LoginForm {...} /> Should render the badge with a 
           Enter an Email
         </label>
         <div
-          class="relative w-full rounded-lg h-12 border border-gray-500"
+          class="relative w-full rounded-md h-12 border border-gray-500"
         >
           <input
             class="h-full px-6 w-full rounded-lg bg-white text-slate-700 ease-in duration-200 focus:bg-white"
@@ -42,7 +42,7 @@ exports[`Container/Component <LoginForm {...} /> Should render the badge with a 
           Enter a password
         </label>
         <div
-          class="relative w-full rounded-lg h-12 border border-gray-500"
+          class="relative w-full rounded-md h-12 border border-gray-500"
         >
           <input
             class="h-full px-6 w-full rounded-lg bg-white text-slate-700 ease-in duration-200 focus:bg-white"
@@ -54,7 +54,7 @@ exports[`Container/Component <LoginForm {...} /> Should render the badge with a 
         </div>
       </div>
       <button
-        class="cursor-pointer bg-green-600 text-white font-bold uppercase bg-primary hover:bg-hover hover:shadow-lg duration-300 ease-in w-full px-4 py-1.5 flex justify-center items-center gap-2 rounded-md"
+        class="cursor-pointer bg-green-600 text-white font-bold uppercase bg-primary hover:bg-hover hover:shadow-lg duration-300 ease-in w-full px-4 py-1.5 flex justify-center items-center gap-2 py-2 w-96 rounded-xl"
         type="submit"
       >
         Login

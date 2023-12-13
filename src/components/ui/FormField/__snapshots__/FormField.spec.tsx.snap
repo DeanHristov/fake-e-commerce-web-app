@@ -11,7 +11,7 @@ exports[`UI/FormField <FormField {...} /> Should render the badge with a counter
       Username or an email
     </label>
     <div
-      class="relative w-full rounded-lg h-12 border border-gray-500"
+      class="relative w-full rounded-md h-12 border border-gray-500"
     >
       <input
         class="h-full px-6 w-full rounded-lg bg-white text-slate-700 ease-in duration-200 focus:bg-white"

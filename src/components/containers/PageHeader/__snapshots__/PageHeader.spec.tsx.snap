@@ -22,7 +22,7 @@ exports[`Containers/PageHeader <PageHeader {...}> Should render default state 1`
         class="w-full h-14 py-2 self-center"
       >
         <div
-          class="relative w-full rounded-lg h-full border border-gray-500"
+          class="relative w-full rounded-md h-full border border-gray-500"
         >
           <input
             class="h-full px-6 w-full rounded-lg bg-white text-slate-700 ease-in duration-200 focus:bg-white"

@@ -1,8 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
-import { FC, useCallback } from 'react';
+import { FC } from 'react';
 import Widget from '@/components/containers/Widget';
 import { TCurrency } from '@/types';
 import PriceLabel from '@/components/ui/PriceLabel';
@@ -13,6 +12,7 @@ import Button from '@/components/ui/Button';
 import { HeartIcon, ShoppingCartIcon } from '@heroicons/react/24/solid';
 import DiscountLabel from '@/components/ui/DiscountLabel';
 import { Utils } from '@/utils/Utils';
+import ProductHeading from '@/components/ui/ProductHeading';
 
 export interface IProductItemProps {
   id: number;
@@ -38,9 +38,6 @@ const ProductItem: FC<IProductItemProps> = ({
   stock,
   currency = 'EUR',
 }) => {
-  const router = useRouter();
-  const handlerClick = useCallback(() => router.push(`/products/${id}`), []);
-
   return (
     <Widget>
       <div className="group mx-auto h-auto max-w-[288px]">
@@ -60,13 +57,12 @@ const ProductItem: FC<IProductItemProps> = ({
             }`}
           />
         </div>
-        <h3
-          onClick={handlerClick}
-          className="text-black text-lg mt-2 truncate hover:underline hover:cursor-pointer"
-        >
-          {title}
-        </h3>
-        <PriceLabel discountPercentage={discountPercentage} price={price} />
+        <ProductHeading id={id} title={title} />
+        <PriceLabel
+          currency={currency}
+          discountPercentage={discountPercentage}
+          price={price}
+        />
         <StarRating
           activeColor="#FFA133"
           inActiveColor="#E3E3E3"

@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UI/Controls <RowControls {...} /> Should render a default state of the Component 1`] = `
+<div>
+  <div
+    class="text-black text-sm "
+  >
+    <span
+      class="hover:underline hover:cursor-pointer hover:text-dark"
+      data-testid="btn-remove"
+    >
+      Remove
+    </span>
+     / 
+    <span
+      class="hover:underline hover:cursor-pointer hover:text-dark"
+      data-testid="btn-wish-list"
+    >
+      Wish list
+    </span>
+  </div>
+</div>
+`;

@@ -23,7 +23,7 @@ exports[`UI/Component <StockLabel {...} /> Should be able to render the default 
     class="flex items-center space-x-1 mt-5"
   >
     <div
-      class="w-1.5 h-1.5 bg-hover animate-ping rounded-full"
+      class="w-1.5 h-1.5 bg-hover rounded-full"
     />
     <span
       class="text-xs text-black leading-4"

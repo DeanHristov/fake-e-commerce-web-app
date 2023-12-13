@@ -2,35 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
-.discount-flag-container::before {
-    content: "";
-    position: absolute;
-    top: 2rem;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 .8rem .8rem 0;
-    border-color: transparent #ef4444 transparent transparent;
-}
+@layer components {
+    .card-flag-container {
+        @apply z-20 bg-red-500 absolute top-5 -left-3 rounded-br rounded-tr;
+    }
 
-.star-icon {
-    font-size: 1rem;
-    position: relative;
-    cursor: pointer;
-}
+    .card-flag-container:before {
+        content: "";
+        border-width: 0 .8rem .8rem 0;
+        border-color: transparent #ef4444 transparent transparent;
 
+        @apply absolute top-8 w-0 h-0 border-solid;
+    }
 
-.star-icon:before {
-    content: '\2605';
-    position: absolute;
-    left: 0;
-}
+    .card-flag {
+        @apply block py-2 px-3 text-white text-xs font-medium;
+    }
 
-.star-icon.full:before {
-    color: #1B1B1B;
-    content: '\2605';
-    position: absolute;
-    left: 0;
+    .star-icon {
+        @apply text-base relative cursor-pointer transition
+    }
+
+    .star-icon:before {
+        content: '\2605';
+
+        @apply absolute left-0;
+    }
+
+    .price-label {
+        @apply text-lg font-medium text-black;
+    }
+
+    .price-label-old {
+        @apply font-normal text-zinc-400 leading-4;
+    }
 }
 
 .page-container {

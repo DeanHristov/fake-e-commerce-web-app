@@ -6,7 +6,7 @@ exports[`Containers/ProductDetails <ProductDetails {...} /> Should render a defa
     class="flex-1"
   >
     <div
-      class="bg-white border border-gray-300 rounded-lg p-4 shadow-md inline-block w-auto relative"
+      class="bg-white border border-gray-300 rounded-lg p-4 shadow-md inline-block w-auto relative undefined"
     >
       <div
         class="flex flex-col lg:flex-row"
