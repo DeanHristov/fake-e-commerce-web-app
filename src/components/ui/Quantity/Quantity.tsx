@@ -40,14 +40,14 @@ const Quantity: FC<IQuantityProps> = ({
       className={`flex justify-center items-center bg-gray-100 rounded-md border border-gray-400 ${className}`}
     >
       <button
-        className="text-lg w-20 py-1 text-red-400 font-medium border-r border-r-gray-400"
+        className="text-xl w-20 text-red-400 font-medium border-r border-r-gray-400"
         onClick={handlerOnDecrease}
       >
         {'-'}
       </button>
-      <span className="w-full px-1 py-1 text-center">{quantity}</span>
+      <span className="w-full px-1  text-center">{quantity}</span>
       <button
-        className="text-lg w-20 py-1 text-green-400 font-medium border-l border-l-gray-400"
+        className="text-xl w-20  text-green-400 font-medium border-l border-l-gray-400"
         onClick={handlerOnIncrease}
       >
         {'+'}

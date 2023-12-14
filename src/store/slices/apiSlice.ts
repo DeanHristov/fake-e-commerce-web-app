@@ -1,12 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import { IProduct } from '@/types';
-
-export interface IAPIResponse {
-  products: IProduct[];
-  total: number;
-  skip: number;
-  limit: number;
-}
+import { IProductsResponse } from '@/types';
 
 //@see: https://redux-toolkit.js.org/rtk-query/api/created-api/overview
 export const apiSlice = createApi({
@@ -15,7 +8,7 @@ export const apiSlice = createApi({
     baseUrl: process.env.API_URL,
   }),
   endpoints: (builder) => ({
-    getProducts: builder.query<IAPIResponse, null>({
+    getProducts: builder.query<IProductsResponse, null>({
       query: () => '/products',
       transformResponse: ({ products }) => products,
     }),

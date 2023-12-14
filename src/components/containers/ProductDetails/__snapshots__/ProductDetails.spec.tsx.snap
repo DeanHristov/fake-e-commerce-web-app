@@ -6,7 +6,7 @@ exports[`Containers/ProductDetails <ProductDetails {...} /> Should render a defa
     class="flex-1"
   >
     <div
-      class="bg-white border border-gray-300 rounded-lg p-4 shadow-md inline-block w-auto relative undefined"
+      class="bg-white border border-gray-300 rounded-lg p-4 shadow-md inline-block relative undefined"
     >
       <div
         class="flex flex-col lg:flex-row"
@@ -17,9 +17,7 @@ exports[`Containers/ProductDetails <ProductDetails {...} /> Should render a defa
           data-nimg="1"
           decoding="async"
           height="320"
-          loading="lazy"
-          src="/_next/image?url=https%3A%2F%2Fi.dummyjson.com%2Fdata%2Fproducts%2F1%2Fthumbnail.jpg&w=1080&q=75"
-          srcset="/_next/image?url=https%3A%2F%2Fi.dummyjson.com%2Fdata%2Fproducts%2F1%2Fthumbnail.jpg&w=640&q=75 1x, /_next/image?url=https%3A%2F%2Fi.dummyjson.com%2Fdata%2Fproducts%2F1%2Fthumbnail.jpg&w=1080&q=75 2x"
+          src=""
           style="color: transparent;"
           width="440"
         />
@@ -28,9 +26,7 @@ exports[`Containers/ProductDetails <ProductDetails {...} /> Should render a defa
         >
           <h3
             class="p-2  text-gray-500 border-b border-t border-gray-300"
-          >
-            iPhone 9
-          </h3>
+          />
           <span
             class="block  text-gray-500 p-2 border-b border-gray-300"
           >

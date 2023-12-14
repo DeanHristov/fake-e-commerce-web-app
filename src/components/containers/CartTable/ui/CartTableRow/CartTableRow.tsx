@@ -41,11 +41,11 @@ const CartTableRow: FC<ICartTableRowProps> = ({
           <span className="text-black text-sm">{`${quantity}x `}</span>
         </ProductHeading>
       </li>
-      <li className="w-full flex justify-center space-x-2 md:pt-2 md:justify-start md:max-w-[8rem]">
+      <li className="w-full flex justify-center space-x-2 md:justify-start md:max-w-[8rem]">
         <h3 className="md:hidden">Price: </h3>
         <PriceLabel currency={currency} price={price} />
       </li>
-      <li className="w-full md:max-w-[8rem] px-2 pt-2 mx-auto md:p-0">
+      <li className="w-2/3 px-2 pt-2 mx-auto md:w-full md:max-w-[8rem] md:p-0">
         <Quantity
           onIncrease={(value) => console.log('onIncrease to: ' + value)}
           onDecrease={(value) => console.log('onDecrease to: ' + value)}

@@ -19,11 +19,16 @@ const CartContainer: FC<ICartContainerProps> = ({
   products = [],
 }) => {
   return (
-    <Widget className="w-full h-auto space-y-4 lg:flex lg:justify-start lg:space-x-4 lg:space-y-0">
-      <div className="lg:max-w-3xl xl:max-w-4xl">
+    <div className="w-full space-y-4 lg:flex lg:justify-start lg:space-x-3 lg:space-y-0">
+      <Widget className="min-h-[16rem] w-full">
         <CartTable>
           <CartTableHeading />
-          {products?.map((product: ICartProduct) => (
+          {Utils.isEmpty(products) && (
+            <h3 className="px-3 py-3 text-center text-lg text-black mt-16">
+              Empty!
+            </h3>
+          )}
+          {products.map((product: ICartProduct) => (
             <CartTableRow
               key={`cart-item-${product.id}`}
               currency={currency}
@@ -31,11 +36,14 @@ const CartContainer: FC<ICartContainerProps> = ({
             />
           ))}
         </CartTable>
-      </div>
-      <div className="w-full">
-        <div className="border border-dark px-3 pb-5">
-          <h3 className="px-3 py-3 text-center text-lg text-black">{`${totalQuantity} Items in your Bag`}</h3>
-          <p className="py-2 mb-4 border-b border-t border-b-dark border-t-dark uppercase flex justify-between items-center">
+      </Widget>
+
+      <Widget className="max-h-[16rem] w-full lg:w-auto">
+        <div className="p-2">
+          {Utils.isNotNull(totalQuantity) && (
+            <h3 className="px-3 py-3 text-center text-base text-black border-b border-b-dark">{`${totalQuantity} Items in your Bag`}</h3>
+          )}
+          <p className="py-2 mb-4 border-b border-b-dark uppercase flex justify-between items-center">
             <span className={'font-bold text-md text-black'}>{`total `}</span>
 
             <span className={'font-medium text-md text-black'}>
@@ -58,8 +66,8 @@ const CartContainer: FC<ICartContainerProps> = ({
             title={'Checkout'}
           />
         </div>
-      </div>
-    </Widget>
+      </Widget>
+    </div>
   );
 };
 export default CartContainer;

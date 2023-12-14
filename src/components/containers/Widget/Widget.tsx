@@ -27,7 +27,7 @@ const Widget: FC<IWidgetProps> = ({
 
   return (
     <div
-      className={`bg-white border border-gray-300 rounded-lg p-4 shadow-md inline-block w-auto relative ${className}`}
+      className={`bg-white border border-gray-300 rounded-lg p-4 shadow-md inline-block relative ${className}`}
     >
       {header}
       {!header && (

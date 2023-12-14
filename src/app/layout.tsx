@@ -34,7 +34,7 @@ const RootLayout: FC<IRootLayoutProps> = async ({ children }) => {
       >
         <AppProvider>
           <PageHeader />
-          <main className="page-container min-w-[320px] max-w-screen-xl m-auto pt-4">
+          <main className="page-container min-w-[320px] max-w-screen-xl m-auto pt-4 px-2 lg:px-0">
             {children}
           </main>
           <PageFooter>

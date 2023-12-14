@@ -3,10 +3,10 @@
 exports[`Container/CartContainer <CartContainer {...} /> Should render a default state of the Component 1`] = `
 <div>
   <div
-    class="bg-white border border-gray-300 rounded-lg p-4 shadow-md inline-block w-auto relative w-full h-auto space-y-4 lg:flex lg:justify-start lg:space-x-4 lg:space-y-0"
+    class="w-full space-y-4 lg:flex lg:justify-start lg:space-x-3 lg:space-y-0"
   >
     <div
-      class="lg:max-w-3xl xl:max-w-4xl"
+      class="bg-white border border-gray-300 rounded-lg p-4 shadow-md inline-block relative min-h-[16rem] w-full"
     >
       <ul
         class="w-full flex border-b border-t border-b-dark border-t-dark"
@@ -56,7 +56,7 @@ exports[`Container/CartContainer <CartContainer {...} /> Should render a default
         >
           <img
             alt="Spring and summershoes"
-            class="w-auto h-auto rounded-lg max-w-[8rem] border border-gray-300 mx-auto md:m-0"
+            class="w-auto h-auto rounded-lg min-w-[4rem] max-w-[8rem] border border-gray-300 mx-auto md:m-0"
             data-nimg="1"
             decoding="async"
             fetchpriority="high"
@@ -79,7 +79,7 @@ exports[`Container/CartContainer <CartContainer {...} /> Should render a default
           </h3>
         </li>
         <li
-          class="w-full flex justify-center space-x-2 md:pt-2 md:justify-start md:max-w-[8rem]"
+          class="w-full flex justify-center space-x-2 md:justify-start md:max-w-[8rem]"
         >
           <h3
             class="md:hidden"
@@ -97,23 +97,23 @@ exports[`Container/CartContainer <CartContainer {...} /> Should render a default
           </div>
         </li>
         <li
-          class="w-full md:max-w-[8rem] px-2 pt-2 mx-auto md:p-0"
+          class="w-2/3 px-2 pt-2 mx-auto md:w-full md:max-w-[8rem] md:p-0"
         >
           <div
             class="flex justify-center items-center bg-gray-100 rounded-md border border-gray-400 undefined"
           >
             <button
-              class="text-lg w-20 py-1 text-red-400 font-medium border-r border-r-gray-400"
+              class="text-xl w-20 text-red-400 font-medium border-r border-r-gray-400"
             >
               -
             </button>
             <span
-              class="w-full px-1 py-1 text-center"
+              class="w-full px-1  text-center"
             >
               3
             </span>
             <button
-              class="text-lg w-20 py-1 text-green-400 font-medium border-l border-l-gray-400"
+              class="text-xl w-20  text-green-400 font-medium border-l border-l-gray-400"
             >
               +
             </button>
@@ -134,7 +134,7 @@ exports[`Container/CartContainer <CartContainer {...} /> Should render a default
               class="space-x-2"
             >
               <span
-                class="price-label-old line-through"
+                class="price-label-old line-through text-sm"
               >
                 €59.79
               </span>
@@ -182,7 +182,7 @@ exports[`Container/CartContainer <CartContainer {...} /> Should render a default
         >
           <img
             alt="TC Reusable Silicone Magic Washing Gloves"
-            class="w-auto h-auto rounded-lg max-w-[8rem] border border-gray-300 mx-auto md:m-0"
+            class="w-auto h-auto rounded-lg min-w-[4rem] max-w-[8rem] border border-gray-300 mx-auto md:m-0"
             data-nimg="1"
             decoding="async"
             fetchpriority="high"
@@ -205,7 +205,7 @@ exports[`Container/CartContainer <CartContainer {...} /> Should render a default
           </h3>
         </li>
         <li
-          class="w-full flex justify-center space-x-2 md:pt-2 md:justify-start md:max-w-[8rem]"
+          class="w-full flex justify-center space-x-2 md:justify-start md:max-w-[8rem]"
         >
           <h3
             class="md:hidden"
@@ -223,23 +223,23 @@ exports[`Container/CartContainer <CartContainer {...} /> Should render a default
           </div>
         </li>
         <li
-          class="w-full md:max-w-[8rem] px-2 pt-2 mx-auto md:p-0"
+          class="w-2/3 px-2 pt-2 mx-auto md:w-full md:max-w-[8rem] md:p-0"
         >
           <div
             class="flex justify-center items-center bg-gray-100 rounded-md border border-gray-400 undefined"
           >
             <button
-              class="text-lg w-20 py-1 text-red-400 font-medium border-r border-r-gray-400"
+              class="text-xl w-20 text-red-400 font-medium border-r border-r-gray-400"
             >
               -
             </button>
             <span
-              class="w-full px-1 py-1 text-center"
+              class="w-full px-1  text-center"
             >
               2
             </span>
             <button
-              class="text-lg w-20 py-1 text-green-400 font-medium border-l border-l-gray-400"
+              class="text-xl w-20  text-green-400 font-medium border-l border-l-gray-400"
             >
               +
             </button>
@@ -260,7 +260,7 @@ exports[`Container/CartContainer <CartContainer {...} /> Should render a default
               class="space-x-2"
             >
               <span
-                class="price-label-old line-through"
+                class="price-label-old line-through text-sm"
               >
                 €57.79
               </span>
@@ -302,18 +302,18 @@ exports[`Container/CartContainer <CartContainer {...} /> Should render a default
       </ul>
     </div>
     <div
-      class="w-full"
+      class="bg-white border border-gray-300 rounded-lg p-4 shadow-md inline-block relative max-h-[16rem] w-full lg:w-auto"
     >
       <div
-        class="border border-dark px-3 pb-5"
+        class="p-2"
       >
         <h3
-          class="px-3 py-3 text-center text-lg text-black"
+          class="px-3 py-3 text-center text-base text-black border-b border-b-dark"
         >
           2 Items in your Bag
         </h3>
         <p
-          class="py-2 mb-4 border-b border-t border-b-dark border-t-dark uppercase flex justify-between items-center"
+          class="py-2 mb-4 border-b border-b-dark uppercase flex justify-between items-center"
         >
           <span
             class="font-bold text-md text-black"

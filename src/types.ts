@@ -26,6 +26,7 @@ export interface IProduct {
   category: string;
   thumbnail: string;
   images?: string[];
+  comments?: IComment[];
 }
 
 export interface IUser {
@@ -55,4 +56,23 @@ export interface ICart {
   totalQuantity: number;
   currency?: TCurrency;
   products: ICartProduct[];
+}
+
+//@see:https://nextjs.org/docs/app/api-reference/functions/generate-metadata#generatemetadata-function
+export interface IMetadataPageTitle {
+  title: string;
+}
+
+export interface IProductsResponse {
+  products: IProduct[];
+  total: number;
+  skip: number;
+  limit: number;
+}
+
+export interface ICartsResponse {
+  carts: ICart[];
+  total: number;
+  skip: number;
+  limit: number;
 }

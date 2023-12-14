@@ -19,7 +19,7 @@ const PriceLabel: FC<IPriceLabelProps> = ({
     >
       {Utils.isNotNull(discountPercentage) && (
         <>
-          <span className="price-label-old line-through">
+          <span className="price-label-old line-through text-sm">
             {Utils.calculateOldPrice(price, discountPercentage!, currency)}
           </span>
           <span className="price-label-old">{'/'}</span>

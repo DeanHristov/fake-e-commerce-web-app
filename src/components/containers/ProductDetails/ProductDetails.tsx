@@ -2,25 +2,20 @@
 import Image from 'next/image';
 import { FC } from 'react';
 import Widget from '../Widget';
-import { TCurrency } from '@/types';
+import { IProduct, TCurrency } from '@/types';
 import { Utils } from '@/utils/Utils';
 
-export interface IProductDetailsProps {
-  name: string;
-  image: string;
-  currency: TCurrency;
-  description: string;
-  rating: number;
-  price: number;
+export interface IProductDetailsProps extends IProduct {
+  currency?: TCurrency;
 }
 
 const ProductDetails: FC<IProductDetailsProps> = ({
-  name,
-  image,
+  title,
+  thumbnail,
   description,
   rating,
   price,
-  currency,
+  currency = 'EUR',
 }) => {
   return (
     <div className="flex-1">
@@ -31,11 +26,11 @@ const ProductDetails: FC<IProductDetailsProps> = ({
             alt=""
             width={440}
             height={320}
-            src={image}
+            src={thumbnail}
           />
           <div className="w-full">
             <h3 className="p-2  text-gray-500 border-b border-t border-gray-300">
-              {name}
+              {title}
             </h3>
             <span className="block  text-gray-500 p-2 border-b border-gray-300">
               {Utils.parseAmountByCurrency(price, currency)}

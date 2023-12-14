@@ -6,7 +6,7 @@ exports[`UI/Component <PriceLabel {...} /> Should render the both prices 1`] = `
     class="space-x-2"
   >
     <span
-      class="price-label-old line-through"
+      class="price-label-old line-through text-sm"
     >
       $38.61
     </span>
