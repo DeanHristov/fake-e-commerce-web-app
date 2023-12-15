@@ -13,6 +13,8 @@ const PriceLabel: FC<IPriceLabelProps> = ({
   discountPercentage,
   currency = 'EUR',
 }) => {
+  const oldPrice = Utils.calculateOldPrice(price, discountPercentage);
+
   return (
     <div
       className={`${Utils.isNotNull(discountPercentage) ? 'space-x-2' : ''}`}
@@ -20,7 +22,7 @@ const PriceLabel: FC<IPriceLabelProps> = ({
       {Utils.isNotNull(discountPercentage) && (
         <>
           <span className="price-label-old line-through text-sm">
-            {Utils.calculateOldPrice(price, discountPercentage!, currency)}
+            {Utils.parseAmountByCurrency(oldPrice, currency)}
           </span>
           <span className="price-label-old">{'/'}</span>
         </>

@@ -1,6 +1,15 @@
-import { createSlice } from '@reduxjs/toolkit';
-import { ICart } from '@/types';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { ICart, ICartProduct } from '@/types';
 import { Utils } from '@/utils/Utils';
+
+export interface IRemoveItemPayload {
+  productId: number;
+}
+
+export interface IUpdateQuantityPayload extends IRemoveItemPayload {
+  quantity: number;
+  increase: boolean;
+}
 
 const initialState: ICart = {
   discountedTotal: 0,
@@ -18,23 +27,55 @@ export const shoppingCartSlice = createSlice({
   name: 'shoppingCart',
   initialState,
   reducers: {
-    addToCart: (state: ICart, action) => {
+    addToCart: (state: ICart, action: PayloadAction<ICartProduct>) => {
       if (Utils.isNull(state.products[action.payload.id])) {
         state.products[action.payload.id] = action.payload;
         state.total += 1;
+        state.totalQuantity += 1;
+        state.totalProducts += 1;
+
+        // TODO Fix it!
+        state.discountedTotal +=
+          // @ts-ignore
+          state.products[action.payload.id].discountedPrice;
       }
     },
-    removeFromCart: (state: ICart, action) => {
+    removeFromCart: (
+      state: ICart,
+      action: PayloadAction<IRemoveItemPayload>,
+    ) => {
       const { productId } = action.payload;
+      const product: ICartProduct = state.products[productId];
+
+      state.discountedTotal -= product.total;
+      state.total -= product.quantity;
+      state.totalProducts -= product.quantity;
+      state.totalQuantity -= product.quantity;
 
       delete state.products[productId];
-      state.total -= 1;
     },
-    updateQuantity: (state: ICart, action) => {
-      const { quantity, productId } = action.payload;
+    updateQuantity: (
+      state: ICart,
+      action: PayloadAction<IUpdateQuantityPayload>,
+    ) => {
+      const { quantity, productId, increase } = action.payload;
 
-      if (Utils.isNotNull(state.products[productId])) {
-        state.products[productId].quantity = quantity;
+      const product: ICartProduct = state.products[productId];
+      if (Utils.isNotNull(product)) {
+        product.quantity = quantity;
+        state.totalProducts = quantity;
+        state.totalQuantity = quantity;
+        product.total = product.price * quantity;
+
+        if (increase && product.discountedPrice) {
+          state.total += 1;
+          state.discountedTotal += product.discountedPrice;
+        }
+
+        if (!increase && product.discountedPrice) {
+          state.total -= 1;
+          state.discountedTotal -= product.discountedPrice;
+        }
       }
     },
   },

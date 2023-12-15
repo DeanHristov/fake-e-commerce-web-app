@@ -1,6 +1,7 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { ICartProduct } from '@/types';
 import { Utils } from '@/utils/Utils';
+import { IRemoveItemPayload } from '@/store/slices';
 
 export type TWishList = Record<number, ICartProduct>;
 
@@ -10,15 +11,17 @@ export const wishListSlice = createSlice({
   name: 'wishList',
   initialState,
   reducers: {
-    addToWishList: (state: TWishList, action) => {
+    addToWishList: (state: TWishList, action: PayloadAction<ICartProduct>) => {
       const { id } = action.payload;
       if (Utils.isNull(state[id])) {
         state[id] = action.payload;
       }
     },
-    removeFromWishList: (state: TWishList, action) => {
-      const { productId } = action.payload;
-      delete state[productId];
+    removeFromWishList: (
+      state: TWishList,
+      action: PayloadAction<IRemoveItemPayload>,
+    ) => {
+      delete state[action.payload.productId];
     },
   },
 });

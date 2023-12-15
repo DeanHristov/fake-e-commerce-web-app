@@ -7,6 +7,7 @@ import { AppProvider } from '@/AppProvider';
 import PageHeader from '@/components/containers/PageHeader';
 import PageFooter from '@/components/containers/PageFooter';
 import './globals.css';
+import ModalBox from '@/components/containers/ModalBox';
 
 const inter: NextFont = Inter({ subsets: ['latin'] });
 
@@ -36,6 +37,7 @@ const RootLayout: FC<IRootLayoutProps> = async ({ children }) => {
           <PageHeader />
           <main className="page-container min-w-[320px] max-w-screen-xl m-auto pt-4 px-2 lg:px-0">
             {children}
+            <ModalBox />
           </main>
           <PageFooter>
             <h3 className="p-2 text-center text-slate-900">

@@ -3,7 +3,8 @@ import {
   type TypedUseSelectorHook,
   useDispatch as useReduxDispatch,
   useSelector as useReduxSelector,
-} from 'react-redux'; // @ts-ignore
+} from 'react-redux';
+// @ts-ignore
 import { middlewares } from './middlewares';
 import { reducer } from './rootReducer'; //@see: https://redux-toolkit.js.org/usage/usage-with-typescript#configurestore
 

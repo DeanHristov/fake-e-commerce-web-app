@@ -26,7 +26,7 @@ export const modalBoxSlice = createSlice({
       state.payload = payload;
     },
 
-    closeModal: (state) => {
+    closeModal: (state: IModalBox) => {
       state.isOpen = false;
       state.payload = null;
     },

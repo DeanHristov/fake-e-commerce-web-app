@@ -1,5 +1,6 @@
 import { FC, ReactNode } from 'react';
-import { useRouter } from 'next/navigation';
+import { useDispatch } from '@/store';
+import { MODAL_BOX, openModal } from '@/store/slices';
 
 export interface IProductHeadingProps {
   id: number;
@@ -14,12 +15,19 @@ const ProductHeading: FC<IProductHeadingProps> = ({
   children,
   className,
 }) => {
-  const router = useRouter();
+  const dispatch = useDispatch();
 
   return (
     <h3
-      onClick={() => router.push(`/products/${id}`)}
-      className={`text-black text-lg mt-2 truncate hover:underline hover:cursor-pointer ${className}`}
+      onClick={() =>
+        dispatch(
+          openModal({
+            type: MODAL_BOX.SHOW_PRODUCT,
+            productId: id,
+          }),
+        )
+      }
+      className={`product-heading hover:underline hover:cursor-pointer ${className}`}
     >
       {children}
       {title}

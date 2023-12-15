@@ -7,7 +7,7 @@ export class Utils {
    * @return {boolean} True if the value doesn't exist otherwise false
    */
   public static isNull(val: any): boolean {
-    return val === null || val === undefined || val === -1;
+    return val === null || val === undefined || val === 0 || val === -1;
   }
 
   /**
@@ -67,16 +67,18 @@ export class Utils {
 
   public static calculateOldPrice(
     price: number,
-    discountPercentage: number,
-    currency?: TCurrency,
-  ): number | string {
-    const reminder: number = (discountPercentage * price) / 100;
-    const oldPrice: number = price + reminder;
+    discountPercentage?: number,
+  ): number {
+    if (Utils.isNull(discountPercentage)) return price;
 
-    if (Utils.isNotNull(currency)) {
-      return Utils.parseAmountByCurrency(oldPrice, currency!);
-    }
+    const reminder: number = Math.round(
+      (Math.round(discountPercentage!) * price) / 100,
+    );
 
-    return oldPrice;
+    return price + reminder;
+  }
+
+  public static parseMapToArrayOfValues<K, V>(map: Map<K, V>): V[] {
+    return Array.from(map, ([_, value]) => value);
   }
 }

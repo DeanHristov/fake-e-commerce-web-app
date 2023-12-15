@@ -11,6 +11,8 @@ import { usePathname, useRouter } from 'next/navigation';
 import { FC } from 'react';
 import Badge from '../../ui/Badge';
 import SearchField from '../../ui/SearchField';
+import { useSelector } from '@/store';
+import { selectCarts } from '@/store/slices';
 
 export interface IPageHeaderProps {}
 
@@ -18,6 +20,7 @@ const PageHeader: FC<IPageHeaderProps> = ({}) => {
   const router: AppRouterInstance = useRouter();
   //@see: https://github.com/vercel/next.js/issues/43704
   const currentPath = usePathname();
+  const shoppingCart = useSelector(selectCarts);
 
   return (
     <>
@@ -42,7 +45,7 @@ const PageHeader: FC<IPageHeaderProps> = ({}) => {
             <div className="w-full py-2 flex justify-center md:justify-end items-center">
               <div className="w-24 md:w-14 border text-center">
                 <Link href={'/shopping-card'}>
-                  <Badge counter={6}>
+                  <Badge counter={shoppingCart.total}>
                     <ShoppingCartIcon className="w-7 h-7 text-gray-500" />
                   </Badge>
                 </Link>

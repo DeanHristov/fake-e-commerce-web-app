@@ -40,11 +40,13 @@ export interface ICartProduct {
   id: number;
   price: number;
   quantity: number;
-  total: number;
-  discountPercentage: number;
-  discountedPrice: number;
+  discountPercentage?: number;
+  // TODO Fix next line!
+  discountedPrice?: number;
   title: string;
   thumbnail: string;
+  total: number;
+  inStock: number;
 }
 
 export interface ICart {
@@ -55,7 +57,7 @@ export interface ICart {
   totalProducts: number;
   totalQuantity: number;
   currency?: TCurrency;
-  products: ICartProduct[];
+  products: Record<number, ICartProduct>; // Map<number, ICartProduct>;
 }
 
 //@see:https://nextjs.org/docs/app/api-reference/functions/generate-metadata#generatemetadata-function

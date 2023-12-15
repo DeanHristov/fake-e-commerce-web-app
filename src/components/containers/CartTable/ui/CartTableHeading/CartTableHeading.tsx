@@ -14,7 +14,7 @@ const CartTableHeading: FC<ICartTableHeadingProps> = () => {
       <li className="w-full max-w-[8rem] px-2 py-2 hidden md:block">
         <span className="">Quantity</span>
       </li>
-      <li className="w-full max-w-[10rem] px-2 py-2 hidden md:block">
+      <li className="w-full max-w-[12rem] px-2 py-2 hidden md:block">
         <span className="">Subtotal</span>
       </li>
     </ul>

@@ -36,6 +36,18 @@
     .price-label-old {
         @apply font-normal text-zinc-400 leading-4;
     }
+
+    .modal-box-container {
+        @apply w-full h-screen p-2 z-20 flex justify-center items-center fixed top-0 left-0  bg-black/60 min-w-[320px];
+    }
+
+    .modal-box-container > .content {
+        @apply rounded bg-white min-w-[320px] relative
+    }
+
+    .product-heading {
+        @apply text-black text-lg mt-2 truncate;
+    }
 }
 
 .page-container {

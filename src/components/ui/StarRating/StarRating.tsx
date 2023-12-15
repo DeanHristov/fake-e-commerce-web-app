@@ -7,7 +7,7 @@ export interface IStarRatingProps {
   inActiveColor: string;
   rating: number;
   starCount?: number;
-  onChange?: () => void;
+  onChange?: (num: number) => void;
 }
 
 const StarRating: FC<IStarRatingProps> = ({

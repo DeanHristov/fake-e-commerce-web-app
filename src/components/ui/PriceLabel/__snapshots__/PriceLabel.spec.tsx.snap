@@ -8,7 +8,7 @@ exports[`UI/Component <PriceLabel {...} /> Should render the both prices 1`] = `
     <span
       class="price-label-old line-through text-sm"
     >
-      $38.61
+      $38.20
     </span>
     <span
       class="price-label-old"

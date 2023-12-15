@@ -1,22 +1,15 @@
 import { render } from '@testing-library/react';
 import ProductDetails from '.';
-import { IProduct } from '@/types';
+
+import { useSelector } from '@/store';
 import products from '@/mocks/data/products';
 
-const firstProduct: IProduct = products[0];
+const mockSelector = useSelector as jest.Mock;
 
 describe('Containers/ProductDetails <ProductDetails {...} />', () => {
   it('Should render a default state of the component', () => {
-    const { container } = render(
-      <ProductDetails
-        price={firstProduct.price}
-        currency={'EUR'}
-        name={firstProduct.title}
-        image={firstProduct.thumbnail}
-        description={firstProduct.description}
-        rating={firstProduct.rating}
-      />,
-    );
+    mockSelector.mockReturnValue(products[0]);
+    const { container } = render(<ProductDetails productId={1} />);
 
     expect(container).toMatchSnapshot();
   });

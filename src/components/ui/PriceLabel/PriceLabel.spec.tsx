@@ -3,7 +3,7 @@ import PriceLabel from './';
 
 describe('UI/Component <PriceLabel {...} />', () => {
   it('Should render the default state', () => {
-    const { container } = render(<PriceLabel price={34.2} />);
+    const { container } = render(<PriceLabel currency="EUR" price={34.2} />);
 
     expect(container).toMatchSnapshot();
   });
@@ -18,9 +18,9 @@ describe('UI/Component <PriceLabel {...} />', () => {
 
   it('Should be able to see the old price based on discount percentage', () => {
     const { getByText } = render(
-      <PriceLabel price={549} discountPercentage={12.9} />,
+      <PriceLabel currency="EUR" price={549} discountPercentage={12.9} />,
     );
 
-    expect(getByText(/€619.82/i)).toBeVisible();
+    expect(getByText(/€620.00/i)).toBeVisible();
   });
 });

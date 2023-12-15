@@ -38,6 +38,7 @@ const config: Config = {
   testMatch: ['<rootDir>/src/**/*.spec.ts?(x)'],
   moduleNameMapper: {
     'next/navigation': '<rootDir>/tests/__mocks__/next-useRouter.ts',
+    'react-redux': '<rootDir>/tests/__mocks__/react-redux.ts',
   },
   coverageThreshold: {
     global: {

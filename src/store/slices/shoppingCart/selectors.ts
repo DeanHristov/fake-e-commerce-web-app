@@ -1,5 +1,4 @@
 import { ReduxState } from '@/store';
+import { ICart } from '@/types'; // The function below is called a selector and allows us to select a value from
 
-// The function below is called a selector and allows us to select a value from
-// the state. For example: `useSelector((state: RootState) => state.counter.value)
-export const selectCarts = (state: ReduxState) => state.shoppingCart;
+export const selectCarts = (state: ReduxState): ICart => state.shoppingCart;

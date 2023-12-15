@@ -3,7 +3,7 @@
 exports[`UI/ProductHeading <ProductHeading {...} /> Should render a default state of the Component 1`] = `
 <div>
   <h3
-    class="text-black text-lg mt-2 truncate hover:underline hover:cursor-pointer undefined"
+    class="product-heading hover:underline hover:cursor-pointer undefined"
   >
     Product 1
   </h3>

@@ -1,5 +1,4 @@
 import { ReduxState } from '@/store';
+import { TWishList } from '@/store/slices';
 
-// The function below is called a selector and allows us to select a value from
-// the state. For example: `useSelector((state: RootState) => state.counter.value)
-export const selectWishList = (state: ReduxState) => state.wishList;
+export const selectWishList = (state: ReduxState): TWishList => state.wishList;

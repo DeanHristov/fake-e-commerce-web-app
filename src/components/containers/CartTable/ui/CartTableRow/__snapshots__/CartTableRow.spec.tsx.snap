@@ -3,14 +3,14 @@
 exports[`UI/CartTableRow <CartTableRow {...} /> Should render a default state of the Component 1`] = `
 <div>
   <ul
-    class="w-full h-auto border-b border-b-dark px-2 py-2 md:flex md:justify-start"
+    class="w-full h-auto min-h-[6rem] border-b border-b-dark px-2 py-2 md:flex md:justify-start"
   >
     <li
-      class="w-full md:flex md:justify-start md:space-x-2 overflow-hidden"
+      class="w-full md:flex md:justify-start md:space-x-2 max-h-[10rem] overflow-hidden"
     >
       <img
         alt="Spring and summershoes"
-        class="w-auto h-auto rounded-lg min-w-[4rem] max-w-[8rem] border border-gray-300 mx-auto md:m-0"
+        class="w-auto h-auto rounded-lg min-w-[9rem] max-w-[8rem] border border-gray-300 mx-auto md:m-0"
         data-nimg="1"
         decoding="async"
         fetchpriority="high"
@@ -22,7 +22,7 @@ exports[`UI/CartTableRow <CartTableRow {...} /> Should render a default state of
         width="0"
       />
       <h3
-        class="text-black text-lg mt-2 truncate hover:underline hover:cursor-pointer text-center md:text-left"
+        class="product-heading hover:underline hover:cursor-pointer text-center md:text-left"
       >
         <span
           class="text-black text-sm"
@@ -74,7 +74,7 @@ exports[`UI/CartTableRow <CartTableRow {...} /> Should render a default state of
       </div>
     </li>
     <li
-      class="w-full md:max-w-[10rem] relative"
+      class="w-full md:max-w-[12rem] relative"
     >
       <div
         class="w-full flex items-center justify-center space-x-2 py-2 md:py-0 md:flex-col"
@@ -90,7 +90,7 @@ exports[`UI/CartTableRow <CartTableRow {...} /> Should render a default state of
           <span
             class="price-label-old line-through text-sm"
           >
-            $59.79
+            $65.00
           </span>
           <span
             class="price-label-old"
@@ -100,13 +100,13 @@ exports[`UI/CartTableRow <CartTableRow {...} /> Should render a default state of
           <span
             class="price-label"
           >
-            $55.00
+            $60.00
           </span>
         </div>
         <span
           class="text-red-500 font-medium text-center block"
         >
-          (-8.71%)
+          -9%
         </span>
       </div>
       <div

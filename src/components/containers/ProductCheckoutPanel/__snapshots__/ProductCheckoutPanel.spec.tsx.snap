@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Container/ProductCheckoutPanel <ProductCheckoutPanel {...} /> Should render a default state of the Component 1`] = `
+<div>
+  <div
+    class="bg-white border border-gray-300 rounded-lg p-4 shadow-md inline-block relative max-h-[16rem] w-full lg:w-auto"
+  >
+    <div
+      class="p-2"
+    >
+      <h3
+        class="px-3 py-3 text-center text-base text-black border-b border-b-dark"
+      >
+        0 Items in your Bag
+      </h3>
+      <p
+        class="py-2 mb-4 border-b border-b-dark uppercase flex justify-between items-center"
+      >
+        <span
+          class="font-bold text-md text-black"
+        >
+          total 
+        </span>
+        <span
+          class="font-medium text-md text-black"
+        >
+          ---
+        </span>
+      </p>
+      <div
+        class="relative w-full rounded-md w-full h-10 mb-4 mx-auto max-w-xl border border-gray-500"
+      >
+        <input
+          class="h-full px-6 w-full rounded-lg bg-white text-slate-700 ease-in duration-200 focus:bg-white"
+          disabled=""
+          placeholder="Enter a promocode"
+          type="text"
+        />
+      </div>
+      <button
+        class="cursor-not-allowed opacity-50 bg-green-600 text-white font-bold uppercase bg-primary hover:bg-hover hover:shadow-lg duration-300 ease-in w-full px-4 py-1.5 flex justify-center items-center gap-2 rounded-none"
+        disabled=""
+      >
+        Checkout
+      </button>
+    </div>
+  </div>
+</div>
+`;

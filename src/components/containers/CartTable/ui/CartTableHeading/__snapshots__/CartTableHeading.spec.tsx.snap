@@ -33,7 +33,7 @@ exports[`UI/CartTableHeading <CartTableHeading {...} /> Should render a default 
       </span>
     </li>
     <li
-      class="w-full max-w-[10rem] px-2 py-2 hidden md:block"
+      class="w-full max-w-[12rem] px-2 py-2 hidden md:block"
     >
       <span
         class=""

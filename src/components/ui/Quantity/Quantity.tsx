@@ -20,7 +20,7 @@ const Quantity: FC<IQuantityProps> = ({
   const handlerOnIncrease = useCallback(() => {
     const nextValue: number = quantity + 1;
 
-    if (nextValue < maxValue) {
+    if (nextValue <= maxValue) {
       onIncrease(nextValue);
       setQuantity(nextValue);
     }

@@ -14,7 +14,7 @@ exports[`UI/ProductItem <ProductItem {...} /> Should render the badge with a cou
         <span
           class="card-flag"
         >
-          -12.96%
+          -13%
         </span>
       </div>
       <div
@@ -35,7 +35,7 @@ exports[`UI/ProductItem <ProductItem {...} /> Should render the badge with a cou
         />
       </div>
       <h3
-        class="text-black text-lg mt-2 truncate hover:underline hover:cursor-pointer undefined"
+        class="product-heading hover:underline hover:cursor-pointer undefined"
       >
         iPhone 9
       </h3>
@@ -45,7 +45,7 @@ exports[`UI/ProductItem <ProductItem {...} /> Should render the badge with a cou
         <span
           class="price-label-old line-through text-sm"
         >
-          €620.15
+          €620.00
         </span>
         <span
           class="price-label-old"

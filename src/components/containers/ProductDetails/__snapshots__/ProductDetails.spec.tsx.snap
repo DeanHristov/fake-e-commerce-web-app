@@ -3,47 +3,257 @@
 exports[`Containers/ProductDetails <ProductDetails {...} /> Should render a default state of the component 1`] = `
 <div>
   <div
-    class="flex-1"
+    class="w-full bg-white rounded-2xl px-4 pb-4 flex flex-col md:flex-row md:space-y-0 md:space-x-10 "
   >
     <div
-      class="bg-white border border-gray-300 rounded-lg p-4 shadow-md inline-block relative undefined"
+      class="max-w-sm md:max-h-96 flex-col justify-center items-start mx-auto group"
     >
+      <img
+        alt="iPhone 9"
+        class="w-full h-auto max-h-[270px] min-w-[280px] transition hover:scale-105 duration-200  rounded-lg border border-gray-300 mx-auto"
+        data-nimg="1"
+        decoding="async"
+        fetchpriority="high"
+        height="0"
+        sizes="100vw"
+        src="/_next/image?url=https%3A%2F%2Fi.dummyjson.com%2Fdata%2Fproducts%2F1%2Fthumbnail.jpg&w=3840&q=75"
+        srcset="/_next/image?url=https%3A%2F%2Fi.dummyjson.com%2Fdata%2Fproducts%2F1%2Fthumbnail.jpg&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fi.dummyjson.com%2Fdata%2Fproducts%2F1%2Fthumbnail.jpg&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fi.dummyjson.com%2Fdata%2Fproducts%2F1%2Fthumbnail.jpg&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fi.dummyjson.com%2Fdata%2Fproducts%2F1%2Fthumbnail.jpg&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fi.dummyjson.com%2Fdata%2Fproducts%2F1%2Fthumbnail.jpg&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fi.dummyjson.com%2Fdata%2Fproducts%2F1%2Fthumbnail.jpg&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fi.dummyjson.com%2Fdata%2Fproducts%2F1%2Fthumbnail.jpg&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fi.dummyjson.com%2Fdata%2Fproducts%2F1%2Fthumbnail.jpg&w=3840&q=75 3840w"
+        style="color: transparent;"
+        width="0"
+      />
       <div
-        class="flex flex-col lg:flex-row"
+        class="hidden md:block"
       >
-        <img
-          alt=""
-          class="border-gray-300 border m-auto"
-          data-nimg="1"
-          decoding="async"
-          height="320"
-          src=""
-          style="color: transparent;"
-          width="440"
-        />
         <div
-          class="w-full"
+          class="flex space-x-2 items-center mt-4"
+          data-testid="star-rating"
         >
-          <h3
-            class="p-2  text-gray-500 border-b border-t border-gray-300"
-          />
-          <span
-            class="block  text-gray-500 p-2 border-b border-gray-300"
+          <div
+            class="flex space-x-1 justify-start items-baseline"
           >
-            €549.00
-          </span>
+            <span
+              class="star-icon"
+              data-testid="star-item"
+              style="color: rgb(255, 161, 51);"
+            >
+              ☆
+            </span>
+            <span
+              class="star-icon"
+              data-testid="star-item"
+              style="color: rgb(255, 161, 51);"
+            >
+              ☆
+            </span>
+            <span
+              class="star-icon"
+              data-testid="star-item"
+              style="color: rgb(255, 161, 51);"
+            >
+              ☆
+            </span>
+            <span
+              class="star-icon"
+              data-testid="star-item"
+              style="color: rgb(255, 161, 51);"
+            >
+              ☆
+            </span>
+            <span
+              class="star-icon"
+              data-testid="star-item"
+              style="color: rgb(255, 161, 51);"
+            >
+              ☆
+            </span>
+          </div>
           <span
-            class="block p-2 border-b border-gray-300"
+            class="text-xs font-medium text-zambezi leading-4"
+            data-testid="rating"
           >
-            4.69
+            4.69 Reviews
           </span>
         </div>
+        <div
+          class="flex items-center space-x-1 mt-5"
+        >
+          <div
+            class="w-1.5 h-1.5 bg-hover rounded-full"
+          />
+          <span
+            class="text-xs text-black leading-4"
+          >
+            94+ pcs. in stock
+          </span>
+        </div>
+        <div
+          class="flex flex-col gap-y-2 pt-2 md:flex-row md:gap-x-2 md:gap-y-0"
+        >
+          <button
+            class="cursor-pointer bg-white border border-green-600 text-dark font-normal hover:shadow-lg duration-300 ease-in w-full px-4 py-1.5 flex justify-center items-center gap-2 undefined"
+          >
+            <svg
+              aria-hidden="true"
+              class="w-4 h-4 text-dark"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
+              />
+            </svg>
+          </button>
+          <button
+            class="cursor-pointer bg-white border border-green-600 text-dark font-normal hover:shadow-lg duration-300 ease-in w-full px-4 py-1.5 flex justify-center items-center gap-2 undefined"
+          >
+            <svg
+              aria-hidden="true"
+              class="w-4 h-4 text-dark"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex flex-col space-y-4 md:space-y-3 w-full"
+    >
+      <h3
+        class="product-heading"
+      >
+        iPhone 9
+      </h3>
+      <div
+        class="space-x-2"
+      >
+        <span
+          class="price-label-old line-through text-sm"
+        >
+          €620.00
+        </span>
+        <span
+          class="price-label-old"
+        >
+          /
+        </span>
+        <span
+          class="price-label"
+        >
+          €549.00
+        </span>
       </div>
       <p
-        class="py-2 mb-10 text-gray-500"
+        class="h-auto overflow-hidden overflow-y-auto"
       >
         An apple mobile which is nothing like apple
       </p>
+      <div
+        class="md:hidden"
+      >
+        <div
+          class="flex space-x-2 items-center mt-4"
+          data-testid="star-rating"
+        >
+          <div
+            class="flex space-x-1 justify-start items-baseline"
+          >
+            <span
+              class="star-icon"
+              data-testid="star-item"
+              style="color: rgb(255, 161, 51);"
+            >
+              ☆
+            </span>
+            <span
+              class="star-icon"
+              data-testid="star-item"
+              style="color: rgb(255, 161, 51);"
+            >
+              ☆
+            </span>
+            <span
+              class="star-icon"
+              data-testid="star-item"
+              style="color: rgb(255, 161, 51);"
+            >
+              ☆
+            </span>
+            <span
+              class="star-icon"
+              data-testid="star-item"
+              style="color: rgb(255, 161, 51);"
+            >
+              ☆
+            </span>
+            <span
+              class="star-icon"
+              data-testid="star-item"
+              style="color: rgb(255, 161, 51);"
+            >
+              ☆
+            </span>
+          </div>
+          <span
+            class="text-xs font-medium text-zambezi leading-4"
+            data-testid="rating"
+          >
+            4.69 Reviews
+          </span>
+        </div>
+        <div
+          class="flex items-center space-x-1 mt-5"
+        >
+          <div
+            class="w-1.5 h-1.5 bg-hover rounded-full"
+          />
+          <span
+            class="text-xs text-black leading-4"
+          >
+            94+ pcs. in stock
+          </span>
+        </div>
+        <div
+          class="flex flex-col gap-y-2 pt-2 md:flex-row md:gap-x-2 md:gap-y-0"
+        >
+          <button
+            class="cursor-pointer bg-white border border-green-600 text-dark font-normal hover:shadow-lg duration-300 ease-in w-full px-4 py-1.5 flex justify-center items-center gap-2 undefined"
+          >
+            <svg
+              aria-hidden="true"
+              class="w-4 h-4 text-dark"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
+              />
+            </svg>
+          </button>
+          <button
+            class="cursor-pointer bg-white border border-green-600 text-dark font-normal hover:shadow-lg duration-300 ease-in w-full px-4 py-1.5 flex justify-center items-center gap-2 undefined"
+          >
+            <svg
+              aria-hidden="true"
+              class="w-4 h-4 text-dark"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 </div>

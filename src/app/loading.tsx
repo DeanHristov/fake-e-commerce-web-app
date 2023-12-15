@@ -1,6 +1,6 @@
 export const Loading = () => {
   return (
-    <div className="loading-container fixed top-0 left-0 right-auto bottom-auto bg-black/80 w-screen h-screen flex justify-center items-center">
+    <div className="loading-container absolute top-0 left-0 right-auto bottom-auto bg-black/80 w-screen h-screen flex justify-center items-center">
       <svg
         aria-hidden="true"
         className="w-52 h-52 text-gray-200 animate-spin fill-dark"

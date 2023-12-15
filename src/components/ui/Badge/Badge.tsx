@@ -1,4 +1,5 @@
 import { FC, ReactNode } from 'react';
+import { Utils } from '@/utils/Utils';
 
 export interface IBadgeProps {
   children: ReactNode;
@@ -15,7 +16,7 @@ const Badge: FC<IBadgeProps> = ({ children, onClick, counter, dot, color }) => {
       className="relative inline-block px-2 cursor-pointer"
     >
       {children}
-      {counter && (
+      {Utils.isNotNull(counter) && counter! > 0 && (
         <span
           className={`absolute top-0 right-2 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 transform translate-x-1/2 -translate-y-1/2 ${
             color ?? 'bg-red-600'
