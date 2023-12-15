@@ -3,15 +3,15 @@ import { Metadata } from 'next';
 
 import CartContainer from '@/components/containers/CartContainer';
 
-export interface IShoppingCardProps {
-  userId: number;
-}
+// export interface IShoppingCardProps {
+//   userId: number;
+// }
 
 export const metadata: Metadata = {
   title: 'Shopping Card',
 };
 
-const ShoppingCardPage: FC<IShoppingCardProps> = async ({ userId = 1 }) => {
+const ShoppingCardPage: FC<{}> = ({}) => {
   //TODO Do a request only if the user has active token!
 
   // const shoppingCart: ICartsResponse = await APIUtils.fetch(

@@ -18,7 +18,7 @@ const HomePageView: FC<IHomePageViewProps> = ({ products }) => {
     if (Utils.isNotEmpty(products)) {
       dispatch(initProducts(products));
     }
-  }, []);
+  }, [dispatch]);
 
   return (
     <section className="mx-auto px-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 pb-16 relative">

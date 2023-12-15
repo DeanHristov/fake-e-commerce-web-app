@@ -22,7 +22,7 @@ const CartTableRow: FC<ICartTableRowProps> = ({
   const onMoveToWishList = useCallback(() => {
     dispatch(addToWishList(product));
     dispatch(removeFromCart({ productId: product.id }));
-  }, [product]);
+  }, [product, dispatch]);
 
   return (
     <ul className="w-full h-auto min-h-[6rem] border-b border-b-dark px-2 py-2 md:flex md:justify-start">
