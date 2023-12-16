@@ -1,11 +1,22 @@
 # Motivation
 
 There are two reasons why this repo exists.
-1) My main mission behind this repo is to show you my ability to work with this stack of technologies and how I organize the project and code as well.
 
-2) Just challenging myself with the latest version (during development) of NextJs (v14+) and React-toolkit
+1) My main mission behind this repo is to show you my ability to work with this
+   stack of technologies and how I organize the project and code as well.
 
-**I haven't used any AI tools like ChatGPT, CoPIlot, or any other "crutches" for the mind.**
+2) Just challenging myself with the latest version (during development) of
+   NextJs (v14+) and React-toolkit
+
+**I haven't used any AI tools like ChatGPT, CoPIlot, or any other "crutches" for
+the mind.**
+
+## Basic preview of the functionality
+
+![Homepage](./docs/home-page.png)
+![Modal box](./docs/modal-box.png)
+![Shopping cart](./docs/shopping-page.png)
+![Wish list page](./docs/wish-list.png)
 
 ## Requirements
 
@@ -105,7 +116,7 @@ on [NPM scripts](https://docs.npmjs.com/misc/scripts).
 - NodeJS- https://nodejs.org/en/
 - Git - https://git-scm.com/
 - TypeScript - https://www.typescriptlang.org/
-- NextJS (v13+) - https://nextjs.org/
+- NextJS (v14.0.4) - https://nextjs.org/
 
 ## Made by
 
