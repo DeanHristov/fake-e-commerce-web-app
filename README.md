@@ -1,10 +1,11 @@
 # Motivation
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped
-with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+There are two reasons why this repo exists.
+1) My main mission behind this repo is to show you my ability to work with this stack of technologies and how I organize the project and code as well.
 
-**I haven't used any kind of AI tools like ChatGPT, CoPIlot, or any other "
-crutches" for the mind.**
+2) Just challenging myself with the latest version (during development) of NextJs (v14+) and React-toolkit
+
+**I haven't used any AI tools like ChatGPT, CoPIlot, or any other "crutches" for the mind.**
 
 ## Requirements
 
