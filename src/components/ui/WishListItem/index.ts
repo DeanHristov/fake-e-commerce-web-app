@@ -1,4 +1,4 @@
-import WishListItem, { IWishListViewProps } from './WishListItem';
+import WishListItem, { IWishListItemProps } from './WishListItem';
 
-export type { IWishListViewProps };
+export type { IWishListItemProps };
 export default WishListItem;
