@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UI/Controls <WizardContent {...} /> Should be able to render the active state of the Component 1`] = `
+<div>
+  <div
+    class="w-full h-full px-2 py-2 border border-t border-t-gray-300 block fade-in"
+  >
+    <div />
+  </div>
+</div>
+`;
+
+exports[`UI/Controls <WizardContent {...} /> Should be able to render the in-active state of the Component 1`] = `
+<div>
+  <div
+    class="w-full h-full px-2 py-2 border border-t border-t-gray-300 hidden fade-out"
+  >
+    <div />
+  </div>
+</div>
+`;

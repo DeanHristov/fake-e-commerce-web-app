@@ -48,6 +48,32 @@
     .product-heading {
         @apply text-black text-lg mt-2 truncate;
     }
+
+    .wizard-heading {
+        @apply w-full flex justify-center items-center transition duration-300 h-0 border;
+    }
+
+    .wizard-heading-circle {
+        @apply bg-white p-2 rounded-full cursor-pointer border relative;
+    }
+
+    .wizard-heading-circle.active:before {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: 105%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        border-left: .9rem solid transparent;
+        border-right: .9rem solid transparent;
+        border-bottom: .9rem solid #d1d5db;
+    }
+
+    .wizard-heading-icon {
+        @apply w-8 h-8 transition duration-300
+    }
 }
 
 .page-container {
@@ -55,7 +81,11 @@
 }
 
 .fade-in {
-    animation: fadeIn 2s ease infinite;
+    animation: fadeIn .8s ease;
+}
+
+.fade-out {
+    animation: fadeOut .3s ease;
 }
 
 .animation-delay-200 {
@@ -88,5 +118,14 @@
     }
     to {
         opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
     }
 }

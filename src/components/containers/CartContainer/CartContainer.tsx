@@ -22,7 +22,7 @@ const CartContainer: FC<ICartContainerProps> = ({}) => {
 
   return (
     <div className="w-full space-y-4 lg:flex lg:justify-start lg:space-x-3 lg:space-y-0">
-      <Widget className="min-h-[16rem] w-full">
+      <Widget title="Shopping Cart" className="min-h-[16rem] w-full">
         <CartTable>
           <CartTableHeading />
           {Utils.isEmpty(shoppingCart.products) && (
@@ -48,9 +48,6 @@ const CartContainer: FC<ICartContainerProps> = ({}) => {
         )}
       </Widget>
       <ProductCheckoutPanel
-        onCheckout={(totalAmount) =>
-          console.log('totalAmount', shoppingCart.discountedTotal)
-        }
         currency={shoppingCart.currency!}
         total={shoppingCart.total}
         discountedTotal={shoppingCart.discountedTotal}

@@ -16,7 +16,9 @@ the mind.**
 ![Homepage](./docs/home-page.png)
 ![Modal box](./docs/modal-box.png)
 ![Shopping cart](./docs/shopping-page.png)
+![Shopping cart modal](./docs/shopping-cart-modal.png)
 ![Wish list page](./docs/wish-list.png)
+![checkout page](./docs/checkout-page.png)
 
 ## Requirements
 

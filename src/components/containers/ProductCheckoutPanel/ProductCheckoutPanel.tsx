@@ -4,9 +4,9 @@ import { Utils } from '@/utils/Utils';
 import InputField from '@/components/ui/InputField';
 import Button from '@/components/ui/Button';
 import { TCurrency } from '@/types';
+import { useRouter } from 'next/navigation';
 
 export interface IProductCheckoutPanelProps {
-  onCheckout: (total: number) => void;
   totalQuantity: number;
   totalProducts: number;
   total: number;
@@ -16,7 +16,6 @@ export interface IProductCheckoutPanelProps {
 }
 
 const ProductCheckoutPanel: FC<IProductCheckoutPanelProps> = ({
-  onCheckout,
   totalQuantity,
   totalProducts,
   total,
@@ -24,6 +23,7 @@ const ProductCheckoutPanel: FC<IProductCheckoutPanelProps> = ({
   discountedTotal,
   currency,
 }) => {
+  const router = useRouter();
   return (
     <Widget className="max-h-[16rem] w-full lg:w-auto">
       <div className="p-2">
@@ -51,7 +51,7 @@ const ProductCheckoutPanel: FC<IProductCheckoutPanelProps> = ({
           className="rounded-none"
           variant="primary"
           title={'Checkout'}
-          onClick={() => onCheckout(discountedTotal)}
+          onClick={() => router.push('/checkout')}
         />
       </div>
     </Widget>

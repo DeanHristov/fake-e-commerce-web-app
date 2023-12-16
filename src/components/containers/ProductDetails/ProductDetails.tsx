@@ -46,7 +46,6 @@ const ProductDetails: FC<IProductDetailsProps> = ({
         activeColor="#FFA133"
         inActiveColor="#E3E3E3"
         starCount={5}
-        onChange={(value) => console.log(`StarRating: ${value}`)}
         rating={selectedProduct.rating}
       />
       <StockLabel stock={selectedProduct.stock} />

@@ -32,7 +32,9 @@ const Widget: FC<IWidgetProps> = ({
       {header}
       {!header && (
         <>
-          {title && <h3 className="text-base text-black font-bold">{title}</h3>}
+          {title && (
+            <h3 className="text-base text-black font-bold pb-2">{title}</h3>
+          )}
           {subTitle && <h4 className="text-sm text-gray-600">{subTitle}</h4>}
         </>
       )}

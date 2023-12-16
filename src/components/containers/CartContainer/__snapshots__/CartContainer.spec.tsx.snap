@@ -8,6 +8,11 @@ exports[`Container/CartContainer <CartContainer {...} /> Should be able to displ
     <div
       class="bg-white border border-gray-300 rounded-lg p-4 shadow-md inline-block relative min-h-[16rem] w-full"
     >
+      <h3
+        class="text-base text-black font-bold pb-2"
+      >
+        Shopping Cart
+      </h3>
       <ul
         class="w-full flex border-b border-t border-b-dark border-t-dark"
       >
@@ -213,6 +218,11 @@ exports[`Container/CartContainer <CartContainer {...} /> Should render a default
     <div
       class="bg-white border border-gray-300 rounded-lg p-4 shadow-md inline-block relative min-h-[16rem] w-full"
     >
+      <h3
+        class="text-base text-black font-bold pb-2"
+      >
+        Shopping Cart
+      </h3>
       <ul
         class="w-full flex border-b border-t border-b-dark border-t-dark"
       >
