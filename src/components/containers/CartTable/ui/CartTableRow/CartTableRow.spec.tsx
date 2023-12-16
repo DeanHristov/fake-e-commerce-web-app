@@ -12,4 +12,10 @@ describe('UI/CartTableRow <CartTableRow {...} />', () => {
 
     expect(container).toMatchSnapshot();
   });
+
+  it('Should render a default state of the Component', () => {
+    const { container } = render(<CartTableRow {...firstCardProduct} />);
+
+    expect(container).toMatchSnapshot();
+  });
 });

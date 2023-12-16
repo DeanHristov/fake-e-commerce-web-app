@@ -16,6 +16,7 @@ const config: Config = {
   verbose: true,
   collectCoverageFrom: [
     '<rootDir>/src/**/*.{ts,tsx}',
+    '!<rootDir>/src/**/index.ts',
     '!<rootDir>/*.config.{ts,js}',
     '!<rootDir>/tests/e2e/**/*.{ts,tsx}',
     '!<rootDir>/src/mocks/**/*.{ts,tsx}',

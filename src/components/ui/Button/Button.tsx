@@ -1,7 +1,7 @@
 'use client';
 
 import { FC, ReactNode } from 'react';
-import Spinner from '../Spinner/Spinner';
+import Spinner from '@/components/ui/Spinner';
 
 export type TButtonPresentations = 'primary' | 'secondary';
 export type TButtonType = 'submit' | 'reset' | 'button';
