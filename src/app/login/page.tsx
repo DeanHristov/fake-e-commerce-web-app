@@ -10,9 +10,9 @@ export const metadata: Metadata = {
 
 const LoginPage: FC<ILoginProps> = ({}) => {
   return (
-    <div className="flex justify-center items-center h-[93.7vh]">
+    <section className="flex justify-center items-center h-[93.7vh]">
       <LoginForm />
-    </div>
+    </section>
   );
 };
 

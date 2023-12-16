@@ -1,63 +1,60 @@
 'use client';
 
 import {
-  MagnifyingGlassIcon,
+  HeartIcon,
   ShoppingCartIcon,
   UserIcon,
 } from '@heroicons/react/24/solid';
-import { AppRouterInstance } from 'next/dist/shared/lib/app-router-context.shared-runtime';
 import Link from 'next/link';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import { FC } from 'react';
 import Badge from '../../ui/Badge';
-import SearchField from '../../ui/SearchField';
 import { useSelector } from '@/store';
-import { selectCarts } from '@/store/slices';
+import { selectCarts, selectWishListSize } from '@/store/slices';
 
 export interface IPageHeaderProps {}
 
+//@see: https://github.com/vercel/next.js/issues/43704
+
 const PageHeader: FC<IPageHeaderProps> = ({}) => {
-  const router: AppRouterInstance = useRouter();
-  //@see: https://github.com/vercel/next.js/issues/43704
   const currentPath = usePathname();
   const shoppingCart = useSelector(selectCarts);
+  const wishListTotal = useSelector(selectWishListSize);
 
   return (
     <>
       {currentPath === '/login' && <div />}
       {currentPath !== '/login' && (
         <div className="shadow-md px-2">
-          <header className="flex flex-col md:flex-row  min-w-[320px] max-w-screen-xl m-auto">
-            <div className="w-full py-2 text-center md:text-left">
-              <Link href={'/'} className="w-full text-black font-bold text-2xl">
-                E-commerce
+          <header className="flex flex-col justify-center items-center space-y-4 min-w-[320px] max-w-screen-xl m-auto md:flex-row">
+            <Link
+              href={'/'}
+              className="w-full text-black font-bold text-2xl text-center md:text-left"
+            >
+              E-commerce
+            </Link>
+            <div className="flex justify-center space-x-3">
+              <Link href={'/shopping-card'}>
+                <Badge counter={shoppingCart.total}>
+                  <ShoppingCartIcon
+                    className={`${
+                      shoppingCart.total > 0 ? 'text-green-500' : ''
+                    } w-7 h-7 text-dark`}
+                  />
+                </Badge>
               </Link>
-            </div>
-            <div className="w-full h-14 py-2 self-center">
-              <SearchField
-                placeholder="Search me..."
-                onChange={(value) => console.log(value)}
-                rightIcon={
-                  <MagnifyingGlassIcon className="w-7 h-7 text-zinc-100" />
-                }
-              />
-            </div>
-            <div className="w-full py-2 flex justify-center md:justify-end items-center">
-              <div className="w-24 md:w-14 border text-center">
-                <Link href={'/shopping-card'}>
-                  <Badge counter={shoppingCart.total}>
-                    <ShoppingCartIcon className="w-7 h-7 text-gray-500" />
-                  </Badge>
-                </Link>
-              </div>
-
-              <div className="w-24 md:w-14 text-center">
-                <Link href={'/admin'}>
-                  <Badge>
-                    <UserIcon className="w-7 h-7 text-gray-500" />
-                  </Badge>
-                </Link>
-              </div>
+              <Link href={'/wish-list'}>
+                <HeartIcon
+                  className={`${
+                    wishListTotal > 0 ? 'animate-wish-list' : ''
+                  } w-7 h-7 text-dark`}
+                />
+              </Link>
+              <Link href={'/admin'}>
+                <Badge>
+                  <UserIcon className="w-7 h-7 text-dark" />
+                </Badge>
+              </Link>
             </div>
           </header>
         </div>

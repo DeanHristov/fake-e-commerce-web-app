@@ -3,7 +3,7 @@
 exports[`UI/Component <StarRating {...} /> Should render the default state 1`] = `
 <div>
   <div
-    class="flex space-x-2 items-center mt-4"
+    class="flex space-x-2 items-center mt-3"
     data-testid="star-rating"
   >
     <div

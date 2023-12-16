@@ -1,6 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { ICart, ICartProduct } from '@/types';
 import { Utils } from '@/utils/Utils';
+import { addToWishList } from '@/store/slices';
 
 export interface IRemoveItemPayload {
   productId: number;
@@ -78,6 +79,21 @@ export const shoppingCartSlice = createSlice({
         }
       }
     },
+  },
+  extraReducers: (builder) => {
+    builder.addCase(addToWishList, (state: ICart, action) => {
+      const { id } = action.payload;
+      if (Utils.isNotNull(state.products[id])) {
+        const product: ICartProduct = state.products[id];
+
+        state.discountedTotal -= product.total;
+        state.total -= product.quantity;
+        state.totalProducts -= product.quantity;
+        state.totalQuantity -= product.quantity;
+
+        delete state.products[id];
+      }
+    });
   },
 });
 

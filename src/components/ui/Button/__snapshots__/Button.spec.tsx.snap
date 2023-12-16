@@ -3,7 +3,7 @@
 exports[`UI/Component <Button {...} /> Should be able to render it with a  left icon 1`] = `
 <div>
   <button
-    class="cursor-pointer bg-green-600 text-white font-bold uppercase bg-primary hover:bg-hover hover:shadow-lg duration-300 ease-in w-full px-4 py-1.5 flex justify-center items-center gap-2 undefined"
+    class="cursor-pointer bg-green-600 text-white font-bold uppercase bg-primary hover:bg-hover hover:shadow-lg transition transform active:scale-90 duration-200 ease-in w-full px-4 py-1.5 flex justify-center items-center gap-2 undefined"
   >
     <svg
       aria-hidden="true"
@@ -24,7 +24,7 @@ exports[`UI/Component <Button {...} /> Should be able to render it with a  left 
 exports[`UI/Component <Button {...} /> Should be able to render it with a right icon 1`] = `
 <div>
   <button
-    class="cursor-pointer bg-green-600 text-white font-bold uppercase bg-primary hover:bg-hover hover:shadow-lg duration-300 ease-in w-full px-4 py-1.5 flex justify-center items-center gap-2 undefined"
+    class="cursor-pointer bg-green-600 text-white font-bold uppercase bg-primary hover:bg-hover hover:shadow-lg transition transform active:scale-90 duration-200 ease-in w-full px-4 py-1.5 flex justify-center items-center gap-2 undefined"
   >
     Click me
     <svg
@@ -45,7 +45,7 @@ exports[`UI/Component <Button {...} /> Should be able to render it with a right 
 exports[`UI/Component <Button {...} /> Should be able to render the primary state 1`] = `
 <div>
   <button
-    class="cursor-pointer bg-green-600 text-white font-bold uppercase bg-primary hover:bg-hover hover:shadow-lg duration-300 ease-in w-full px-4 py-1.5 flex justify-center items-center gap-2 undefined"
+    class="cursor-pointer bg-green-600 text-white font-bold uppercase bg-primary hover:bg-hover hover:shadow-lg transition transform active:scale-90 duration-200 ease-in w-full px-4 py-1.5 flex justify-center items-center gap-2 undefined"
   >
     Click me
   </button>
@@ -55,7 +55,7 @@ exports[`UI/Component <Button {...} /> Should be able to render the primary stat
 exports[`UI/Component <Button {...} /> Should be able to render the secondary state 1`] = `
 <div>
   <button
-    class="cursor-pointer bg-white border border-green-600 text-dark font-normal hover:shadow-lg duration-300 ease-in w-full px-4 py-1.5 flex justify-center items-center gap-2 undefined"
+    class="cursor-pointer bg-white border border-green-600 text-dark font-normal hover:shadow-lg transition transform active:scale-90 duration-200 ease-in w-full px-4 py-1.5 flex justify-center items-center gap-2 undefined"
   >
     Click me
   </button>

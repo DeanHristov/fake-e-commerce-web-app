@@ -70,6 +70,17 @@
     animation-delay: 400ms;
 }
 
+.animate-wish-list {
+    animation: wish-list 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+
+@keyframes wish-list {
+    75%, 100% {
+        transform: scale(1.15);
+        color: #ef4444;
+    }
+}
 
 @keyframes fadeIn {
     from {

@@ -1,28 +1,49 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { ICartProduct } from '@/types';
 import { Utils } from '@/utils/Utils';
-import { IRemoveItemPayload } from '@/store/slices';
+import { addToCart, IRemoveItemPayload } from '@/store/slices';
 
 export type TWishList = Record<number, ICartProduct>;
 
-const initialState: TWishList = {};
+export interface IWishListState {
+  products: TWishList;
+  total: number;
+}
+
+const initialState: IWishListState = {
+  products: {},
+  total: 0,
+};
 
 export const wishListSlice = createSlice({
   name: 'wishList',
   initialState,
   reducers: {
-    addToWishList: (state: TWishList, action: PayloadAction<ICartProduct>) => {
+    addToWishList: (
+      state: IWishListState,
+      action: PayloadAction<ICartProduct>,
+    ) => {
       const { id } = action.payload;
-      if (Utils.isNull(state[id])) {
-        state[id] = action.payload;
-      }
+
+      state.products[id] = action.payload;
+      state.total += 1;
     },
     removeFromWishList: (
-      state: TWishList,
+      state: IWishListState,
       action: PayloadAction<IRemoveItemPayload>,
     ) => {
-      delete state[action.payload.productId];
+      state.total = state.total > 0 ? state.total - 1 : 0;
+      delete state.products[action.payload.productId];
     },
+  },
+
+  extraReducers: (builder) => {
+    builder.addCase(addToCart, (state: IWishListState, action) => {
+      if (Utils.isNotNull(state.products[action.payload.id])) {
+        state.total = state.total > 0 ? state.total - 1 : 0;
+        delete state.products[action.payload.id];
+      }
+    });
   },
 });
 

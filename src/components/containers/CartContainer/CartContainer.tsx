@@ -8,13 +8,16 @@ import CartTableHeading from '@/components/containers/CartTable/ui/CartTableHead
 import { Utils } from '@/utils/Utils';
 import ProductCheckoutPanel from '@/components/containers/ProductCheckoutPanel';
 import { useSelector } from '@/store';
-import { selectCarts } from '@/store/slices';
+import { selectCarts, selectWishListSize } from '@/store/slices';
 import CartTableRow from '@/components/containers/CartTable/ui/CartTableRow/CartTableRow';
+import WishListView from '@/components/containers/WishListView';
+import Divider from '@/components/ui/Divider';
 
 export interface ICartContainerProps {}
 
 const CartContainer: FC<ICartContainerProps> = ({}) => {
   const shoppingCart: ICart = useSelector(selectCarts);
+  const totalWishListItems: number = useSelector(selectWishListSize);
   const products: ICartProduct[] = Object.values(shoppingCart.products);
 
   return (
@@ -37,6 +40,12 @@ const CartContainer: FC<ICartContainerProps> = ({}) => {
             />
           ))}
         </CartTable>
+        {totalWishListItems > 0 && (
+          <div className="mt-10 space-y-6 ">
+            <Divider gradient />
+            <WishListView />
+          </div>
+        )}
       </Widget>
       <ProductCheckoutPanel
         onCheckout={(totalAmount) =>

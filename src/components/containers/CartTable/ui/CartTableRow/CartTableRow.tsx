@@ -1,4 +1,4 @@
-import { FC, useCallback } from 'react';
+import { FC } from 'react';
 import Image from 'next/image';
 import { ICartProduct, TCurrency } from '@/types';
 
@@ -19,10 +19,6 @@ const CartTableRow: FC<ICartTableRowProps> = ({
   ...product
 }) => {
   const dispatch = useDispatch();
-  const onMoveToWishList = useCallback(() => {
-    dispatch(addToWishList(product));
-    dispatch(removeFromCart({ productId: product.id }));
-  }, [product, dispatch]);
 
   return (
     <ul className="w-full h-auto min-h-[6rem] border-b border-b-dark px-2 py-2 md:flex md:justify-start">
@@ -34,7 +30,7 @@ const CartTableRow: FC<ICartTableRowProps> = ({
           width={0}
           height={0}
           sizes="100vw"
-          className={`w-auto h-auto rounded-lg min-w-[9rem] max-w-[8rem] border border-gray-300 mx-auto md:m-0`}
+          className={`w-auto h-auto rounded-lg min-w-[9rem] md:max-w-[8rem] border border-gray-300 mx-auto md:m-0`}
         />
         <ProductHeading
           id={product.id}
@@ -89,7 +85,7 @@ const CartTableRow: FC<ICartTableRowProps> = ({
         <RowControls
           className="text-center md:text-left md:absolute md:bottom-0.5 md:right-0"
           onRemove={() => dispatch(removeFromCart({ productId: product.id }))}
-          onWishList={onMoveToWishList}
+          onWishList={() => dispatch(addToWishList(product))}
         />
       </li>
     </ul>

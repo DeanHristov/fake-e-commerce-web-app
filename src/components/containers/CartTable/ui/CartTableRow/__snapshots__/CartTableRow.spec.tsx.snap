@@ -10,7 +10,7 @@ exports[`UI/CartTableRow <CartTableRow {...} /> Should render a default state of
     >
       <img
         alt="Spring and summershoes"
-        class="w-auto h-auto rounded-lg min-w-[9rem] max-w-[8rem] border border-gray-300 mx-auto md:m-0"
+        class="w-auto h-auto rounded-lg min-w-[9rem] md:max-w-[8rem] border border-gray-300 mx-auto md:m-0"
         data-nimg="1"
         decoding="async"
         fetchpriority="high"

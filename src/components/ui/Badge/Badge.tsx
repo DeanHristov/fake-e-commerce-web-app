@@ -27,7 +27,7 @@ const Badge: FC<IBadgeProps> = ({ children, onClick, counter, dot, color }) => {
       )}
       {!counter && dot && (
         <span
-          className={`absolute top-0 right-2 inline-block w-2 h-2 transform translate-x-1/2 -translate-y-1/2 ${
+          className={`animate-ping absolute top-1.5 right-2 inline-block w-2 h-2 transform translate-x-1/2 -translate-y-1/2 ${
             color ?? 'bg-red-600'
           } rounded-full`}
         />

@@ -28,7 +28,7 @@ const StarRating: FC<IStarRatingProps> = ({
 
   const stars: string[] = Array.from({ length: starCount }, () => `☆`);
   return (
-    <div data-testid="star-rating" className="flex space-x-2 items-center mt-4">
+    <div data-testid="star-rating" className="flex space-x-2 items-center mt-3">
       <div className="flex space-x-1 justify-start items-baseline">
         {stars.map((star, idx) => {
           let style = inActiveColor;

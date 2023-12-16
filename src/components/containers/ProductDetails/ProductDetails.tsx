@@ -75,7 +75,7 @@ const ProductDetails: FC<IProductDetailsProps> = ({
           width={0}
           height={0}
           sizes="100vw"
-          className={`w-full h-auto max-h-[270px] min-w-[280px] transition hover:scale-105 duration-200  rounded-lg border border-gray-300 mx-auto`}
+          className={`w-full h-auto max-h-[270px] min-w-[280px] transition hover:-translate-y-2 duration-200  rounded-lg mx-auto`}
         />
         <div className="hidden md:block">
           <ControlButtons />

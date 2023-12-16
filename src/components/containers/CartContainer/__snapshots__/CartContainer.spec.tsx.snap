@@ -56,7 +56,7 @@ exports[`Container/CartContainer <CartContainer {...} /> Should be able to displ
         >
           <img
             alt="Iphone"
-            class="w-auto h-auto rounded-lg min-w-[9rem] max-w-[8rem] border border-gray-300 mx-auto md:m-0"
+            class="w-auto h-auto rounded-lg min-w-[9rem] md:max-w-[8rem] border border-gray-300 mx-auto md:m-0"
             data-nimg="1"
             decoding="async"
             fetchpriority="high"
@@ -195,7 +195,7 @@ exports[`Container/CartContainer <CartContainer {...} /> Should be able to displ
           />
         </div>
         <button
-          class="cursor-pointer bg-green-600 text-white font-bold uppercase bg-primary hover:bg-hover hover:shadow-lg duration-300 ease-in w-full px-4 py-1.5 flex justify-center items-center gap-2 rounded-none"
+          class="cursor-pointer bg-green-600 text-white font-bold uppercase bg-primary hover:bg-hover hover:shadow-lg transition transform active:scale-90 duration-200 ease-in w-full px-4 py-1.5 flex justify-center items-center gap-2 rounded-none"
         >
           Checkout
         </button>
@@ -295,7 +295,7 @@ exports[`Container/CartContainer <CartContainer {...} /> Should render a default
           />
         </div>
         <button
-          class="cursor-not-allowed opacity-50 bg-green-600 text-white font-bold uppercase bg-primary hover:bg-hover hover:shadow-lg duration-300 ease-in w-full px-4 py-1.5 flex justify-center items-center gap-2 rounded-none"
+          class="cursor-not-allowed opacity-50 bg-green-600 text-white font-bold uppercase bg-primary hover:bg-hover hover:shadow-lg transition transform active:scale-90 duration-200 ease-in w-full px-4 py-1.5 flex justify-center items-center gap-2 rounded-none"
           disabled=""
         >
           Checkout
