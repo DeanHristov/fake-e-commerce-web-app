@@ -39,7 +39,9 @@ const Button: FC<IButtonProps> = ({
     <button
       disabled={disabled}
       className={`${
-        disabled ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'
+        disabled
+          ? 'cursor-not-allowed opacity-50 active:scale-100'
+          : 'cursor-pointer'
       } ${
         buttonStyles[variant]
       } hover:shadow-lg transition transform active:scale-90 duration-200 ease-in w-full px-4 py-1.5 flex justify-center items-center gap-2 ${className}`}

@@ -10,7 +10,7 @@ import { usePathname } from 'next/navigation';
 import { FC } from 'react';
 import Badge from '../../ui/Badge';
 import { useSelector } from '@/store';
-import { selectCarts, selectWishListSize } from '@/store/slices';
+import { selectShoppingCart, selectWishListSize } from '@/store/slices';
 
 export interface IPageHeaderProps {}
 
@@ -18,7 +18,7 @@ export interface IPageHeaderProps {}
 
 const PageHeader: FC<IPageHeaderProps> = ({}) => {
   const currentPath = usePathname();
-  const shoppingCart = useSelector(selectCarts);
+  const shoppingCart = useSelector(selectShoppingCart);
   const wishListTotal = useSelector(selectWishListSize);
 
   return (
@@ -31,7 +31,7 @@ const PageHeader: FC<IPageHeaderProps> = ({}) => {
               href={'/'}
               className="w-full text-black font-bold text-2xl text-center md:text-left"
             >
-              E-commerce
+              Fake App
             </Link>
             <div className="flex justify-center space-x-3">
               <Link href={'/shopping-card'}>

@@ -8,7 +8,7 @@ import CartTableHeading from '@/components/containers/CartTable/ui/CartTableHead
 import { Utils } from '@/utils/Utils';
 import ProductCheckoutPanel from '@/components/containers/ProductCheckoutPanel';
 import { useSelector } from '@/store';
-import { selectCarts, selectWishListSize } from '@/store/slices';
+import { selectShoppingCart, selectWishListSize } from '@/store/slices';
 import CartTableRow from '@/components/containers/CartTable/ui/CartTableRow/CartTableRow';
 import WishListView from '@/components/containers/WishListView';
 import Divider from '@/components/ui/Divider';
@@ -16,7 +16,7 @@ import Divider from '@/components/ui/Divider';
 export interface ICartContainerProps {}
 
 const CartContainer: FC<ICartContainerProps> = ({}) => {
-  const shoppingCart: ICart = useSelector(selectCarts);
+  const shoppingCart: ICart = useSelector(selectShoppingCart);
   const totalWishListItems: number = useSelector(selectWishListSize);
   const products: ICartProduct[] = Object.values(shoppingCart.products);
 

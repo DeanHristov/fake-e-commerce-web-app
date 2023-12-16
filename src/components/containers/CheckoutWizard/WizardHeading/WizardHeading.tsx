@@ -20,39 +20,39 @@ const WizardHeading: FC<IWizardHeadingProps> = ({
   onClick,
   disabled = false,
 }) => {
-  const isDisabled: boolean = !disabled && active === variant;
+  const shouldDisabled: boolean = disabled || active !== variant;
 
   return (
     <div
       className={`wizard-heading ${
-        isDisabled ? 'border-green-500' : 'border-gray-300'
+        shouldDisabled ? 'border-gray-300' : 'border-green-500'
       }`}
     >
       <div
         data-testid={'circle-button'}
-        onClick={() => !disabled && onClick(variant)}
+        onClick={() => !shouldDisabled && onClick(variant)}
         className={`wizard-heading-circle ${
-          isDisabled ? 'border-green-500 active' : 'border-gray-300'
+          shouldDisabled ? 'border-gray-300' : 'border-green-500 active'
         }`}
       >
         {variant === ACTIVE_VARIANT.PREVIEW && (
           <ShoppingBagIcon
             className={`wizard-heading-icon ${
-              isDisabled ? 'text-green-500' : 'text-gray-300'
+              shouldDisabled ? 'text-gray-300' : 'text-green-500'
             }`}
           />
         )}
         {variant === ACTIVE_VARIANT.DELIVERY && (
           <BuildingOffice2Icon
             className={`wizard-heading-icon ${
-              isDisabled ? 'text-green-500' : 'text-gray-300'
+              shouldDisabled ? 'text-gray-300' : 'text-green-500'
             }`}
           />
         )}
         {variant === ACTIVE_VARIANT.RECEIPT && (
           <PencilSquareIcon
             className={`wizard-heading-icon ${
-              isDisabled ? 'text-green-500' : 'text-gray-300'
+              shouldDisabled ? 'text-gray-300' : 'text-green-500'
             }`}
           />
         )}

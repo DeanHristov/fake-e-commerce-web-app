@@ -85,25 +85,106 @@ exports[`Containers/Controls <CheckoutWizard {...} /> Should be able to render t
       class="tab-content h-full flex"
     >
       <div
-        class="w-full h-full px-2 py-2 border border-t border-t-gray-300 block fade-in"
+        class="w-full h-full px-2 py-2 border-t border-t-gray-300 block fade-in"
       >
-        <h3>
-          // Add preview info
+        <h3
+          class="text-center"
+        >
+          Imagine you've entered your card data!
         </h3>
+        <button
+          class="cursor-not-allowed opacity-50 active:scale-100 bg-green-600 text-white font-bold uppercase bg-primary hover:bg-hover hover:shadow-lg transition transform active:scale-90 duration-200 ease-in w-full px-4 py-1.5 flex justify-center items-center gap-2 mt-10"
+          disabled=""
+        >
+          Next
+          <svg
+            aria-hidden="true"
+            class="w-8 h-8"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </button>
       </div>
       <div
-        class="w-full h-full px-2 py-2 border border-t border-t-gray-300 hidden fade-out"
+        class="w-full h-full px-2 py-2 border-t border-t-gray-300 hidden fade-out"
       >
-        <h3>
-          // Add delivery info
-        </h3>
+        <button
+          class="cursor-not-allowed opacity-50 active:scale-100 bg-green-600 text-white font-bold uppercase bg-primary hover:bg-hover hover:shadow-lg transition transform active:scale-90 duration-200 ease-in w-full px-4 py-1.5 flex justify-center items-center gap-2 mt-10"
+          disabled=""
+        >
+          Next
+          <svg
+            aria-hidden="true"
+            class="w-8 h-8"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </button>
       </div>
       <div
-        class="w-full h-full px-2 py-2 border border-t border-t-gray-300 hidden fade-out"
+        class="w-full h-full px-2 py-2 border-t border-t-gray-300 hidden fade-out"
       >
-        <h3>
-          // Add receipt info
-        </h3>
+        <div
+          class="max-w-xs h-auto mx-auto shadow-md"
+        >
+          <div
+            class="cepeipt-container px-4 space-y-6 my-6 pb-6 border border-gray-300 rounded-md"
+          >
+            <div
+              class="py-2"
+            >
+              <h3
+                class="text-center text-slate-900 text-3xl"
+              >
+                Fake App
+              </h3>
+              <p
+                class="text-center text-sm text-gray-400"
+              >
+                16 December, 2023
+              </p>
+            </div>
+            <div
+              class=""
+            />
+            <div
+              class="w-full h-px m-auto bg-gradient-to-r from-transparent via-gray-400 to-transparent"
+            />
+            <p
+              class="receipt-item py-1"
+            >
+              <span
+                class="text-slate-900 text-sm font-bold bg-white px-1 z-10"
+              >
+                Total
+              </span>
+              <span
+                class="text-slate-900 text-sm font-bold bg-white px-1 z-10"
+              >
+                €NaN
+              </span>
+            </p>
+            <h3
+              class="text-center text-slate-900 text-2xl"
+            >
+              Thank you!
+            </h3>
+          </div>
+        </div>
       </div>
     </div>
   </div>

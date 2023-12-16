@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UI/Component <Receipt {...} /> Should be able to render the render the default state 1`] = `
+<div>
+  <div
+    class="cepeipt-container px-4 space-y-6 my-6 pb-6 border border-gray-300 rounded-md"
+  >
+    <div
+      class="py-2"
+    >
+      <h3
+        class="text-center text-slate-900 text-3xl"
+      >
+        Fake App
+      </h3>
+      <p
+        class="text-center text-sm text-gray-400"
+      >
+        16 December, 2023
+      </p>
+    </div>
+    <div
+      class=""
+    />
+    <div
+      class="w-full h-px m-auto bg-gradient-to-r from-transparent via-gray-400 to-transparent"
+    />
+    <p
+      class="receipt-item py-1"
+    >
+      <span
+        class="text-slate-900 text-sm font-bold bg-white px-1 z-10"
+      >
+        Total
+      </span>
+      <span
+        class="text-slate-900 text-sm font-bold bg-white px-1 z-10"
+      >
+        €20.00
+      </span>
+    </p>
+    <h3
+      class="text-center text-slate-900 text-2xl"
+    >
+      Thank you!
+    </h3>
+  </div>
+</div>
+`;

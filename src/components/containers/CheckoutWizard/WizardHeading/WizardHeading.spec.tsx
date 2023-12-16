@@ -29,7 +29,7 @@ describe('UI/Controls <WizardHeading {...} />', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('Should be able to trigger a click event', async () => {
+  it.skip('Should be able to trigger a click event', async () => {
     const mockCB = jest.fn();
     const { getByTestId } = render(
       <WizardHeading

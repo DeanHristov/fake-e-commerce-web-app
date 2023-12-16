@@ -41,6 +41,9 @@ export const shoppingCartSlice = createSlice({
           state.products[action.payload.id].discountedPrice;
       }
     },
+    emptyCart: (state: ICart) => {
+      return initialState;
+    },
     removeFromCart: (
       state: ICart,
       action: PayloadAction<IRemoveItemPayload>,
@@ -97,6 +100,6 @@ export const shoppingCartSlice = createSlice({
   },
 });
 
-export const { addToCart, removeFromCart, updateQuantity } =
+export const { emptyCart, addToCart, removeFromCart, updateQuantity } =
   shoppingCartSlice.actions;
 export default shoppingCartSlice;
