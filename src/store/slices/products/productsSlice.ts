@@ -1,10 +1,15 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { IProduct } from '@/types';
+import { Utils } from '@/utils/Utils';
 
-const initialState: Record<number, IProduct> = {};
+const reducerName = 'products';
+const initialState: Record<number, IProduct> = Utils.tryToLoadFromStorage(
+  reducerName,
+  {},
+);
 
 export const productsSlice = createSlice({
-  name: 'products',
+  name: reducerName,
   initialState,
   reducers: {
     initProducts: (

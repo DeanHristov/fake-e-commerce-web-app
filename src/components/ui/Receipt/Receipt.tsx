@@ -20,13 +20,13 @@ const Receipt: FC<IReceiptProps> = ({ total, currency, products }) => {
         </p>
       </div>
       <div className="">
-        {products.map(({ title, price, quantity }, index) => (
+        {products.map(({ title, total, quantity }, index) => (
           <p key={`receipt-item-${index}`} className="receipt-item py-2">
             <span className="text-slate-900 text-sm bg-white px-1 z-10">
-              {`${quantity}x ${title}`}
+              {`(${quantity}x) ${title}`}
             </span>
             <span className="text-slate-900 text-sm bg-white px-1 z-10">
-              {Utils.parseAmountByCurrency(price, currency)}
+              {Utils.parseAmountByCurrency(total, currency)}
             </span>
           </p>
         ))}

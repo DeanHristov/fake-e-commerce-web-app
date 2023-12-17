@@ -27,8 +27,9 @@ if (process.env.NODE_ENV === 'development') {
 middlewares.push(({ getState }) => (next) => (action) => {
   const result = next(action);
   Utils.debounce(() => {
-    const { shoppingCart, wishList } = getState();
+    const { shoppingCart, wishList, products } = getState();
 
+    localStorage.setItem('products', JSON.stringify(products));
     localStorage.setItem('shoppingCart', JSON.stringify(shoppingCart));
     localStorage.setItem('wishList', JSON.stringify(wishList));
   }, 500)();
