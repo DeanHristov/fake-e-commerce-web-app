@@ -15,6 +15,7 @@ export const reduxStore = configureStore({
     // @ts-ignore
     return getDefaultMiddleware().concat(middlewares);
   },
+  devTools: process.env.NODE_ENV === 'development',
 });
 
 //@see: https://redux-toolkit.js.org/tutorials/typescript
