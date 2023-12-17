@@ -1,5 +1,16 @@
 import { Utils } from './Utils';
 
+jest.useFakeTimers();
+
+const mockGetItem = jest.fn();
+const mockSetItem = jest.fn();
+Object.defineProperty(window, 'localStorage', {
+  value: {
+    getItem: (...args: string[]) => mockGetItem(...args),
+    setItem: (...args: string[]) => mockSetItem(...args),
+  },
+});
+
 describe('Class / Utils', () => {
   it('Should return null', () => {
     expect(Utils.isNull(null)).toBeTruthy();
@@ -33,5 +44,45 @@ describe('Class / Utils', () => {
     expect(usdAmount).toEqual('$122.00');
     expect(bgnAmount).toEqual('BGN 122.00');
     expect(eurAmount).toEqual('€122.00');
+  });
+
+  it('Should be able to call the function after 300ms', () => {
+    const mockCallback = jest.fn();
+    const fakeDebounce = Utils.debounce(mockCallback);
+
+    fakeDebounce();
+
+    jest.runAllTimers();
+    expect(mockCallback).toHaveBeenCalled();
+  });
+
+  it('Should be able to call the function after 300ms with args', () => {
+    const mockCallback = jest.fn();
+    const fakeDebounce = Utils.debounce(mockCallback);
+
+    fakeDebounce({ args: [1, 2] });
+
+    jest.runAllTimers();
+    expect(mockCallback).toHaveBeenCalledWith({ args: [1, 2] });
+  });
+
+  it('Should be able to return searchable value from the localstorage', () => {
+    const inputStore = { args: 1 };
+
+    mockGetItem.mockReturnValue(JSON.stringify(inputStore));
+
+    const outputStore = Utils.tryToLoadFromStorage<any>('key', []);
+
+    expect(outputStore).toEqual(inputStore);
+  });
+
+  it("Should be able to return a default value in case where it can't find the key", () => {
+    const inputStore: any[] = [];
+
+    mockGetItem.mockReturnValue(null);
+
+    const outputStore = Utils.tryToLoadFromStorage<any>('another key', []);
+
+    expect(outputStore).toEqual(inputStore);
   });
 });

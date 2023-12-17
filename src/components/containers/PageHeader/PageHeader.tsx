@@ -11,6 +11,7 @@ import { FC } from 'react';
 import Badge from '../../ui/Badge';
 import { useSelector } from '@/store';
 import { selectShoppingCart, selectWishListSize } from '@/store/slices';
+import { useIsClient } from '@/hooks/useIsClient';
 
 export interface IPageHeaderProps {}
 
@@ -20,6 +21,9 @@ const PageHeader: FC<IPageHeaderProps> = ({}) => {
   const currentPath = usePathname();
   const shoppingCart = useSelector(selectShoppingCart);
   const wishListTotal = useSelector(selectWishListSize);
+  const isClient = useIsClient();
+
+  if (!isClient) return null;
 
   return (
     <>

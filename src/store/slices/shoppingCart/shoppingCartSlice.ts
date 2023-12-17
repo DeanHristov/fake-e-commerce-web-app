@@ -12,7 +12,8 @@ export interface IUpdateQuantityPayload extends IRemoveItemPayload {
   increase: boolean;
 }
 
-const initialState: ICart = {
+const reducerName = 'shoppingCart';
+const initialState: ICart = Utils.tryToLoadFromStorage<ICart>(reducerName, {
   discountedTotal: 0,
   id: 0,
   products: {},
@@ -21,11 +22,11 @@ const initialState: ICart = {
   totalQuantity: 0,
   userId: 0,
   currency: 'EUR',
-};
+});
 
 //@see: https://redux.js.org/style-guide/#do-not-put-non-serializable-values-in-state-or-actions
 export const shoppingCartSlice = createSlice({
-  name: 'shoppingCart',
+  name: reducerName,
   initialState,
   reducers: {
     addToCart: (state: ICart, action: PayloadAction<ICartProduct>) => {

@@ -33,6 +33,7 @@ const WishListItem: FC<IWishListItemProps> = ({ product }) => {
   return (
     <div className="relative border border-gray-300 px-2 py-2 my-2 flex justify-center items-center bg-white rounded-lg shadow-md gap-x-2 hover:scale-[1.02] transition">
       <Image
+        priority
         src={product.thumbnail}
         alt={product.title}
         width={0}

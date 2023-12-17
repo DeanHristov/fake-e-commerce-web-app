@@ -1,5 +1,6 @@
 import { createLogger } from 'redux-logger';
 import { apiSlice } from '@/store/slices';
+import { Utils } from '@/utils/Utils';
 
 const middlewares = [];
 
@@ -20,6 +21,20 @@ if (process.env.NODE_ENV === 'development') {
     }),
   );
 }
+
+// Storing partial data from the app store in the localStorage
+//@ts-ignore
+middlewares.push(({ getState }) => (next) => (action) => {
+  const result = next(action);
+  Utils.debounce(() => {
+    const { shoppingCart, wishList } = getState();
+
+    localStorage.setItem('shoppingCart', JSON.stringify(shoppingCart));
+    localStorage.setItem('wishList', JSON.stringify(wishList));
+  }, 500)();
+
+  return result;
+});
 
 middlewares.push(apiSlice.middleware);
 

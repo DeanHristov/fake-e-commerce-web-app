@@ -6,7 +6,7 @@ import {
 } from 'react-redux';
 // @ts-ignore
 import { middlewares } from './middlewares';
-import { reducer } from './rootReducer'; //@see: https://redux-toolkit.js.org/usage/usage-with-typescript#configurestore
+import { reducer } from './rootReducer';
 
 //@see: https://redux-toolkit.js.org/usage/usage-with-typescript#configurestore
 export const reduxStore = configureStore({

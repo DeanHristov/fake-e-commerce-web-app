@@ -81,4 +81,25 @@ export class Utils {
   public static parseMapToArrayOfValues<K, V>(map: Map<K, V>): V[] {
     return Array.from(map, ([_, value]) => value);
   }
+
+  public static debounce(cb: (args?: any) => void, timeout = 300) {
+    let timer: NodeJS.Timeout;
+
+    return (args?: any) => {
+      clearTimeout(timer);
+      timer = setTimeout(() => cb(args), timeout);
+    };
+  }
+
+  public static tryToLoadFromStorage<T>(key: string, initialState: T): T {
+    try {
+      const serializedState = localStorage.getItem(key);
+
+      if (!serializedState) return initialState;
+
+      return JSON.parse(serializedState);
+    } catch (err) {
+      return initialState;
+    }
+  }
 }

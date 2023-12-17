@@ -15,7 +15,6 @@ import { ICart } from '@/types';
 
 export enum ACTIVE_VARIANT {
   PREVIEW = 1,
-  DELIVERY = 2,
   RECEIPT = 3,
 }
 
@@ -43,12 +42,6 @@ const CheckoutWizard: FC<ICheckoutWizardProps> = () => {
         />
         <WizardHeading
           disabled={shouldDisable}
-          variant={ACTIVE_VARIANT.DELIVERY}
-          onClick={setActiveTab}
-          active={activeTab}
-        />
-        <WizardHeading
-          disabled={shouldDisable}
           variant={ACTIVE_VARIANT.RECEIPT}
           onClick={setActiveTab}
           active={activeTab}
@@ -61,24 +54,13 @@ const CheckoutWizard: FC<ICheckoutWizardProps> = () => {
           </h3>
           <Button
             disabled={shouldDisable}
-            onClick={() => setActiveTab(ACTIVE_VARIANT.DELIVERY)}
+            onClick={() => setActiveTab(ACTIVE_VARIANT.RECEIPT)}
             rightIcon={<ArrowRightIcon className="w-8 h-8" />}
-            title={'Next'}
+            title={'Pay & Go'}
             className="mt-10"
           />
         </WizardContent>
-        <WizardContent isActive={activeTab === 2}>
-          <Button
-            disabled={shouldDisable}
-            onClick={() => {
-              setActiveTab(ACTIVE_VARIANT.RECEIPT);
-              // dispatch(emptyCart());
-            }}
-            rightIcon={<ArrowRightIcon className="w-8 h-8" />}
-            title={'Next'}
-            className="mt-10"
-          />
-        </WizardContent>
+
         <WizardContent isActive={activeTab === 3}>
           <div className="max-w-xs h-auto mx-auto shadow-md">
             <Receipt

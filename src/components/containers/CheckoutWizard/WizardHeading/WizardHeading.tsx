@@ -1,10 +1,6 @@
 'use client';
 import { FC } from 'react';
-import {
-  BuildingOffice2Icon,
-  PencilSquareIcon,
-  ShoppingBagIcon,
-} from '@heroicons/react/24/solid';
+import { PencilSquareIcon, ShoppingBagIcon } from '@heroicons/react/24/solid';
 import { ACTIVE_VARIANT } from '@/components/containers/CheckoutWizard/CheckoutWizard';
 
 export interface IWizardHeadingProps {
@@ -37,13 +33,6 @@ const WizardHeading: FC<IWizardHeadingProps> = ({
       >
         {variant === ACTIVE_VARIANT.PREVIEW && (
           <ShoppingBagIcon
-            className={`wizard-heading-icon ${
-              shouldDisabled ? 'text-gray-300' : 'text-green-500'
-            }`}
-          />
-        )}
-        {variant === ACTIVE_VARIANT.DELIVERY && (
-          <BuildingOffice2Icon
             className={`wizard-heading-icon ${
               shouldDisabled ? 'text-gray-300' : 'text-green-500'
             }`}

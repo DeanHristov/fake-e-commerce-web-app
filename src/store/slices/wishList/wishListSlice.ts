@@ -10,13 +10,17 @@ export interface IWishListState {
   total: number;
 }
 
-const initialState: IWishListState = {
-  products: {},
-  total: 0,
-};
+const reducerName = 'wishList';
+const initialState: IWishListState = Utils.tryToLoadFromStorage<IWishListState>(
+  reducerName,
+  {
+    products: {},
+    total: 0,
+  },
+);
 
 export const wishListSlice = createSlice({
-  name: 'wishList',
+  name: reducerName,
   initialState,
   reducers: {
     addToWishList: (
@@ -36,7 +40,6 @@ export const wishListSlice = createSlice({
       delete state.products[action.payload.productId];
     },
   },
-
   extraReducers: (builder) => {
     builder.addCase(addToCart, (state: IWishListState, action) => {
       if (Utils.isNotNull(state.products[action.payload.id])) {

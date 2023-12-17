@@ -21,7 +21,7 @@ describe('UI/Controls <WizardHeading {...} />', () => {
     const { container } = render(
       <WizardHeading
         onClick={jest.fn}
-        active={ACTIVE_VARIANT.DELIVERY}
+        active={ACTIVE_VARIANT.PREVIEW}
         variant={ACTIVE_VARIANT.RECEIPT}
       />,
     );
@@ -34,7 +34,7 @@ describe('UI/Controls <WizardHeading {...} />', () => {
     const { getByTestId } = render(
       <WizardHeading
         onClick={mockCB}
-        active={ACTIVE_VARIANT.DELIVERY}
+        active={ACTIVE_VARIANT.PREVIEW}
         variant={ACTIVE_VARIANT.RECEIPT}
       />,
     );
@@ -52,7 +52,7 @@ describe('UI/Controls <WizardHeading {...} />', () => {
       <WizardHeading
         disabled
         onClick={mockCB}
-        active={ACTIVE_VARIANT.DELIVERY}
+        active={ACTIVE_VARIANT.PREVIEW}
         variant={ACTIVE_VARIANT.RECEIPT}
       />,
     );
