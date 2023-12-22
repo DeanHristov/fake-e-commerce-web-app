@@ -1,14 +1,14 @@
-import { FC, useMemo } from 'react';
 import { ICartProduct, IProduct, TCurrency } from '@/types';
 import Image from 'next/image';
+import { FC, useMemo } from 'react';
 
-import PriceLabel from '@/components/ui/PriceLabel';
-import StockLabel from '@/components/ui/StockLabel';
 import Button from '@/components/ui/Button';
-import { HeartIcon, ShoppingCartIcon } from '@heroicons/react/24/solid';
+import PriceLabel from '@/components/ui/PriceLabel';
 import StarRating from '@/components/ui/StarRating';
+import StockLabel from '@/components/ui/StockLabel';
 import { useDispatch, useSelector } from '@/store';
 import { addToCart, addToWishList, selectProductsById } from '@/store/slices';
+import { HeartIcon, ShoppingCartIcon } from '@heroicons/react/24/solid';
 
 export interface IProductDetailsProps {
   productId: number;
@@ -26,7 +26,7 @@ const ProductDetails: FC<IProductDetailsProps> = ({
 
   const productSlice: ICartProduct = useMemo(
     () => ({
-      id: selectedProduct.id,
+      _id: selectedProduct._id,
       title: selectedProduct.title,
       price: selectedProduct.price,
       inStock: selectedProduct.stock,

@@ -1,6 +1,6 @@
-import { createLogger } from 'redux-logger';
 import { apiSlice } from '@/store/slices';
 import { Utils } from '@/utils/Utils';
+import { createLogger } from 'redux-logger';
 
 const middlewares = [];
 

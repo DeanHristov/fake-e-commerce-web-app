@@ -1,10 +1,11 @@
-import { render } from '@testing-library/react';
-import { carts } from '@/mocks/data/carts';
-import { ICartProduct } from '@/types';
 import WishListView from '@/components/containers/WishListView/WishListView';
+import { carts } from '@/mocks/data/carts';
 import { useSelector } from '@/store';
+import { ICartProduct } from '@/types';
+import { render } from '@testing-library/react';
 
-const productItem: ICartProduct = carts[0].products[0];
+const firstProductItem: ICartProduct =
+  carts[0].products['8f12eb53-18c8-46a6-b975-ea0ee8b62d4c'];
 
 const mockSelector = useSelector as jest.Mock;
 
@@ -20,7 +21,7 @@ describe('Containers/Component <WishListView {...} />', () => {
 
   it('Should be able to render a list of items', () => {
     mockSelector.mockReturnValue({
-      [productItem.id]: productItem,
+      [firstProductItem._id]: firstProductItem,
     });
     const { container, getByText } = render(<WishListView />);
 

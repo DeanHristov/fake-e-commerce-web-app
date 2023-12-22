@@ -2,29 +2,21 @@ import Image from 'next/image';
 import { FC, useMemo } from 'react';
 
 import Widget from '@/components/containers/Widget';
-import { ICartProduct, TCurrency } from '@/types';
+import Button from '@/components/ui/Button';
 import PriceLabel from '@/components/ui/PriceLabel';
 import StarRating from '@/components/ui/StarRating';
 import StockLabel from '@/components/ui/StockLabel';
-import Button from '@/components/ui/Button';
+import { ICartProduct, IProduct, TCurrency } from '@/types';
 
-import { HeartIcon, ShoppingCartIcon } from '@heroicons/react/24/solid';
 import DiscountLabel from '@/components/ui/DiscountLabel';
-import { Utils } from '@/utils/Utils';
 import ProductHeading from '@/components/ui/ProductHeading';
 import { useDispatch } from '@/store';
 import { addToCart, addToWishList } from '@/store/slices';
+import { Utils } from '@/utils/Utils';
+import { HeartIcon, ShoppingCartIcon } from '@heroicons/react/24/solid';
 
-export interface IProductItemProps {
-  id: number;
+export interface IProductItemProps extends IProduct {
   positionIdx: number;
-  title: string;
-  price: number;
-  rating: number;
-  category: string;
-  thumbnail: string;
-  stock: number;
-  discountPercentage?: number;
   currency?: TCurrency;
 }
 
@@ -32,7 +24,7 @@ const ProductItem: FC<IProductItemProps> = (product) => {
   const dispatch = useDispatch();
   const cartItem: ICartProduct = useMemo(
     () => ({
-      id: product.id,
+      _id: product._id,
       title: product.title,
       price: product.price,
       total: product.price,
@@ -64,7 +56,7 @@ const ProductItem: FC<IProductItemProps> = (product) => {
             }`}
           />
         </div>
-        <ProductHeading id={product.id} title={product.title} />
+        <ProductHeading id={product._id} title={product.title} />
         <PriceLabel
           currency={product.currency!}
           discountPercentage={product.discountPercentage}

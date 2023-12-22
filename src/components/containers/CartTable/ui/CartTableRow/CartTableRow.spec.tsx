@@ -1,10 +1,11 @@
 import { render } from '@testing-library/react';
 
-import CartTableRow from './CartTableRow';
-import { ICartProduct } from '@/types';
 import { carts } from '@/mocks/data/carts';
+import { ICartProduct } from '@/types';
+import CartTableRow from './CartTableRow';
 
-const firstCardProduct: ICartProduct = carts[0].products[0];
+const firstCardProduct: ICartProduct =
+  carts[0].products['8f12eb53-18c8-46a6-b975-ea0ee8b62d4c'];
 
 describe('UI/CartTableRow <CartTableRow {...} />', () => {
   it('Should render a default state of the Component', () => {

@@ -1,10 +1,10 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { addToWishList } from '@/store/slices';
 import { ICart, ICartProduct } from '@/types';
 import { Utils } from '@/utils/Utils';
-import { addToWishList } from '@/store/slices';
+import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 
 export interface IRemoveItemPayload {
-  productId: number;
+  productId: string;
 }
 
 export interface IUpdateQuantityPayload extends IRemoveItemPayload {
@@ -15,12 +15,12 @@ export interface IUpdateQuantityPayload extends IRemoveItemPayload {
 const reducerName = 'shoppingCart';
 const initialState: ICart = Utils.tryToLoadFromStorage<ICart>(reducerName, {
   discountedTotal: 0,
-  id: 0,
+  _id: '',
   products: {},
   total: 0,
   totalProducts: 0,
   totalQuantity: 0,
-  userId: 0,
+  userId: '',
   currency: 'EUR',
 });
 
@@ -30,8 +30,8 @@ export const shoppingCartSlice = createSlice({
   initialState,
   reducers: {
     addToCart: (state: ICart, action: PayloadAction<ICartProduct>) => {
-      if (Utils.isNull(state.products[action.payload.id])) {
-        state.products[action.payload.id] = action.payload;
+      if (Utils.isNull(state.products[action.payload._id])) {
+        state.products[action.payload._id] = action.payload;
         state.total += 1;
         state.totalQuantity += 1;
         state.totalProducts += 1;
@@ -39,7 +39,7 @@ export const shoppingCartSlice = createSlice({
         // TODO Fix it!
         state.discountedTotal +=
           // @ts-ignore
-          state.products[action.payload.id].discountedPrice;
+          state.products[action.payload._id].discountedPrice;
       }
     },
     emptyCart: (state: ICart) => {
@@ -86,16 +86,16 @@ export const shoppingCartSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder.addCase(addToWishList, (state: ICart, action) => {
-      const { id } = action.payload;
-      if (Utils.isNotNull(state.products[id])) {
-        const product: ICartProduct = state.products[id];
+      const { _id } = action.payload;
+      if (Utils.isNotNull(state.products[_id])) {
+        const product: ICartProduct = state.products[_id];
 
         state.discountedTotal -= product.total;
         state.total -= product.quantity;
         state.totalProducts -= product.quantity;
         state.totalQuantity -= product.quantity;
 
-        delete state.products[id];
+        delete state.products[_id];
       }
     });
   },

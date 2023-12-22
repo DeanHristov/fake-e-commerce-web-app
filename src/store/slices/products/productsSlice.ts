@@ -1,9 +1,9 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { IProduct } from '@/types';
 import { Utils } from '@/utils/Utils';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 const reducerName = 'products';
-const initialState: Record<number, IProduct> = Utils.tryToLoadFromStorage(
+const initialState: Record<string, IProduct> = Utils.tryToLoadFromStorage(
   reducerName,
   {},
 );
@@ -13,11 +13,11 @@ export const productsSlice = createSlice({
   initialState,
   reducers: {
     initProducts: (
-      state: Record<number, IProduct>,
+      state: Record<string, IProduct>,
       action: PayloadAction<IProduct[]>,
     ) => {
       for (let productItem of action.payload) {
-        state[productItem.id] = productItem;
+        state[productItem._id] = productItem;
       }
     },
   },

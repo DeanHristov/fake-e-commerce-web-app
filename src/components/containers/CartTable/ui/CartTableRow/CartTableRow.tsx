@@ -1,11 +1,11 @@
-import { FC } from 'react';
-import Image from 'next/image';
 import { ICartProduct, TCurrency } from '@/types';
+import Image from 'next/image';
+import { FC } from 'react';
 
-import Quantity from '@/components/ui/Quantity';
+import RowControls from '@/components/containers/CartTable/ui/RowControls/RowControls';
 import PriceLabel from '@/components/ui/PriceLabel';
 import ProductHeading from '@/components/ui/ProductHeading';
-import RowControls from '@/components/containers/CartTable/ui/RowControls/RowControls';
+import Quantity from '@/components/ui/Quantity';
 import { useDispatch } from '@/store';
 import { addToWishList, removeFromCart, updateQuantity } from '@/store/slices';
 import { Utils } from '@/utils/Utils';
@@ -33,7 +33,7 @@ const CartTableRow: FC<ICartTableRowProps> = ({
           className={`w-auto h-auto rounded-lg min-w-[9rem] md:max-w-[8rem] border border-gray-300 mx-auto md:m-0`}
         />
         <ProductHeading
-          id={product.id}
+          id={product._id}
           title={product.title}
           className={'text-center md:text-left'}
         >
@@ -50,7 +50,7 @@ const CartTableRow: FC<ICartTableRowProps> = ({
             dispatch(
               updateQuantity({
                 quantity: value,
-                productId: product.id,
+                productId: product._id,
                 increase: true,
               }),
             )
@@ -59,7 +59,7 @@ const CartTableRow: FC<ICartTableRowProps> = ({
             dispatch(
               updateQuantity({
                 quantity: value,
-                productId: product.id,
+                productId: product._id,
                 increase: false,
               }),
             )
@@ -84,7 +84,7 @@ const CartTableRow: FC<ICartTableRowProps> = ({
         </div>
         <RowControls
           className="text-center md:text-left md:absolute md:bottom-0.5 md:right-0"
-          onRemove={() => dispatch(removeFromCart({ productId: product.id }))}
+          onRemove={() => dispatch(removeFromCart({ productId: product._id }))}
           onWishList={() => dispatch(addToWishList(product))}
         />
       </li>

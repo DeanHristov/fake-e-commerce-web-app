@@ -1,15 +1,16 @@
 import { FC } from 'react';
-import { server } from '@/mocks/server';
-import { APIUtils } from '@/utils/APIUtils';
+
 import HomePageView from '@/components/containers/HomePageView';
+import { IProduct } from '@/types';
+import { APIUtils } from '@/utils/APIUtils';
 
 export interface IHomePageProps {}
 
-server.listen({ onUnhandledRequest: 'bypass' });
 const HomePage: FC<IHomePageProps> = async ({}) => {
-  const { products } = await APIUtils.fetch(`/products`);
+  const { data, error } =
+    await APIUtils.fetch<IProduct[]>(`/products?limit=20`);
 
-  return <HomePageView products={products} />;
+  return <HomePageView error={error} products={data} />;
 };
 
 export default HomePage;

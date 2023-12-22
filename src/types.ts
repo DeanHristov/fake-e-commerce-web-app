@@ -4,6 +4,10 @@ export enum PRODUCT_CATEGORIES {
 
 export type TCurrency = 'USD' | 'BGN' | 'EUR';
 
+export enum USER_ROLES {
+  ADMIN = 'admin',
+  VISITOR = 'visitor',
+}
 export interface IComment {
   productId: string;
   _id: string;
@@ -15,7 +19,7 @@ export interface IComment {
 
 // Object schema can be seen here: https://dummyjson.com/docs/products
 export interface IProduct {
-  id: number;
+  _id: string;
   title: string;
   description: string;
   price: number;
@@ -30,14 +34,16 @@ export interface IProduct {
 }
 
 export interface IUser {
+  _id: string;
   name: string;
-  email: string;
+  username: string;
   password: string;
-  isAdmin: boolean;
+  role: USER_ROLES;
+  email: string;
 }
 
 export interface ICartProduct {
-  id: number;
+  _id: string;
   price: number;
   quantity: number;
   discountPercentage?: number;
@@ -50,14 +56,14 @@ export interface ICartProduct {
 }
 
 export interface ICart {
-  id: number;
-  userId: number;
+  _id: string;
+  userId: string;
   total: number;
   discountedTotal: number;
   totalProducts: number;
   totalQuantity: number;
-  currency?: TCurrency;
-  products: Record<number, ICartProduct>; // Map<number, ICartProduct>;
+  currency: TCurrency;
+  products: Record<string, ICartProduct>; // Map<number, ICartProduct>;
 }
 
 //@see:https://nextjs.org/docs/app/api-reference/functions/generate-metadata#generatemetadata-function

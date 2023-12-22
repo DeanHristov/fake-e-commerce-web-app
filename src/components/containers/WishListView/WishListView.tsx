@@ -1,11 +1,11 @@
 'use client';
 
-import { FC } from 'react';
+import WishListItem from '@/components/ui/WishListItem';
+import { useIsClient } from '@/hooks/useIsClient';
 import { useSelector } from '@/store';
 import { selectWishList, TWishList } from '@/store/slices';
 import { ICartProduct } from '@/types';
-import WishListItem from '@/components/ui/WishListItem';
-import { useIsClient } from '@/hooks/useIsClient';
+import { FC } from 'react';
 
 export interface IWishListViewProps {}
 
@@ -19,7 +19,7 @@ const WishListView: FC<IWishListViewProps> = ({}) => {
   return (
     <>
       {productItems.map((product: ICartProduct) => (
-        <div key={`wish-item-${product.id}`} className="wish-list">
+        <div key={`wish-item-${product._id}`} className="wish-list">
           <WishListItem product={product} />
         </div>
       ))}

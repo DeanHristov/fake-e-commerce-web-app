@@ -1,13 +1,13 @@
-import { FC, useMemo } from 'react';
-import { ICartProduct } from '@/types';
-import Image from 'next/image';
-import ProductHeading from '@/components/ui/ProductHeading';
 import Button from '@/components/ui/Button';
-import { ShoppingCartIcon, TrashIcon } from '@heroicons/react/24/solid';
-import StarRating from '@/components/ui/StarRating';
 import PriceLabel from '@/components/ui/PriceLabel';
+import ProductHeading from '@/components/ui/ProductHeading';
+import StarRating from '@/components/ui/StarRating';
 import { useDispatch } from '@/store';
 import { addToCart, removeFromWishList } from '@/store/slices';
+import { ICartProduct } from '@/types';
+import { ShoppingCartIcon, TrashIcon } from '@heroicons/react/24/solid';
+import Image from 'next/image';
+import { FC, useMemo } from 'react';
 
 export interface IWishListItemProps {
   product: ICartProduct;
@@ -17,7 +17,7 @@ const WishListItem: FC<IWishListItemProps> = ({ product }) => {
   const dispatch = useDispatch();
   const productItem: ICartProduct = useMemo(
     () => ({
-      id: product.id,
+      _id: product._id,
       title: product.title,
       price: product.price,
       total: product.price,
@@ -43,7 +43,7 @@ const WishListItem: FC<IWishListItemProps> = ({ product }) => {
       />
       <div className="flex-1 justify-center items-center">
         <ProductHeading
-          id={product.id}
+          id={product._id}
           title={product.title}
           className="inline-block"
         />
@@ -71,7 +71,7 @@ const WishListItem: FC<IWishListItemProps> = ({ product }) => {
         <Button
           variant="secondary"
           onClick={() =>
-            dispatch(removeFromWishList({ productId: product.id }))
+            dispatch(removeFromWishList({ productId: product._id }))
           }
           leftIcon={<TrashIcon className={'w-4 h-4 text-dark'} />}
         />

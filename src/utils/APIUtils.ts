@@ -19,15 +19,14 @@ export class APIUtils {
    * @param
    * @return
    */
-  public static async fetch(route: string) {
-    const response = await fetch(`${process.env.API_URL}${route}`, {
-      cache: 'no-cache',
-    });
+  public static async fetch<T>(route: string) {
+    try {
+      const response = await fetch(`${process.env.API_URL}${route}`);
 
-    if (!response.ok) {
-      return response.statusText;
+      const resData = await response.json();
+      return resData;
+    } catch (reason) {
+      return { data: [], error: 'Failed to fetch data!' };
     }
-
-    return await response.json();
   }
 }

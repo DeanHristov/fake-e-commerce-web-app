@@ -1,17 +1,16 @@
-import { FC } from 'react';
 import Widget from '@/components/containers/Widget';
-import { Utils } from '@/utils/Utils';
-import InputField from '@/components/ui/InputField';
 import Button from '@/components/ui/Button';
+import InputField from '@/components/ui/InputField';
 import { TCurrency } from '@/types';
+import { Utils } from '@/utils/Utils';
 import { useRouter } from 'next/navigation';
+import { FC } from 'react';
 
 export interface IProductCheckoutPanelProps {
   totalQuantity: number;
   totalProducts: number;
   total: number;
   discountedTotal: number;
-  userId: number | null;
   currency: TCurrency;
 }
 
@@ -19,7 +18,6 @@ const ProductCheckoutPanel: FC<IProductCheckoutPanelProps> = ({
   totalQuantity,
   totalProducts,
   total,
-  userId,
   discountedTotal,
   currency,
 }) => {

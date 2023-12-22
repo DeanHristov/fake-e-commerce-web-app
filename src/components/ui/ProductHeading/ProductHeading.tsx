@@ -1,9 +1,9 @@
-import { FC, ReactNode } from 'react';
 import { useDispatch } from '@/store';
 import { MODAL_BOX, openModal } from '@/store/slices';
+import { FC, ReactNode } from 'react';
 
 export interface IProductHeadingProps {
-  id: number;
+  id: string;
   title: string;
   children?: ReactNode;
   className?: string;

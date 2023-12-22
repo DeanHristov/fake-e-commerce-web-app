@@ -1,9 +1,9 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { addToCart, IRemoveItemPayload } from '@/store/slices';
 import { ICartProduct } from '@/types';
 import { Utils } from '@/utils/Utils';
-import { addToCart, IRemoveItemPayload } from '@/store/slices';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-export type TWishList = Record<number, ICartProduct>;
+export type TWishList = Record<string, ICartProduct>;
 
 export interface IWishListState {
   products: TWishList;
@@ -27,9 +27,9 @@ export const wishListSlice = createSlice({
       state: IWishListState,
       action: PayloadAction<ICartProduct>,
     ) => {
-      const { id } = action.payload;
+      const { _id } = action.payload;
 
-      state.products[id] = action.payload;
+      state.products[_id] = action.payload;
       state.total += 1;
     },
     removeFromWishList: (
@@ -42,9 +42,9 @@ export const wishListSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder.addCase(addToCart, (state: IWishListState, action) => {
-      if (Utils.isNotNull(state.products[action.payload.id])) {
+      if (Utils.isNotNull(state.products[action.payload._id])) {
         state.total = state.total > 0 ? state.total - 1 : 0;
-        delete state.products[action.payload.id];
+        delete state.products[action.payload._id];
       }
     });
   },
