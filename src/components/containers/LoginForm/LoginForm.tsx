@@ -1,9 +1,11 @@
 'use client';
 
+import { APIUtils } from '@/utils/APIUtils';
 import { useFormik } from 'formik';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { FC, useState } from 'react';
+import { toast } from 'react-toastify';
 import { object, string } from 'yup';
 import Button from '../../ui/Button';
 import FormField from '../../ui/FormField';
@@ -20,13 +22,13 @@ export enum LOGIN_FORM_FIELDS {
 // TODO Make the form more user-friendly with a nice feedback on un-success sign in
 // TODO Fix the issue in console: content.js:1 Uncaught (in promise) Error: Something went wrong. Please check back shortly.
 const LoginForm: FC<ILoginFormProps> = ({}) => {
-  const [spinning, setSpinning] = useState<boolean>(false);
   const router = useRouter();
+  const [spinning, setSpinning] = useState<boolean>(false);
   const formik = useFormik({
     validateOnChange: false,
     initialValues: {
-      [LOGIN_FORM_FIELDS.EMAIL]: '',
-      [LOGIN_FORM_FIELDS.PASSWORD]: '',
+      [LOGIN_FORM_FIELDS.EMAIL]: 'visitor@my-site.com',
+      [LOGIN_FORM_FIELDS.PASSWORD]: '13579',
     },
 
     validationSchema: object({
@@ -37,26 +39,28 @@ const LoginForm: FC<ILoginFormProps> = ({}) => {
     onSubmit: async (values, { resetForm }) => {
       setSpinning(true);
 
-      const controller = new AbortController();
-      const response = await fetch('/api/sign-in/', {
-        signal: controller.signal,
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
+      const { statusCode, error } = await APIUtils.fetch(
+        `${process.env.BASE_URL}/sign-in/`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(values),
         },
-        body: JSON.stringify(values),
-      });
+      );
 
-      if (!response.ok) {
+      setSpinning(false);
+      if (statusCode === 400 || error) {
         resetForm();
-        setSpinning(false);
-        return controller.abort();
+        return toast.error(error, {
+          position: toast.POSITION.TOP_RIGHT,
+          autoClose: false,
+        });
       }
 
-      // TODO Push the data in some store!
-      // const data = await response.json();
-
       router.push('/');
+      router.refresh();
     },
   });
 

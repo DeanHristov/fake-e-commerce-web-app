@@ -110,8 +110,6 @@ $ npm start
   - A login page
   - A checkout page
   - An admin page (portal) - **Coming soon**
-  - A custom shopping cart page (per userId) - **Coming soon**
-  - A custom wish list page (per userId) - **Coming soon**
 
 - The visitor (not signed user) can do following:
   - See a list of products
@@ -123,10 +121,14 @@ $ npm start
   - Do a checkout process (fake!)
   - Keeping basket & wish list in persistent store (localStorage)
   - Pagination - **Coming soon**
-- Authentication - **Coming soon**
-  - A JWT and cookie which expires in 10 minutes
+- Authentication
+  - Using server-side cookies & JWT for auth.
+  - Cookie & JWT have a short time life period (10 minutes)
   - User can login with email and password
   - User can logout
+  - Only the admin user has access to the `/admin` route
+  - Only the signed-in user has access to the `/profile` route
+  - Protecting the `/login` route from already signed in users.
 - When the user is signed In:
   - See a list of products
   - Adding a product to the basket
@@ -136,15 +138,15 @@ $ npm start
   - See details (through the modal box) of any product
   - Do a checkout process (fake!)
   - Do voting - **Coming soon**
-  - Be able to fetch, see and manage its basket in a separate route - **Coming soon**
-  - Be able to fetch, see and manage its wish list in a separate route - **Coming soon**
+  - Be able to fetch, see and manage its basket - **Coming soon**
+  - Be able to fetch, see and manage its wish list - **Coming soon**
   - Be able to manage its personal information like password, name, email etc... - **Coming soon**
-  - See a history with its orders
-- When the admin is signed In: - **Coming soon**
+  - See a history with its orders - **Coming soon**
+- When the admin is signed In:
   - Has access to the admin panel
-  - Can perform all CRUD operations over the users
-  - Can perform all CRUD operations over the orders
-  - Can perform all CRUD operations over the products
+  - Can perform all CRUD operations over the users - **Coming soon**
+  - Can perform all CRUD operations over the orders - **Coming soon**
+  - Can perform all CRUD operations over the products - **Coming soon**
   - Managing a delivery process
   - Managing payment process
 

@@ -27,10 +27,12 @@ export class Utils {
   public static isEmpty(val: any): boolean {
     if (Utils.isNull(val)) return true;
 
+    // The input is an object
     if (!Array.isArray(val) && typeof val === 'object') {
       return Object.values(val).length === 0;
     }
 
+    // The input is an array
     if (Array.isArray(val)) return val.length === 0;
 
     return true;

@@ -1,6 +1,5 @@
-import { FC } from 'react';
 import { Metadata } from 'next';
-
+import { FC } from 'react';
 export interface IAdminProps {}
 
 export const metadata: Metadata = {

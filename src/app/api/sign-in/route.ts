@@ -1,48 +1,43 @@
-import bcryptjs from 'bcryptjs';
+import { APIUtils } from '@/utils/APIUtils';
 import ms from 'ms';
-
 import { NextRequest, NextResponse } from 'next/server';
-import { Utils } from '@/utils/Utils';
-// TODO Replace the way how retrieve the users - Use some fake DB!
-import users from '@/mocks/data/users';
-
-import {APIUtils} from '@/utils/APIUtils';
 
 export interface ISignInResponse {
-  status: string;
+  status?: string;
+  error?: string;
 }
 
 export async function POST(req: NextRequest) {
   const { email, password } = await req.json();
+  const {
+    statusCode,
+    error,
+    data: token,
+  } = await APIUtils.fetch(`${process.env.API_URL}/auth/sign-in`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ email, password }),
+  });
 
-  // TODO Replace the way how finding the user!
-  const userIdx = users.findIndex((item) => item.email === email);
-  const unauthorizedResponse = NextResponse.json<ISignInResponse>(
-    { status: 'Unauthorized' },
-    { status: 401 },
-  );
+  if (statusCode === 400 || error) {
+    return NextResponse.json<ISignInResponse>(
+      { error },
+      { status: statusCode },
+    );
+  }
 
   const response = NextResponse.json<ISignInResponse>(
     { status: 'Ok!' },
     { status: 200 },
   );
-
-  if (Utils.isNull(users[userIdx])) return unauthorizedResponse;
-
-  const currentUser = users[userIdx];
-  const isPasswordMatch: boolean = bcryptjs.compareSync(
-    password,
-    currentUser.password,
-  );
-
-  if (!isPasswordMatch) return unauthorizedResponse;
-
-  const token: string = APIUtils.getJWToken(currentUser);
   response.cookies.set({
     name: 'token',
-    value: `Bearer ${token}`,
+    value: token,
     httpOnly: true,
     maxAge: ms(process.env.JWT_EXPIRE as string),
   });
+
   return response;
 }

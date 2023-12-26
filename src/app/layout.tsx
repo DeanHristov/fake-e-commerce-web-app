@@ -1,13 +1,17 @@
 import { Metadata } from 'next';
+import { cookies } from 'next/headers';
+
 import { NextFont } from 'next/dist/compiled/@next/font';
 import { Inter } from 'next/font/google';
 import { FC, ReactNode } from 'react';
 
 import { AppProvider } from '@/AppProvider';
-import PageHeader from '@/components/containers/PageHeader';
-import PageFooter from '@/components/containers/PageFooter';
-import './globals.css';
 import ModalBox from '@/components/containers/ModalBox';
+import PageFooter from '@/components/containers/PageFooter';
+import PageHeader from '@/components/containers/PageHeader';
+import { IUser } from '@/types';
+import { APIUtils } from '@/utils/APIUtils';
+import './globals.css';
 
 const inter: NextFont = Inter({ subsets: ['latin'] });
 
@@ -27,6 +31,12 @@ export const metadata: Metadata = {
 //TODO Move the "usePathname()" functionality from the PageHeader here when the issue above is solved!
 
 const RootLayout: FC<IRootLayoutProps> = async ({ children }) => {
+  const cookieStore = cookies();
+  const bearerToken = cookieStore.get('token')?.value.split(' ')[1];
+  const activeUser: IUser | undefined = await APIUtils.decodeJWToken<IUser>(
+    bearerToken!,
+  );
+
   return (
     <html lang="en">
       <body
@@ -34,7 +44,7 @@ const RootLayout: FC<IRootLayoutProps> = async ({ children }) => {
         className={`bg-gray-100 ${inter.className} `}
       >
         <AppProvider>
-          <PageHeader />
+          <PageHeader activeUser={activeUser} />
           <main className="page-container min-w-[320px] max-w-screen-xl m-auto pt-4 px-2 lg:px-0">
             {children}
             <ModalBox />

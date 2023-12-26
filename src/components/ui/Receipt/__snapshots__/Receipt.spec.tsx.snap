@@ -16,7 +16,7 @@ exports[`UI/Component <Receipt {...} /> Should be able to render the render the 
       <p
         class="text-center text-sm text-gray-400"
       >
-        22 December, 2023
+        26 December, 2023
       </p>
     </div>
     <div

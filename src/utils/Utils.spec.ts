@@ -27,6 +27,7 @@ describe('Class / Utils', () => {
 
   it('Should return an empty', () => {
     expect(Utils.isEmpty(null)).toBeTruthy();
+    expect(Utils.isEmpty(undefined)).toBeTruthy();
     expect(Utils.isEmpty({})).toBeTruthy();
     expect(Utils.isEmpty([])).toBeTruthy();
   });
@@ -84,5 +85,30 @@ describe('Class / Utils', () => {
     const outputStore = Utils.tryToLoadFromStorage<any>('another key', []);
 
     expect(outputStore).toEqual(inputStore);
+  });
+
+  it("Should be able to return the initial state if it throw a 'silent' error", () => {
+    const initialState: any[] = [];
+
+    mockGetItem.mockImplementation(() => {
+      throw new Error();
+    });
+
+    const outputStore = Utils.tryToLoadFromStorage<any>(
+      'another key',
+      initialState,
+    );
+
+    expect(outputStore).toEqual(initialState);
+  });
+
+  it('Should be able to parse map to array of values', () => {
+    const testMap: Map<string, number> = new Map();
+
+    testMap.set('1', 1);
+    testMap.set('2', 2);
+    testMap.set('3', 3);
+
+    expect(Utils.parseMapToArrayOfValues(testMap)).toEqual([1, 2, 3]);
   });
 });

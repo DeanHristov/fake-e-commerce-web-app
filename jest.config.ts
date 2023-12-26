@@ -1,8 +1,6 @@
 import type { Config } from 'jest';
 import nextJest from 'next/jest';
 
-import nodeFetch, { Request, Response } from 'node-fetch';
-
 const createJestConfig = nextJest({
   // Provide the path to your Next.js app to load next.config.js and .env files in your test environment
   dir: './',
@@ -17,6 +15,7 @@ const config: Config = {
   collectCoverageFrom: [
     '<rootDir>/src/**/*.{ts,tsx}',
     '!<rootDir>/src/**/index.ts',
+    '!<rootDir>/src/middleware.ts',
     '!<rootDir>/*.config.{ts,js}',
     '!<rootDir>/tests/e2e/**/*.{ts,tsx}',
     '!<rootDir>/src/mocks/**/*.{ts,tsx}',
@@ -42,6 +41,7 @@ const config: Config = {
   moduleNameMapper: {
     'next/navigation': '<rootDir>/tests/__mocks__/next-useRouter.ts',
     'react-redux': '<rootDir>/tests/__mocks__/react-redux.ts',
+    jose: '<rootDir>/tests/__mocks__/jose.ts',
   },
   coverageThreshold: {
     global: {
@@ -53,9 +53,6 @@ const config: Config = {
   },
   globals: {
     //@see: https://github.com/node-fetch/node-fetch/discussions/1503
-    fetch: nodeFetch,
-    Request: Request,
-    Response: Response,
   },
 };
 
