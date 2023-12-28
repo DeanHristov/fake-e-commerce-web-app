@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from 'next/server';
 
 export async function GET(req: NextRequest) {
   const response = NextResponse.json({ status: 'Ok!' });
-  const { headers, cookies } = response;
+  const { cookies } = response;
 
   await APIUtils.fetch(`${process.env.API_URL}/auth/sign-out`);
 

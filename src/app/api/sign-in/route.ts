@@ -34,9 +34,10 @@ export async function POST(req: NextRequest) {
   );
   response.cookies.set({
     name: 'token',
+    sameSite: 'strict',
     value: token,
     httpOnly: true,
-    maxAge: ms(process.env.JWT_EXPIRE as string),
+    maxAge: ms(process.env.JWT_EXPIRE as string) / 1000,
   });
 
   return response;
